@@ -54,7 +54,7 @@ class OptReturn(object):
 
 class Cerebro(with_metaclass(MetaParams, object)):
     '''Params:
-
+        - Test
       - ``preload`` (default: ``True``)
 
         Whether to preload the different ``data feeds`` passed to cerebro for
