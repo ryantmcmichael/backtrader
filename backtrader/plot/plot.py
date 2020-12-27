@@ -39,7 +39,7 @@ import matplotlib.ticker as mticker
 from ..utils.py3 import range, with_metaclass, string_types, integer_types
 from .. import AutoInfoClass, MetaParams, TimeFrame, date2num
 
-from .finance import plot_candlestick, plot_ohlc, plot_volume, plot_lineonclose, plot_trendcandlestick
+from .finance import plot_candlestick, plot_ohlc, plot_volume, plot_lineonclose
 from .formatters import (MyVolFormatter, MyDateFormatter, getlocator)
 from . import locator as loc
 from .multicursor import MultiCursor
@@ -716,17 +716,8 @@ class Plot_OldSync(with_metaclass(MetaParams, object)):
                     label=datalabel,
                     alpha=self.pinf.sch.baralpha,
                     fillup=self.pinf.sch.barupfill,
-                    filldown=self.pinf.sch.bardownfill)
-                
-            elif self.pinf.sch.style.startswith('trendcandle'):
-                plotted = plot_trendcandlestick(
-                    ax, self.pinf.xdata, opens, highs, lows, closes,
-                    colorup=self.pinf.sch.barup,
-                    colordown=self.pinf.sch.bardown,
-                    label=datalabel,
-                    alpha=self.pinf.sch.baralpha,
-                    fillup=self.pinf.sch.barupfill,
-                    filldown=self.pinf.sch.bardownfill)
+                    filldown=self.pinf.sch.bardownfill,
+                    trend=self.pinf.sch.trend)
 
             elif self.pinf.sch.style.startswith('bar') or True:
                 # final default option -- should be "else"

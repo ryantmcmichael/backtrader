@@ -48,6 +48,7 @@ class CandlestickPlotHandler(object):
                  label='_nolegend',
                  fillup=True,
                  filldown=True,
+                 trend=False,
                  **kwargs):
 
         # Manager up/down bar colors
@@ -86,6 +87,7 @@ class CandlestickPlotHandler(object):
             width, tickwidth, edgeadjust,
             label=label,
             fillup=fillup, filldown=filldown,
+            trend=trend,
             **kwargs)
 
         # add collections to the axis and return them
@@ -129,23 +131,53 @@ class CandlestickPlotHandler(object):
                       label='_nolegend',
                       scaling=1.0, bot=0,
                       fillup=True, filldown=True,
+                      trend=False,
                       **kwargs):
 
         # Prepack different zips of the series values
         oc = lambda: zip(opens, closes)  # NOQA: E731
         xoc = lambda: zip(xs, opens, closes)  # NOQA: E731
         iohlc = lambda: zip(xs, opens, highs, lows, closes)  # NOQA: E731
-
-        colorup = self.colorup if fillup else 'None'
-        colordown = self.colordown if filldown else 'None'
-        colord = {True: colorup, False: colordown}
-        colors = [colord[o < c] for o, c in oc()]
-
         edgecolord = {True: self.edgeup, False: self.edgedown}
-        edgecolors = [edgecolord[o < c] for o, c in oc()]
-
         tickcolord = {True: self.tickup, False: self.tickdown}
-        tickcolors = [tickcolord[o < c] for o, c in oc()]
+        
+        if trend:
+            # Prepack different zips of the series values
+            cc = lambda: zip(closes[-1:]+closes[:-1], closes)
+            
+            # Select color based on previous close price
+            colord = {True: self.colorup, False: self.colordown}
+            colors = [colord[c1 < c2] for c1, c2 in cc()]
+            colors[0] = (0,0,0,0.25) # First color can't be determined because
+                                     # we don't know the previous price. Make
+                                     # it gray.
+            
+            # Select fill based on current period
+            fillsb = [o < c for o, c, in oc()]
+            for x in range(len(colors)):
+                if fillsb[x] == True:
+                    colors[x] = 'None'
+            
+            # Edge colors should follow bar color
+            edgecolors = [edgecolord[c1 < c2] for c1, c2 in cc()]
+            edgecolors[0] = (0,0,0,1) # First color can't be determined because
+                                      # we don't know the previous price. Make
+                                      # it gray.
+            
+            # Tick colors should follow bar color
+            tickcolors = [tickcolord[c1 < c2] for c1, c2 in cc()]
+            tickcolors[0] = (0,0,0,1)  # First color can't be determined because
+                                       # we don't know the previous price. Make
+                                       # it gray.
+        else:
+            colorup = self.colorup if fillup else 'None'
+            colordown = self.colordown if filldown else 'None'
+            colord = {True: colorup, False: colordown}        
+            colors = [colord[o < c] for o, c in oc()]
+    
+            edgecolors = [edgecolord[o < c] for o, c in oc()]
+    
+            tickcolors = [tickcolord[o < c] for o, c in oc()]
 
         delta = width / 2 - edgeadjust
 
@@ -219,6 +251,7 @@ def plot_candlestick(ax,
                      label='_nolegend',
                      fillup=True,
                      filldown=True,
+                     trend=False,
                      **kwargs):
 
     chandler = CandlestickPlotHandler(
@@ -232,230 +265,12 @@ def plot_candlestick(ax,
         label,
         fillup,
         filldown,
+        trend,
         **kwargs)
 
     # Return the collections. the barcol goes first because
     # is the larger,  has the dominant zorder and defines the legend
     return chandler.barcol, chandler.tickcol
-
-class TrendCandlestickPlotHandler(object):
-    legend_opens = [0.50, 0.50, 0.50]
-    legend_highs = [1.00, 1.00, 1.00]
-    legend_lows = [0.00, 0.00, 0.00]
-    legend_closes = [0.80, 0.00, 1.00]
-
-    def __init__(self,
-                 ax, x, opens, highs, lows, closes,
-                 colorup='k', colordown='r',
-                 edgeup=None, edgedown=None,
-                 tickup=None, tickdown=None,
-                 width=1, tickwidth=1,
-                 edgeadjust=0.05, edgeshading=-10,
-                 alpha=1.0,
-                 label='_nolegend',
-                 fillup=True,
-                 filldown=True,
-                 **kwargs):
-
-        # Manager up/down bar colors
-        r, g, b = mcolors.colorConverter.to_rgb(colorup)
-        self.colorup = r, g, b, alpha
-        r, g, b = mcolors.colorConverter.to_rgb(colordown)
-        self.colordown = r, g, b, alpha
-        # Manage the edge up/down colors for the bars
-        if edgeup:
-            r, g, b = mcolors.colorConverter.to_rgb(edgeup)
-            self.edgeup = ((r, g, b, alpha),)
-        else:
-            self.edgeup = shade_color(self.colorup, edgeshading)
-
-        if edgedown:
-            r, g, b = mcolors.colorConverter.to_rgb(edgedown)
-            self.edgedown = ((r, g, b, alpha),)
-        else:
-            self.edgedown = shade_color(self.colordown, edgeshading)
-
-            # Manage the up/down tick colors
-        if tickup:
-            r, g, b = mcolors.colorConverter.to_rgb(tickup)
-            self.tickup = ((r, g, b, alpha),)
-        else:
-            self.tickup = self.edgeup
-
-        if tickdown:
-            r, g, b = mcolors.colorConverter.to_rgb(tickdown)
-            self.tickdown = ((r, g, b, alpha),)
-        else:
-            self.tickdown = self.edgedown
-
-        self.barcol, self.tickcol = self.barcollection(
-            x, opens, highs, lows, closes,
-            width, tickwidth, edgeadjust,
-            label=label,
-            fillup=fillup, filldown=filldown,
-            **kwargs)
-
-        # add collections to the axis and return them
-        ax.add_collection(self.tickcol)
-        ax.add_collection(self.barcol)
-
-        # Update the axis
-        ax.update_datalim(((0, min(lows)), (len(opens), max(highs))))
-        ax.autoscale_view()
-
-        # Add self as legend handler for this object
-        mlegend.Legend.update_default_handler_map({self.barcol: self})
-
-    def legend_artist(self, legend, orig_handle, fontsize, handlebox):
-        x0 = handlebox.xdescent
-        y0 = handlebox.ydescent
-        width = handlebox.width / len(self.legend_opens)
-        height = handlebox.height
-
-        # Generate the x axis coordinates (handlebox based)
-        xs = [x0 + width * (i + 0.5) for i in range(len(self.legend_opens))]
-
-        barcol, tickcol = self.barcollection(
-            xs,
-            self.legend_opens, self.legend_highs,
-            self.legend_lows, self.legend_closes,
-            width=width, tickwidth=2,
-            scaling=height, bot=y0)
-
-        barcol.set_transform(handlebox.get_transform())
-        handlebox.add_artist(barcol)
-        tickcol.set_transform(handlebox.get_transform())
-        handlebox.add_artist(tickcol)
-
-        return barcol, tickcol
-
-    def barcollection(self,
-                      xs,
-                      opens, highs, lows, closes,
-                      width, tickwidth=1, edgeadjust=0,
-                      label='_nolegend',
-                      scaling=1.0, bot=0,
-                      fillup=True, filldown=True,
-                      **kwargs):
-
-        # Prepack different zips of the series values
-        oc = lambda: zip(opens, closes)  # NOQA: E731
-        xoc = lambda: zip(xs, opens, closes)  # NOQA: E731
-        iohlc = lambda: zip(xs, opens, highs, lows, closes)  # NOQA: E731
-
-        # Prepack different zips of the series values
-        cc = lambda: zip(closes[-1:]+closes[:-1], closes)  # NOQA: E731
-        
-        colorup = self.colorup
-        colordown = self.colordown
-        colord = {True: colorup, False: colordown}
-        colors = [colord[c1 < c2] for c1, c2 in cc()]
-        colors[0] = (0,0,0,0.25)
-        
-        fillsb = [o < c for o, c, in oc()]
-        for x in range(len(colors)):
-            if fillsb[x] == True:
-                colors[x] = 'None'
-
-        edgecolord = {True: self.edgeup, False: self.edgedown}
-        edgecolors = [edgecolord[c1 < c2] for c1, c2 in cc()] # NEW
-        edgecolors[0] = (0,0,0,1) # NEW
-
-        tickcolord = {True: self.tickup, False: self.tickdown}
-        tickcolors = [tickcolord[c1 < c2] for c1, c2 in cc()] # NEW
-        tickcolors[0] = (0,0,0,1) # NEW
-
-        delta = width / 2 - edgeadjust
-
-        def barbox(i, open, close):
-            # delta seen as closure
-            left, right = i - delta, i + delta
-            open = open * scaling + bot
-            close = close * scaling + bot
-            return (left, open), (left, close), (right, close), (right, open)
-
-        barareas = [barbox(i, o, c) for i, o, c in xoc()]
-
-        def tup(i, open, high, close):
-            high = high * scaling + bot
-            open = open * scaling + bot
-            close = close * scaling + bot
-
-            return (i, high), (i, max(open, close))
-
-        tickrangesup = [tup(i, o, h, c) for i, o, h, l, c in iohlc()]
-
-        def tdown(i, open, low, close):
-            low = low * scaling + bot
-            open = open * scaling + bot
-            close = close * scaling + bot
-
-            return (i, low), (i, min(open, close))
-
-        tickrangesdown = [tdown(i, o, l, c) for i, o, h, l, c in iohlc()]
-
-        # Extra variables for the collections
-        useaa = 0,  # use tuple here
-        lw = 0.5,   # and here
-        tlw = tickwidth,
-
-        # Bar collection for the candles
-        barcol = mcol.PolyCollection(
-            barareas,
-            facecolors=colors,
-            edgecolors=edgecolors,
-            antialiaseds=useaa,
-            linewidths=lw,
-            label=label,
-            **kwargs)
-
-        # LineCollections have a higher zorder than PolyCollections
-        # to ensure the edges of the bars are not overwriten by the Lines
-        # we need to put the bars slightly over the LineCollections
-        kwargs['zorder'] = barcol.get_zorder() * 0.9999
-
-        # Up/down ticks from the body
-        tickcol = mcol.LineCollection(
-            tickrangesup + tickrangesdown,
-            colors=tickcolors,
-            linewidths=tlw,
-            antialiaseds=useaa,
-            **kwargs)
-
-        # return barcol, tickcol
-        return barcol, tickcol
-
-
-def plot_trendcandlestick(ax,
-                     x, opens, highs, lows, closes,
-                     colorup='k', colordown='r',
-                     edgeup=None, edgedown=None,
-                     tickup=None, tickdown=None,
-                     width=1, tickwidth=1.25,
-                     edgeadjust=0.05, edgeshading=-10,
-                     alpha=1.0,
-                     label='_nolegend',
-                     fillup=True,
-                     filldown=True,
-                     **kwargs):
-
-    chandler = TrendCandlestickPlotHandler(
-        ax, x, opens, highs, lows, closes,
-        colorup, colordown,
-        edgeup, edgedown,
-        tickup, tickdown,
-        width, tickwidth,
-        edgeadjust, edgeshading,
-        alpha,
-        label,
-        fillup,
-        filldown,
-        **kwargs)
-
-    # Return the collections. the barcol goes first because
-    # is the larger,  has the dominant zorder and defines the legend
-    return chandler.barcol, chandler.tickcol
-
 
 class VolumePlotHandler(object):
     legend_vols = [0.5, 1.0, 0.75]
