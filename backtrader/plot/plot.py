@@ -259,7 +259,7 @@ class Plot_OldSync(with_metaclass(MetaParams, object)):
             # Applying the manual rotation with setp cures the problem
             # but the labels from all axis but the last have to be hidden
             for ax in laxis:
-                self.mpyplot.setp(ax.get_xticklabels(), visible=False)
+                self.mpyplot.setp(ax.get_xticklabels(), visible=True)
 
             self.mpyplot.setp(lastax.get_xticklabels(), visible=True,
                               rotation=self.pinf.sch.tickrotation)
@@ -716,7 +716,8 @@ class Plot_OldSync(with_metaclass(MetaParams, object)):
                     label=datalabel,
                     alpha=self.pinf.sch.baralpha,
                     fillup=self.pinf.sch.barupfill,
-                    filldown=self.pinf.sch.bardownfill)
+                    filldown=self.pinf.sch.bardownfill,
+                    trend=self.pinf.sch.trend)
 
             elif self.pinf.sch.style.startswith('bar') or True:
                 # final default option -- should be "else"
