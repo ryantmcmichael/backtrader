@@ -1,0 +1,38 @@
+
+** To view Pickle Files
+import pickle
+with open(r'C:\Users\rtm\Documents\Personal\Stock_Market\Python\backtrader\results\2020-12-23_11-45-15\Benchmark_Plot.pickle', 'rb') as f:
+    dest_object_name = pickle.load(f)
+
+** Git Bash
+Navigate to the repository:
+$ cd Anaconda3/Lib/site-packages/backtrader/
+
+** To grab a PR that someone has posted to mementum/backtrader (but that hasn't been accepted)
+1) Create a new branch
+		git checkout -b <name of branch>
+		
+2) Pull the PR from upstream
+		git pull upstream refs/pull/{id}/head
+
+		Note: {id} is the ID of the PR (e.g. 431)
+
+		Note: This assumes that "upstream" is mementum/backtrader. Can check by typing
+		git remote show upstream
+
+3) You'll be prompted to enter a commit note
+		Use 'i' to start inserting text, and then 'escape' when finished
+		Then type ':wq' and press 'enter' to save the file
+
+4) In GitHub Desktop, you'll see the PR pulled into the branch in the "history" tab
+
+5) Merge the branch into <master> using GitHub Desktop or however preferred
+
+
+** Development Workflow
+	- ALWAYS keep 'master' identical to remote upstream master (i.e. backtrader2/backtrader/master)
+	- If you're making a particular change that might be useful for the general public, then create a branch off master and write the code. If it goes well, submit a 			PR and see if it gets accepted by the community. If accepted, then pull changes to master, and continue.
+	- For all other changes (e.g. things that are bespoke), develop in the branch 'rtm'. Push this to github as a backup, but don't expect this to merge with remote 			upstream. It's too funky and weird. Incorporating new changes from master might require some cherry-picking and conflict resolution.
+
+
+Hi all! I wrote a class to enable candlestick trend plots. I use Candlestick trend plots in TOS, and they are a little different from the standard Candlestick plots offered in backtrader. I read that backtrader2 is restricted to bug fixes (rather than feature adds), but anyone here is interested, just let me know. Also, if it makes sense to stage a PR in backtrader2 (even if it isn't reviewed for awhile), I could do that.
