@@ -1,0 +1,813 @@
+Summary of Backtest: No note saved
+
+Start Date of Backtest: 2022-03-13 00:00:00
+End Date of Backtest: 2022-03-19 00:00:00
+
+*****************
+** ADDING DATA **
+*****************
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_AAL_2022-03-15_2022-03-16.csv
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_GROM_2022-03-18_2022-03-19.csv
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_IMPP_2022-03-16_2022-03-17.csv
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_KAVL_2022-03-15_2022-03-16.csv
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_MRNA_2022-03-14_2022-03-15.csv
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_MULN_2022-03-15_2022-03-16.csv
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_MULN_2022-03-18_2022-03-19.csv
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_NIO_2022-03-18_2022-03-19.csv
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_PIK_2022-03-18_2022-03-19.csv
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_PLTR_2022-03-16_2022-03-17.csv
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_SOFI_2022-03-16_2022-03-17.csv
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_SQQQ_2022-03-14_2022-03-15.csv
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_SQQQ_2022-03-15_2022-03-16.csv
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_TQQQ_2022-03-18_2022-03-19.csv
+
+*****************************************************
+** LAUNCHING CEREBRO AT 2022-03-20 09:09:07.875799 **
+*****************************************************
+2022-03-14, Current Trades: 0
+2022-03-14, Added Trades: 1
+2022-03-14T06:50:00, Notify Order MRNA BGHT, Sz: 6.000, Pr: 158.70, Csh: 9,047.80
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T06:59:00, Notify Order SQQQ BGHT, Sz: 20.000, Pr: 48.99, Csh: 8,068.10
+2022-03-14T07:09:00, Notify Order SQQQ SLD, Shr: -20.000, ShPrc: 48.26, Csh: 9,033.30
+2022-03-14, Trade Pnl: -14.50 (-0.73%), Account FPnL: 10,018.33
+2022-03-14T07:25:00, Notify Order MRNA SLD, Shr: -6.000, ShPrc: 164.26, Csh: 10,018.86
+2022-03-14, Trade Pnl: 33.36 (5.56%), Account FPnL: 10,018.86
+2022-03-14, Current Trades: 0
+2022-03-14, Added Trades: 1
+2022-03-14T07:29:00, Notify Order SQQQ BGHT, Sz: 20.000, Pr: 48.18, Csh: 9,055.26
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T07:31:00, Notify Order MRNA BGHT, Sz: 6.000, Pr: 163.73, Csh: 8,072.88
+2022-03-14T07:37:00, Notify Order MRNA SLD, Shr: -6.000, ShPrc: 163.48, Csh: 9,053.76
+2022-03-14, Trade Pnl: -1.50 (-0.25%), Account FPnL: 10,020.46
+2022-03-14T07:48:00, Notify Order SQQQ SLD, Shr: -20.000, ShPrc: 48.37, Csh: 10,021.16
+2022-03-14, Trade Pnl: 3.80 (0.19%), Account FPnL: 10,021.16
+2022-03-14, Current Trades: 0
+2022-03-14, Added Trades: 1
+2022-03-14T07:56:00, Notify Order MRNA BGHT, Sz: 6.000, Pr: 162.81, Csh: 9,044.30
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T08:10:00, Notify Order SQQQ BGHT, Sz: 20.000, Pr: 48.24, Csh: 8,079.50
+2022-03-14T08:11:00, Notify Order MRNA SLD, Shr: -6.000, ShPrc: 162.26, Csh: 9,053.06
+2022-03-14, Trade Pnl: -3.30 (-0.55%), Account FPnL: 10,021.36
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T08:55:00, Notify Order MRNA BGHT, Sz: 6.000, Pr: 157.08, Csh: 8,110.59
+2022-03-14T09:06:00, Notify Order MRNA SLD, Shr: -6.000, ShPrc: 155.57, Csh: 9,044.01
+2022-03-14, Trade Pnl: -9.05 (-1.51%), Account FPnL: 10,048.81
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T09:12:00, Notify Order MRNA BGHT, Sz: 6.000, Pr: 157.93, Csh: 8,096.43
+2022-03-14T09:22:00, Notify Order MRNA SLD, Shr: -6.000, ShPrc: 156.28, Csh: 9,034.11
+2022-03-14, Trade Pnl: -9.90 (-1.65%), Account FPnL: 10,035.21
+2022-03-14T09:23:00, Notify Order SQQQ SLD, Shr: -20.000, ShPrc: 50.06, Csh: 10,035.21
+2022-03-14, Trade Pnl: 36.30 (1.81%), Account FPnL: 10,035.21
+2022-03-14, Current Trades: 0
+2022-03-14, Added Trades: 1
+2022-03-14T09:32:00, Notify Order MRNA BGHT, Sz: 6.000, Pr: 157.08, Csh: 9,092.73
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T09:36:00, Notify Order SQQQ BGHT, Sz: 19.000, Pr: 50.42, Csh: 8,134.75
+2022-03-14T09:39:00, Notify Order MRNA SLD, Shr: -6.000, ShPrc: 155.81, Csh: 9,069.61
+2022-03-14, Trade Pnl: -7.62 (-1.27%), Account FPnL: 10,024.93
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T10:12:00, Notify Order MRNA BGHT, Sz: 6.000, Pr: 152.04, Csh: 8,157.37
+2022-03-14T10:19:00, Notify Order SQQQ SLD, Shr: -19.000, ShPrc: 51.15, Csh: 9,129.22
+2022-03-14, Trade Pnl: 13.87 (0.73%), Account FPnL: 10,042.84
+2022-03-14T10:23:00, Notify Order MRNA SLD, Shr: -6.000, ShPrc: 151.52, Csh: 10,038.34
+2022-03-14, Trade Pnl: -3.12 (-0.52%), Account FPnL: 10,038.34
+2022-03-14, Current Trades: 0
+2022-03-14, Added Trades: 1
+2022-03-14T10:25:00, Notify Order MRNA BGHT, Sz: 6.000, Pr: 152.64, Csh: 9,122.50
+2022-03-14T10:26:00, Notify Order MRNA SLD, Shr: -6.000, ShPrc: 152.18, Csh: 10,035.59
+2022-03-14, Trade Pnl: -2.75 (-0.46%), Account FPnL: 10,035.59
+2022-03-14, Current Trades: 0
+2022-03-14, Added Trades: 1
+2022-03-14T10:27:00, Notify Order MRNA BGHT, Sz: 6.000, Pr: 152.30, Csh: 9,121.79
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T10:30:00, Notify Order MRNA SLD, Shr: -6.000, ShPrc: 151.74, Csh: 9,056.36
+2022-03-14T10:30:00, Notify Order SQQQ BGHT, Sz: 19.000, Pr: 51.36, Csh: 9,056.36
+2022-03-14, Trade Pnl: -3.39 (-0.57%), Account FPnL: 10,030.11
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T10:32:00, Notify Order MRNA BGHT, Sz: 6.000, Pr: 151.55, Csh: 8,147.06
+2022-03-14T10:33:00, Notify Order MRNA SLD, Shr: -6.000, ShPrc: 150.79, Csh: 9,051.80
+2022-03-14, Trade Pnl: -4.56 (-0.76%), Account FPnL: 10,030.85
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T10:43:00, Notify Order MRNA BGHT, Sz: 6.000, Pr: 153.80, Csh: 8,129.02
+2022-03-14T10:49:00, Notify Order SQQQ SLD, Shr: -19.000, ShPrc: 51.49, Csh: 9,107.33
+2022-03-14, Trade Pnl: 2.47 (0.13%), Account FPnL: 10,027.58
+2022-03-14T11:03:00, Notify Order MRNA SLD, Shr: -6.000, ShPrc: 153.30, Csh: 10,027.14
+2022-03-14, Trade Pnl: -2.96 (-0.49%), Account FPnL: 10,027.14
+2022-03-14, Current Trades: 0
+2022-03-14, Added Trades: 1
+2022-03-14T11:06:00, Notify Order SQQQ BGHT, Sz: 19.000, Pr: 51.07, Csh: 9,056.81
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T11:12:00, Notify Order MRNA BGHT, Sz: 6.000, Pr: 154.49, Csh: 8,129.84
+2022-03-14T11:14:00, Notify Order SQQQ SLD, Shr: -19.000, ShPrc: 51.17, Csh: 9,102.07
+2022-03-14, Trade Pnl: 1.90 (0.10%), Account FPnL: 10,033.63
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T11:18:00, Notify Order SQQQ BGHT, Sz: 19.000, Pr: 51.33, Csh: 8,126.71
+2022-03-14T11:25:00, Notify Order MRNA SLD, Shr: -6.000, ShPrc: 153.65, Csh: 9,048.60
+2022-03-14, Trade Pnl: -5.08 (-0.85%), Account FPnL: 10,028.33
+2022-03-14T11:35:00, Notify Order SQQQ SLD, Shr: -19.000, ShPrc: 51.22, Csh: 10,021.78
+2022-03-14, Trade Pnl: -2.18 (-0.11%), Account FPnL: 10,021.78
+2022-03-14, Current Trades: 0
+2022-03-14, Added Trades: 1
+2022-03-14T11:49:00, Notify Order SQQQ BGHT, Sz: 19.000, Pr: 51.36, Csh: 9,045.94
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T11:58:00, Notify Order SQQQ SLD, Shr: -19.000, ShPrc: 51.13, Csh: 9,098.30
+2022-03-14T11:58:00, Notify Order MRNA BGHT, Sz: 6.000, Pr: 153.18, Csh: 9,098.30
+2022-03-14, Trade Pnl: -4.37 (-0.23%), Account FPnL: 10,016.03
+2022-03-14T12:05:00, Notify Order MRNA SLD, Shr: -6.000, ShPrc: 152.46, Csh: 10,013.06
+2022-03-14, Trade Pnl: -4.35 (-0.72%), Account FPnL: 10,013.06
+2022-03-14, Current Trades: 0
+2022-03-14, Added Trades: 1
+2022-03-14T12:13:00, Notify Order SQQQ BGHT, Sz: 19.000, Pr: 50.99, Csh: 9,044.25
+2022-03-14T12:18:00, Notify Order SQQQ SLD, Shr: -19.000, ShPrc: 50.78, Csh: 10,009.02
+2022-03-14, Trade Pnl: -4.04 (-0.21%), Account FPnL: 10,009.02
+2022-03-14, Current Trades: 0
+2022-03-14, Added Trades: 1
+2022-03-14T12:29:00, Notify Order SQQQ BGHT, Sz: 19.000, Pr: 50.98, Csh: 9,040.40
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T12:45:00, Notify Order MRNA BGHT, Sz: 6.000, Pr: 148.39, Csh: 8,150.06
+2022-03-14T12:47:00, Notify Order SQQQ SLD, Shr: -19.000, ShPrc: 51.39, Csh: 9,126.47
+2022-03-14, Trade Pnl: 7.79 (0.41%), Account FPnL: 10,017.53
+2022-03-14, Current Trades: 1
+2022-03-14, Added Trades: 1
+2022-03-14T12:57:00, Notify Order SQQQ BGHT, Sz: 19.000, Pr: 51.28, Csh: 8,152.06
+2022-03-14T12:59:00, Notify Order MRNA SLD, Shr: -6.000, ShPrc: 150.27, Csh: 10,029.33
+2022-03-14T12:59:00, Notify Order SQQQ SLD, Shr: -19.000, ShPrc: 51.35, Csh: 10,029.33
+2022-03-14, Trade Pnl: 11.28 (1.88%), Account FPnL: 10,029.33
+2022-03-14, Trade Pnl: 1.23 (0.06%), Account FPnL: 10,029.33
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 2
+2022-03-15T06:51:00, Notify Order KAVL BGHT, Sz: 465.000, Pr: 2.15, Csh: 8,064.90
+2022-03-15T06:51:00, Notify Order SQQQ BGHT, Sz: 19.000, Pr: 50.65, Csh: 8,064.90
+2022-03-15, Current Trades: 2
+2022-03-15, Added Trades: 1
+2022-03-15T06:54:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.39, Csh: 7,064.55
+2022-03-15T06:56:00, Notify Order SQQQ SLD, Shr: -19.000, ShPrc: 50.07, Csh: 8,015.88
+2022-03-15, Trade Pnl: -11.02 (-0.58%), Account FPnL: 10,028.19
+2022-03-15, Current Trades: 2
+2022-03-15, Added Trades: 1
+2022-03-15T06:57:00, Notify Order MULN BGHT, Sz: 598.000, Pr: 1.66, Csh: 7,023.14
+2022-03-15T07:06:00, Notify Order KAVL SLD, Shr: -465.000, ShPrc: 1.96, Csh: 7,934.59
+2022-03-15, Trade Pnl: -90.63 (-0.19%), Account FPnL: 10,004.92
+2022-03-15T07:09:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.31, Csh: 8,930.06
+2022-03-15, Trade Pnl: -4.88 (-0.08%), Account FPnL: 9,982.24
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T07:15:00, Notify Order SQQQ BGHT, Sz: 20.000, Pr: 49.90, Csh: 7,931.96
+2022-03-15, Current Trades: 2
+2022-03-15, Added Trades: 1
+2022-03-15T07:16:00, Notify Order KAVL BGHT, Sz: 473.000, Pr: 2.10, Csh: 6,938.62
+2022-03-15, Current Trades: 3
+2022-03-15, Added Trades: 1
+2022-03-15T07:21:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.43, Csh: 5,951.18
+2022-03-15T07:24:00, Notify Order SQQQ SLD, Shr: -20.000, ShPrc: 49.35, Csh: 6,938.18
+2022-03-15, Trade Pnl: -11.10 (-0.56%), Account FPnL: 9,990.63
+2022-03-15T07:26:00, Notify Order KAVL SLD, Shr: -473.000, ShPrc: 1.98, Csh: 7,872.36
+2022-03-15, Trade Pnl: -59.17 (-0.13%), Account FPnL: 10,007.75
+2022-03-15T07:41:00, Notify Order MULN SLD, Shr: -598.000, ShPrc: 1.86, Csh: 8,984.46
+2022-03-15, Trade Pnl: 119.36 (0.20%), Account FPnL: 9,986.69
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T07:54:00, Notify Order KAVL BGHT, Sz: 558.000, Pr: 1.79, Csh: 7,985.64
+2022-03-15, Current Trades: 2
+2022-03-15, Added Trades: 1
+2022-03-15T07:57:00, Notify Order MULN BGHT, Sz: 537.000, Pr: 1.85, Csh: 6,992.14
+2022-03-15, Current Trades: 3
+2022-03-15, Added Trades: 1
+2022-03-15T07:59:00, Notify Order SQQQ BGHT, Sz: 20.000, Pr: 48.65, Csh: 6,019.11
+2022-03-15T08:03:00, Notify Order MULN SLD, Shr: -537.000, ShPrc: 1.81, Csh: 6,991.35
+2022-03-15, Trade Pnl: -21.27 (-0.04%), Account FPnL: 10,019.85
+2022-03-15T08:04:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.65, Csh: 7,993.27
+2022-03-15, Trade Pnl: 14.49 (0.23%), Account FPnL: 9,987.18
+2022-03-15T08:08:00, Notify Order SQQQ SLD, Shr: -20.000, ShPrc: 48.19, Csh: 8,956.97
+2022-03-15, Trade Pnl: -9.33 (-0.47%), Account FPnL: 9,961.37
+2022-03-15T08:11:00, Notify Order KAVL SLD, Shr: -558.000, ShPrc: 1.84, Csh: 9,981.68
+2022-03-15, Trade Pnl: 25.89 (0.05%), Account FPnL: 9,981.68
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T08:19:00, Notify Order MULN BGHT, Sz: 539.000, Pr: 1.86, Csh: 8,979.14
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T08:22:00, Notify Order KAVL BGHT, Sz: 542.000, Pr: 1.85, Csh: 7,979.15
+2022-03-15, Current Trades: 2
+2022-03-15, Added Trades: 1
+2022-03-15T08:24:00, Notify Order KAVL SLD, Shr: -542.000, ShPrc: 1.80, Csh: 7,991.46
+2022-03-15T08:24:00, Notify Order SQQQ BGHT, Sz: 20.000, Pr: 48.30, Csh: 7,991.46
+2022-03-15, Trade Pnl: -21.68 (-0.04%), Account FPnL: 9,949.05
+2022-03-15T08:27:00, Notify Order SQQQ SLD, Shr: -20.000, ShPrc: 47.97, Csh: 8,950.86
+2022-03-15, Trade Pnl: -6.60 (-0.33%), Account FPnL: 9,972.27
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T08:32:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.64, Csh: 7,965.54
+2022-03-15, Current Trades: 2
+2022-03-15, Added Trades: 1
+2022-03-15T08:41:00, Notify Order KAVL BGHT, Sz: 563.000, Pr: 1.77, Csh: 6,968.19
+2022-03-15T08:42:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.53, Csh: 7,946.89
+2022-03-15, Trade Pnl: -6.62 (-0.11%), Account FPnL: 9,956.42
+2022-03-15T08:46:00, Notify Order MULN SLD, Shr: -539.000, ShPrc: 1.86, Csh: 8,948.03
+2022-03-15, Trade Pnl: -1.40 (-0.00%), Account FPnL: 9,969.87
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T08:48:00, Notify Order SQQQ BGHT, Sz: 21.000, Pr: 47.56, Csh: 7,949.27
+2022-03-15, Current Trades: 2
+2022-03-15, Added Trades: 1
+2022-03-15T08:50:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.65, Csh: 6,963.00
+2022-03-15T08:56:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.40, Csh: 7,933.52
+2022-03-15, Trade Pnl: -15.75 (-0.25%), Account FPnL: 9,951.97
+2022-03-15T09:01:00, Notify Order KAVL SLD, Shr: -563.000, ShPrc: 1.79, Csh: 8,941.29
+2022-03-15, Trade Pnl: 10.42 (0.02%), Account FPnL: 9,956.85
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T09:10:00, Notify Order KAVL BGHT, Sz: 555.000, Pr: 1.81, Csh: 7,936.74
+2022-03-15T09:12:00, Notify Order SQQQ SLD, Shr: -21.000, ShPrc: 47.90, Csh: 8,942.74
+2022-03-15, Trade Pnl: 7.24 (0.34%), Account FPnL: 9,947.29
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T09:22:00, Notify Order MULN BGHT, Sz: 568.000, Pr: 1.76, Csh: 7,943.06
+2022-03-15T09:30:00, Notify Order MULN SLD, Shr: -568.000, ShPrc: 1.67, Csh: 8,892.53
+2022-03-15, Trade Pnl: -50.21 (-0.09%), Account FPnL: 9,913.73
+2022-03-15T09:32:00, Notify Order KAVL SLD, Shr: -555.000, ShPrc: 1.82, Csh: 9,902.69
+2022-03-15, Trade Pnl: 5.61 (0.01%), Account FPnL: 9,902.69
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T09:42:00, Notify Order MULN BGHT, Sz: 581.000, Pr: 1.71, Csh: 8,909.18
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T09:43:00, Notify Order SQQQ BGHT, Sz: 20.000, Pr: 47.68, Csh: 7,955.58
+2022-03-15T09:46:00, Notify Order MULN SLD, Shr: -581.000, ShPrc: 1.69, Csh: 8,937.41
+2022-03-15, Trade Pnl: -11.68 (-0.02%), Account FPnL: 9,892.21
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T09:57:00, Notify Order MULN BGHT, Sz: 584.000, Pr: 1.71, Csh: 7,938.83
+2022-03-15, Current Trades: 2
+2022-03-15, Added Trades: 1
+2022-03-15T10:01:00, Notify Order KAVL BGHT, Sz: 571.000, Pr: 1.75, Csh: 6,939.58
+2022-03-15, Current Trades: 3
+2022-03-15, Added Trades: 1
+2022-03-15T10:03:00, Notify Order SQQQ SLD, Shr: -20.000, ShPrc: 47.81, Csh: 6,898.36
+2022-03-15T10:03:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.35, Csh: 6,898.36
+2022-03-15, Trade Pnl: 2.60 (0.13%), Account FPnL: 9,917.80
+2022-03-15, Current Trades: 3
+2022-03-15, Added Trades: 1
+2022-03-15T10:14:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.25, Csh: 8,924.26
+2022-03-15T10:14:00, Notify Order KAVL SLD, Shr: -571.000, ShPrc: 1.75, Csh: 8,924.26
+2022-03-15T10:14:00, Notify Order MULN SLD, Shr: -584.000, ShPrc: 1.71, Csh: 8,924.26
+2022-03-15T10:14:00, Notify Order SQQQ BGHT, Sz: 20.000, Pr: 48.18, Csh: 8,924.26
+2022-03-15, Trade Pnl: -6.05 (-0.09%), Account FPnL: 9,890.16
+2022-03-15, Trade Pnl: 0.06 (0.00%), Account FPnL: 9,890.16
+2022-03-15, Trade Pnl: 0.23 (0.00%), Account FPnL: 9,890.16
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T10:15:00, Notify Order KAVL BGHT, Sz: 569.000, Pr: 1.76, Csh: 7,922.82
+2022-03-15T10:21:00, Notify Order KAVL SLD, Shr: -569.000, ShPrc: 1.75, Csh: 8,915.72
+2022-03-15, Trade Pnl: -8.53 (-0.01%), Account FPnL: 9,880.78
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T10:22:00, Notify Order KAVL BGHT, Sz: 568.000, Pr: 1.77, Csh: 7,911.67
+2022-03-15, Current Trades: 2
+2022-03-15, Added Trades: 1
+2022-03-15T10:26:00, Notify Order MULN BGHT, Sz: 578.000, Pr: 1.73, Csh: 6,911.73
+2022-03-15, Current Trades: 3
+2022-03-15, Added Trades: 1
+2022-03-15T10:29:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.27, Csh: 5,919.18
+2022-03-15T10:32:00, Notify Order SQQQ SLD, Shr: -20.000, ShPrc: 48.35, Csh: 6,886.18
+2022-03-15, Trade Pnl: 3.40 (0.17%), Account FPnL: 9,886.30
+2022-03-15, Current Trades: 3
+2022-03-15, Added Trades: 1
+2022-03-15T10:33:00, Notify Order SQQQ BGHT, Sz: 20.000, Pr: 48.35, Csh: 5,919.08
+2022-03-15T10:39:00, Notify Order MULN SLD, Shr: -578.000, ShPrc: 1.72, Csh: 6,913.24
+2022-03-15, Trade Pnl: -5.78 (-0.01%), Account FPnL: 9,892.00
+2022-03-15T10:44:00, Notify Order SQQQ SLD, Shr: -20.000, ShPrc: 48.20, Csh: 7,877.24
+2022-03-15, Trade Pnl: -3.10 (-0.15%), Account FPnL: 9,855.59
+2022-03-15, Current Trades: 2
+2022-03-15, Added Trades: 1
+2022-03-15T10:45:00, Notify Order SQQQ BGHT, Sz: 20.000, Pr: 48.30, Csh: 6,911.24
+2022-03-15T10:46:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.26, Csh: 7,902.81
+2022-03-15, Trade Pnl: -0.98 (-0.02%), Account FPnL: 9,869.61
+2022-03-15T10:48:00, Notify Order SQQQ SLD, Shr: -20.000, ShPrc: 48.33, Csh: 8,869.51
+2022-03-15, Trade Pnl: 0.70 (0.03%), Account FPnL: 9,863.57
+2022-03-15T10:49:00, Notify Order KAVL SLD, Shr: -568.000, ShPrc: 1.75, Csh: 9,866.35
+2022-03-15, Trade Pnl: -7.21 (-0.01%), Account FPnL: 9,866.35
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:50:00, Notify Order SQQQ BGHT, Sz: 20.000, Pr: 48.43, Csh: 8,897.80
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T10:56:00, Notify Order SQQQ SLD, Shr: -20.000, ShPrc: 48.07, Csh: 8,859.57
+2022-03-15T10:56:00, Notify Order MULN BGHT, Sz: 568.000, Pr: 1.76, Csh: 8,859.57
+2022-03-15, Trade Pnl: -7.16 (-0.36%), Account FPnL: 9,850.51
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T11:06:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.26, Csh: 7,868.00
+2022-03-15, Current Trades: 2
+2022-03-15, Added Trades: 2
+2022-03-15T11:09:00, Notify Order KAVL BGHT, Sz: 561.000, Pr: 1.78, Csh: 5,905.22
+2022-03-15T11:09:00, Notify Order SQQQ BGHT, Sz: 20.000, Pr: 48.21, Csh: 5,905.22
+2022-03-15T11:11:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.20, Csh: 7,881.54
+2022-03-15T11:11:00, Notify Order MULN SLD, Shr: -568.000, ShPrc: 1.74, Csh: 7,881.54
+2022-03-15, Trade Pnl: -3.58 (-0.06%), Account FPnL: 9,848.21
+2022-03-15, Trade Pnl: -11.30 (-0.02%), Account FPnL: 9,848.21
+2022-03-15, Current Trades: 2
+2022-03-15, Added Trades: 1
+2022-03-15T11:29:00, Notify Order MULN BGHT, Sz: 578.000, Pr: 1.73, Csh: 6,882.00
+2022-03-15T11:30:00, Notify Order KAVL SLD, Shr: -561.000, ShPrc: 1.80, Csh: 7,891.80
+2022-03-15, Trade Pnl: 11.22 (0.02%), Account FPnL: 9,863.18
+2022-03-15T11:32:00, Notify Order SQQQ SLD, Shr: -20.000, ShPrc: 48.60, Csh: 8,863.90
+2022-03-15, Trade Pnl: 7.90 (0.40%), Account FPnL: 9,858.06
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T11:35:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.23, Csh: 7,874.23
+2022-03-15T11:38:00, Notify Order MULN SLD, Shr: -578.000, ShPrc: 1.71, Csh: 8,862.61
+2022-03-15, Trade Pnl: -11.16 (-0.02%), Account FPnL: 9,849.44
+2022-03-15T11:44:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.20, Csh: 9,850.61
+2022-03-15, Trade Pnl: -1.67 (-0.03%), Account FPnL: 9,850.61
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 2
+2022-03-15T11:48:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.28, Csh: 7,858.64
+2022-03-15T11:48:00, Notify Order MULN BGHT, Sz: 579.000, Pr: 1.73, Csh: 7,858.64
+2022-03-15, Current Trades: 2
+2022-03-15, Added Trades: 1
+2022-03-15T11:51:00, Notify Order KAVL BGHT, Sz: 555.000, Pr: 1.79, Csh: 6,864.63
+2022-03-15T11:56:00, Notify Order KAVL SLD, Shr: -555.000, ShPrc: 1.77, Csh: 7,846.98
+2022-03-15, Trade Pnl: -11.66 (-0.02%), Account FPnL: 9,831.90
+2022-03-15T11:58:00, Notify Order MULN SLD, Shr: -579.000, ShPrc: 1.70, Csh: 8,830.88
+2022-03-15, Trade Pnl: -14.88 (-0.03%), Account FPnL: 9,827.33
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T12:06:00, Notify Order KAVL BGHT, Sz: 556.000, Pr: 1.79, Csh: 7,835.64
+2022-03-15T12:20:00, Notify Order KAVL SLD, Shr: -556.000, ShPrc: 1.79, Csh: 8,830.82
+2022-03-15, Trade Pnl: -0.06 (-0.00%), Account FPnL: 9,834.10
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T12:23:00, Notify Order MULN BGHT, Sz: 598.000, Pr: 1.66, Csh: 7,835.15
+2022-03-15T12:29:00, Notify Order MULN SLD, Shr: -598.000, ShPrc: 1.63, Csh: 8,810.19
+2022-03-15, Trade Pnl: -20.63 (-0.03%), Account FPnL: 9,810.87
+2022-03-15T12:31:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.40, Csh: 9,811.26
+2022-03-15, Trade Pnl: 7.87 (0.12%), Account FPnL: 9,811.26
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:38:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.45, Csh: 8,822.14
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T12:40:00, Notify Order KAVL BGHT, Sz: 561.000, Pr: 1.77, Csh: 7,826.36
+2022-03-15T12:42:00, Notify Order KAVL SLD, Shr: -561.000, ShPrc: 1.79, Csh: 8,830.55
+2022-03-15, Trade Pnl: 8.41 (0.01%), Account FPnL: 9,820.31
+2022-03-15, Current Trades: 1
+2022-03-15, Added Trades: 1
+2022-03-15T12:44:00, Notify Order SQQQ BGHT, Sz: 21.000, Pr: 46.74, Csh: 7,849.01
+2022-03-15, Current Trades: 2
+2022-03-15, Added Trades: 1
+2022-03-15T12:53:00, Notify Order SQQQ SLD, Shr: -21.000, ShPrc: 46.29, Csh: 7,824.85
+2022-03-15T12:53:00, Notify Order KAVL BGHT, Sz: 555.000, Pr: 1.79, Csh: 7,824.85
+2022-03-15, Trade Pnl: -9.47 (-0.45%), Account FPnL: 9,817.71
+2022-03-15T12:59:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.56, Csh: 9,797.49
+2022-03-15T12:59:00, Notify Order KAVL SLD, Shr: -555.000, ShPrc: 1.76, Csh: 9,797.49
+2022-03-15, Trade Pnl: 6.72 (0.11%), Account FPnL: 9,797.49
+2022-03-15, Trade Pnl: -19.42 (-0.03%), Account FPnL: 9,797.49
+2022-03-16, Current Trades: 0
+2022-03-16, Added Trades: 1
+2022-03-16T06:50:00, Notify Order PLTR BGHT, Sz: 89.000, Pr: 11.23, Csh: 8,798.47
+2022-03-16, Current Trades: 1
+2022-03-16, Added Trades: 1
+2022-03-16T06:51:00, Notify Order SOFI BGHT, Sz: 121.000, Pr: 8.23, Csh: 7,802.63
+2022-03-16T07:07:00, Notify Order PLTR SLD, Shr: -89.000, ShPrc: 11.23, Csh: 8,802.10
+2022-03-16, Trade Pnl: 0.44 (0.00%), Account FPnL: 9,811.25
+2022-03-16, Current Trades: 1
+2022-03-16, Added Trades: 1
+2022-03-16T07:09:00, Notify Order PLTR BGHT, Sz: 88.000, Pr: 11.24, Csh: 7,812.54
+2022-03-16T07:10:00, Notify Order PLTR SLD, Shr: -88.000, ShPrc: 11.19, Csh: 8,797.26
+2022-03-16, Trade Pnl: -4.84 (-0.06%), Account FPnL: 9,802.16
+2022-03-16T07:11:00, Notify Order SOFI SLD, Shr: -121.000, ShPrc: 8.31, Csh: 9,802.77
+2022-03-16, Trade Pnl: 9.67 (0.08%), Account FPnL: 9,802.77
+2022-03-16, Current Trades: 0
+2022-03-16, Added Trades: 2
+2022-03-16T07:15:00, Notify Order PLTR BGHT, Sz: 88.000, Pr: 11.34, Csh: 7,811.29
+2022-03-16T07:15:00, Notify Order SOFI BGHT, Sz: 118.000, Pr: 8.42, Csh: 7,811.29
+2022-03-16T07:45:00, Notify Order PLTR SLD, Shr: -88.000, ShPrc: 11.52, Csh: 8,824.61
+2022-03-16, Trade Pnl: 15.40 (0.18%), Account FPnL: 9,842.36
+2022-03-16T07:46:00, Notify Order SOFI SLD, Shr: -118.000, ShPrc: 8.63, Csh: 9,842.95
+2022-03-16, Trade Pnl: 24.78 (0.21%), Account FPnL: 9,842.95
+2022-03-16, Current Trades: 0
+2022-03-16, Added Trades: 1
+2022-03-16T07:50:00, Notify Order IMPP BGHT, Sz: 428.000, Pr: 2.33, Csh: 8,845.66
+2022-03-16, Current Trades: 1
+2022-03-16, Added Trades: 2
+2022-03-16T08:01:00, Notify Order PLTR BGHT, Sz: 86.000, Pr: 11.59, Csh: 6,854.74
+2022-03-16T08:01:00, Notify Order SOFI BGHT, Sz: 115.000, Pr: 8.65, Csh: 6,854.74
+2022-03-16T08:11:00, Notify Order IMPP SLD, Shr: -428.000, ShPrc: 2.33, Csh: 7,852.58
+2022-03-16, Trade Pnl: 0.56 (0.00%), Account FPnL: 9,843.80
+2022-03-16T08:14:00, Notify Order PLTR SLD, Shr: -86.000, ShPrc: 11.52, Csh: 8,843.73
+2022-03-16, Trade Pnl: -5.60 (-0.07%), Account FPnL: 9,840.21
+2022-03-16, Current Trades: 1
+2022-03-16, Added Trades: 1
+2022-03-16T08:18:00, Notify Order PLTR BGHT, Sz: 85.000, Pr: 11.66, Csh: 7,852.63
+2022-03-16, Current Trades: 2
+2022-03-16, Added Trades: 1
+2022-03-16T08:23:00, Notify Order IMPP BGHT, Sz: 420.000, Pr: 2.39, Csh: 6,848.83
+2022-03-16T08:31:00, Notify Order PLTR SLD, Shr: -85.000, ShPrc: 11.60, Csh: 7,835.26
+2022-03-16, Trade Pnl: -4.68 (-0.06%), Account FPnL: 9,817.76
+2022-03-16T08:33:00, Notify Order IMPP SLD, Shr: -420.000, ShPrc: 2.33, Csh: 8,811.76
+2022-03-16, Trade Pnl: -27.30 (-0.07%), Account FPnL: 9,813.98
+2022-03-16, Current Trades: 1
+2022-03-16, Added Trades: 1
+2022-03-16T08:38:00, Notify Order PLTR BGHT, Sz: 86.000, Pr: 11.62, Csh: 7,812.44
+2022-03-16T08:41:00, Notify Order SOFI SLD, Shr: -115.000, ShPrc: 8.65, Csh: 8,806.61
+2022-03-16, Trade Pnl: 0.00 (0.00%), Account FPnL: 9,803.35
+2022-03-16T08:46:00, Notify Order PLTR SLD, Shr: -86.000, ShPrc: 11.62, Csh: 9,805.93
+2022-03-16, Trade Pnl: 0.00 (0.00%), Account FPnL: 9,805.93
+2022-03-16, Current Trades: 0
+2022-03-16, Added Trades: 1
+2022-03-16T08:50:00, Notify Order PLTR BGHT, Sz: 85.000, Pr: 11.63, Csh: 8,817.38
+2022-03-16, Current Trades: 1
+2022-03-16, Added Trades: 1
+2022-03-16T08:56:00, Notify Order SOFI BGHT, Sz: 114.000, Pr: 8.72, Csh: 7,823.30
+2022-03-16, Current Trades: 2
+2022-03-16, Added Trades: 1
+2022-03-16T09:01:00, Notify Order IMPP BGHT, Sz: 429.000, Pr: 2.34, Csh: 6,821.59
+2022-03-16T09:09:00, Notify Order SOFI SLD, Shr: -114.000, ShPrc: 8.68, Csh: 7,810.54
+2022-03-16, Trade Pnl: -5.13 (-0.05%), Account FPnL: 9,797.64
+2022-03-16T09:12:00, Notify Order PLTR SLD, Shr: -85.000, ShPrc: 11.66, Csh: 8,801.64
+2022-03-16, Trade Pnl: 2.55 (0.03%), Account FPnL: 9,796.96
+2022-03-16T09:17:00, Notify Order IMPP SLD, Shr: -429.000, ShPrc: 2.32, Csh: 9,794.77
+2022-03-16, Trade Pnl: -8.58 (-0.02%), Account FPnL: 9,794.77
+2022-03-16, Current Trades: 0
+2022-03-16, Added Trades: 1
+2022-03-16T09:44:00, Notify Order PLTR BGHT, Sz: 86.000, Pr: 11.60, Csh: 8,797.36
+2022-03-16T09:49:00, Notify Order PLTR SLD, Shr: -86.000, ShPrc: 11.48, Csh: 9,785.07
+2022-03-16, Trade Pnl: -9.70 (-0.11%), Account FPnL: 9,785.07
+2022-03-16, Current Trades: 0
+2022-03-16, Added Trades: 1
+2022-03-16T10:00:00, Notify Order SOFI BGHT, Sz: 117.000, Pr: 8.54, Csh: 8,785.89
+2022-03-16, Current Trades: 1
+2022-03-16, Added Trades: 1
+2022-03-16T10:02:00, Notify Order PLTR BGHT, Sz: 86.000, Pr: 11.56, Csh: 7,791.48
+2022-03-16T10:12:00, Notify Order PLTR SLD, Shr: -86.000, ShPrc: 11.49, Csh: 9,770.84
+2022-03-16T10:12:00, Notify Order SOFI SLD, Shr: -117.000, ShPrc: 8.47, Csh: 9,770.84
+2022-03-16, Trade Pnl: -6.27 (-0.07%), Account FPnL: 9,770.84
+2022-03-16, Trade Pnl: -7.96 (-0.07%), Account FPnL: 9,770.84
+2022-03-16, Current Trades: 0
+2022-03-16, Added Trades: 1
+2022-03-16T10:27:00, Notify Order IMPP BGHT, Sz: 471.000, Pr: 2.13, Csh: 8,768.56
+2022-03-16, Current Trades: 1
+2022-03-16, Added Trades: 2
+2022-03-16T10:31:00, Notify Order PLTR BGHT, Sz: 87.000, Pr: 11.48, Csh: 6,775.88
+2022-03-16T10:31:00, Notify Order SOFI BGHT, Sz: 117.000, Pr: 8.49, Csh: 6,775.88
+2022-03-16T10:46:00, Notify Order SOFI SLD, Shr: -117.000, ShPrc: 8.47, Csh: 7,766.87
+2022-03-16, Trade Pnl: -2.92 (-0.02%), Account FPnL: 9,802.78
+2022-03-16T10:52:00, Notify Order IMPP SLD, Shr: -471.000, ShPrc: 2.17, Csh: 8,791.30
+2022-03-16, Trade Pnl: 22.14 (0.05%), Account FPnL: 9,796.80
+2022-03-16, Current Trades: 1
+2022-03-16, Added Trades: 1
+2022-03-16T10:59:00, Notify Order SOFI BGHT, Sz: 118.000, Pr: 8.47, Csh: 7,791.84
+2022-03-16T11:00:00, Notify Order SOFI SLD, Shr: -118.000, ShPrc: 8.46, Csh: 8,790.12
+2022-03-16, Trade Pnl: -1.18 (-0.01%), Account FPnL: 9,791.05
+2022-03-16T11:02:00, Notify Order PLTR SLD, Shr: -87.000, ShPrc: 11.42, Csh: 9,783.66
+2022-03-16, Trade Pnl: -5.22 (-0.06%), Account FPnL: 9,783.66
+2022-03-16, Current Trades: 0
+2022-03-16, Added Trades: 1
+2022-03-16T11:17:00, Notify Order IMPP BGHT, Sz: 462.000, Pr: 2.17, Csh: 8,782.22
+2022-03-16, Current Trades: 1
+2022-03-16, Added Trades: 1
+2022-03-16T11:24:00, Notify Order SOFI BGHT, Sz: 121.000, Pr: 8.26, Csh: 7,782.75
+2022-03-16T11:30:00, Notify Order SOFI SLD, Shr: -121.000, ShPrc: 8.21, Csh: 8,776.16
+2022-03-16, Trade Pnl: -6.06 (-0.05%), Account FPnL: 9,783.32
+2022-03-16T11:34:00, Notify Order IMPP SLD, Shr: -462.000, ShPrc: 2.18, Csh: 9,783.60
+2022-03-16, Trade Pnl: 6.01 (0.01%), Account FPnL: 9,783.60
+2022-03-16, Current Trades: 0
+2022-03-16, Added Trades: 2
+2022-03-16T11:42:00, Notify Order IMPP BGHT, Sz: 454.000, Pr: 2.19, Csh: 7,800.10
+2022-03-16T11:42:00, Notify Order PLTR BGHT, Sz: 87.000, Pr: 11.37, Csh: 7,800.10
+2022-03-16, Current Trades: 2
+2022-03-16, Added Trades: 1
+2022-03-16T11:43:00, Notify Order SOFI BGHT, Sz: 120.000, Pr: 8.30, Csh: 6,804.12
+2022-03-16T11:47:00, Notify Order IMPP SLD, Shr: -454.000, ShPrc: 2.17, Csh: 7,789.30
+2022-03-16, Trade Pnl: -9.13 (-0.02%), Account FPnL: 9,788.89
+2022-03-16, Current Trades: 2
+2022-03-16, Added Trades: 1
+2022-03-16T12:09:00, Notify Order IMPP BGHT, Sz: 468.000, Pr: 2.14, Csh: 6,787.78
+2022-03-16T12:27:00, Notify Order IMPP SLD, Shr: -468.000, ShPrc: 2.13, Csh: 7,784.62
+2022-03-16, Trade Pnl: -4.68 (-0.01%), Account FPnL: 9,829.48
+2022-03-16T12:34:00, Notify Order PLTR SLD, Shr: -87.000, ShPrc: 11.69, Csh: 8,801.21
+2022-03-16, Trade Pnl: 27.41 (0.32%), Account FPnL: 9,817.52
+2022-03-16T12:36:00, Notify Order SOFI SLD, Shr: -120.000, ShPrc: 8.45, Csh: 9,815.21
+2022-03-16, Trade Pnl: 18.01 (0.15%), Account FPnL: 9,815.21
+2022-03-16, Current Trades: 0
+2022-03-16, Added Trades: 1
+2022-03-16T12:47:00, Notify Order SOFI BGHT, Sz: 117.000, Pr: 8.51, Csh: 8,819.54
+2022-03-16, Current Trades: 1
+2022-03-16, Added Trades: 1
+2022-03-16T12:48:00, Notify Order PLTR BGHT, Sz: 85.000, Pr: 11.73, Csh: 7,822.07
+2022-03-16T12:59:00, Notify Order PLTR SLD, Shr: -85.000, ShPrc: 11.81, Csh: 9,827.94
+2022-03-16T12:59:00, Notify Order SOFI SLD, Shr: -117.000, ShPrc: 8.56, Csh: 9,827.94
+2022-03-16, Trade Pnl: 6.29 (0.07%), Account FPnL: 9,827.94
+2022-03-16, Trade Pnl: 6.43 (0.05%), Account FPnL: 9,827.94
+2022-03-18, Current Trades: 0
+2022-03-18, Added Trades: 4
+2022-03-18T06:50:00, Notify Order MULN BGHT, Sz: 411.000, Pr: 2.42, Csh: 5,892.54
+2022-03-18T06:50:00, Notify Order NIO BGHT, Sz: 50.000, Pr: 19.85, Csh: 5,892.54
+2022-03-18T06:50:00, Notify Order PIK BGHT, Sz: 144.000, Pr: 6.91, Csh: 5,892.54
+2022-03-18T06:50:00, Notify Order TQQQ BGHT, Sz: 19.000, Pr: 50.10, Csh: 5,892.54
+2022-03-18T06:57:00, Notify Order PIK SLD, Shr: -144.000, ShPrc: 6.69, Csh: 6,855.64
+2022-03-18, Trade Pnl: -31.22 (-0.22%), Account FPnL: 9,883.39
+2022-03-18, Current Trades: 3
+2022-03-18, Added Trades: 1
+2022-03-18T07:03:00, Notify Order PIK BGHT, Sz: 133.000, Pr: 7.45, Csh: 5,864.61
+2022-03-18, Current Trades: 4
+2022-03-18, Added Trades: 1
+2022-03-18T07:05:00, Notify Order GROM BGHT, Sz: 719.000, Pr: 1.40, Csh: 4,858.01
+2022-03-18T07:20:00, Notify Order PIK SLD, Shr: -133.000, ShPrc: 6.83, Csh: 5,766.40
+2022-03-18, Trade Pnl: -82.65 (-0.62%), Account FPnL: 9,889.73
+2022-03-18T07:24:00, Notify Order NIO SLD, Shr: -50.000, ShPrc: 20.24, Csh: 7,750.81
+2022-03-18T07:24:00, Notify Order TQQQ SLD, Shr: -19.000, ShPrc: 51.18, Csh: 7,750.81
+2022-03-18, Trade Pnl: 19.50 (0.39%), Account FPnL: 9,966.58
+2022-03-18, Trade Pnl: 20.51 (1.08%), Account FPnL: 9,966.58
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T07:34:00, Notify Order MULN SLD, Shr: -411.000, ShPrc: 2.64, Csh: 7,867.80
+2022-03-18T07:34:00, Notify Order TQQQ BGHT, Sz: 19.000, Pr: 50.95, Csh: 7,867.80
+2022-03-18, Trade Pnl: 88.37 (0.22%), Account FPnL: 9,941.97
+2022-03-18T07:35:00, Notify Order TQQQ SLD, Shr: -19.000, ShPrc: 50.89, Csh: 8,834.70
+2022-03-18, Trade Pnl: -1.14 (-0.06%), Account FPnL: 9,913.20
+2022-03-18, Current Trades: 1
+2022-03-18, Added Trades: 1
+2022-03-18T07:36:00, Notify Order PIK BGHT, Sz: 143.000, Pr: 6.97, Csh: 7,837.99
+2022-03-18T07:42:00, Notify Order GROM SLD, Shr: -719.000, ShPrc: 1.50, Csh: 8,912.90
+2022-03-18, Trade Pnl: 68.31 (0.10%), Account FPnL: 9,877.13
+2022-03-18, Current Trades: 1
+2022-03-18, Added Trades: 1
+2022-03-18T07:45:00, Notify Order MULN BGHT, Sz: 366.000, Pr: 2.72, Csh: 7,915.55
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T07:46:00, Notify Order GROM BGHT, Sz: 624.000, Pr: 1.60, Csh: 6,920.27
+2022-03-18T07:47:00, Notify Order PIK SLD, Shr: -143.000, ShPrc: 6.79, Csh: 7,891.24
+2022-03-18, Trade Pnl: -25.74 (-0.18%), Account FPnL: 9,902.98
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T07:49:00, Notify Order NIO BGHT, Sz: 50.000, Pr: 19.98, Csh: 6,892.24
+2022-03-18, Current Trades: 3
+2022-03-18, Added Trades: 1
+2022-03-18T07:51:00, Notify Order TQQQ BGHT, Sz: 19.000, Pr: 50.75, Csh: 5,927.99
+2022-03-18, Current Trades: 4
+2022-03-18, Added Trades: 1
+2022-03-18T07:56:00, Notify Order PIK BGHT, Sz: 139.000, Pr: 7.18, Csh: 4,929.97
+2022-03-18T08:07:00, Notify Order PIK SLD, Shr: -139.000, ShPrc: 6.88, Csh: 5,886.29
+2022-03-18, Trade Pnl: -41.70 (-0.30%), Account FPnL: 9,942.82
+2022-03-18T08:11:00, Notify Order MULN SLD, Shr: -366.000, ShPrc: 2.83, Csh: 6,920.24
+2022-03-18, Trade Pnl: 36.60 (0.10%), Account FPnL: 9,902.47
+2022-03-18, Current Trades: 3
+2022-03-18, Added Trades: 1
+2022-03-18T08:14:00, Notify Order PIK BGHT, Sz: 139.000, Pr: 7.15, Csh: 5,926.39
+2022-03-18T08:22:00, Notify Order TQQQ SLD, Shr: -19.000, ShPrc: 51.43, Csh: 6,903.56
+2022-03-18, Trade Pnl: 12.92 (0.68%), Account FPnL: 9,886.31
+2022-03-18T08:24:00, Notify Order NIO SLD, Shr: -50.000, ShPrc: 20.21, Csh: 8,866.21
+2022-03-18T08:24:00, Notify Order PIK SLD, Shr: -139.000, ShPrc: 6.85, Csh: 8,866.21
+2022-03-18, Trade Pnl: 11.50 (0.23%), Account FPnL: 9,870.85
+2022-03-18, Trade Pnl: -41.70 (-0.30%), Account FPnL: 9,870.85
+2022-03-18, Current Trades: 1
+2022-03-18, Added Trades: 1
+2022-03-18T08:31:00, Notify Order GROM SLD, Shr: -624.000, ShPrc: 1.59, Csh: 8,859.71
+2022-03-18T08:31:00, Notify Order MULN BGHT, Sz: 348.000, Pr: 2.87, Csh: 8,859.71
+2022-03-18, Trade Pnl: -3.12 (-0.00%), Account FPnL: 9,863.69
+2022-03-18, Current Trades: 1
+2022-03-18, Added Trades: 1
+2022-03-18T08:35:00, Notify Order TQQQ BGHT, Sz: 19.000, Pr: 51.62, Csh: 7,878.93
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T08:38:00, Notify Order NIO BGHT, Sz: 49.000, Pr: 20.25, Csh: 6,886.93
+2022-03-18T08:42:00, Notify Order MULN SLD, Shr: -348.000, ShPrc: 2.77, Csh: 7,850.89
+2022-03-18, Trade Pnl: -34.70 (-0.10%), Account FPnL: 9,825.43
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T08:44:00, Notify Order PIK BGHT, Sz: 143.000, Pr: 6.96, Csh: 6,855.70
+2022-03-18T08:48:00, Notify Order TQQQ SLD, Shr: -19.000, ShPrc: 51.45, Csh: 7,833.25
+2022-03-18, Trade Pnl: -3.23 (-0.17%), Account FPnL: 9,824.49
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T08:53:00, Notify Order GROM BGHT, Sz: 637.000, Pr: 1.56, Csh: 6,839.53
+2022-03-18, Current Trades: 3
+2022-03-18, Added Trades: 1
+2022-03-18T08:54:00, Notify Order PIK SLD, Shr: -143.000, ShPrc: 6.93, Csh: 6,827.72
+2022-03-18T08:54:00, Notify Order MULN BGHT, Sz: 353.000, Pr: 2.84, Csh: 6,827.72
+2022-03-18, Trade Pnl: -4.48 (-0.03%), Account FPnL: 9,824.57
+2022-03-18T08:59:00, Notify Order MULN SLD, Shr: -353.000, ShPrc: 2.80, Csh: 7,816.12
+2022-03-18, Trade Pnl: -14.12 (-0.04%), Account FPnL: 9,813.36
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T09:01:00, Notify Order PIK BGHT, Sz: 143.000, Pr: 6.95, Csh: 6,822.27
+2022-03-18T09:04:00, Notify Order GROM SLD, Shr: -637.000, ShPrc: 1.51, Csh: 7,784.14
+2022-03-18, Trade Pnl: -31.85 (-0.05%), Account FPnL: 9,832.98
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T09:06:00, Notify Order TQQQ BGHT, Sz: 19.000, Pr: 51.55, Csh: 6,804.69
+2022-03-18T09:14:00, Notify Order PIK SLD, Shr: -143.000, ShPrc: 6.94, Csh: 7,796.97
+2022-03-18, Trade Pnl: -1.57 (-0.01%), Account FPnL: 9,796.77
+2022-03-18T09:15:00, Notify Order NIO SLD, Shr: -49.000, ShPrc: 20.85, Csh: 9,796.51
+2022-03-18T09:15:00, Notify Order TQQQ SLD, Shr: -19.000, ShPrc: 51.46, Csh: 9,796.51
+2022-03-18, Trade Pnl: 29.89 (0.61%), Account FPnL: 9,796.51
+2022-03-18, Trade Pnl: -1.80 (-0.09%), Account FPnL: 9,796.51
+2022-03-18, Current Trades: 0
+2022-03-18, Added Trades: 1
+2022-03-18T09:17:00, Notify Order NIO BGHT, Sz: 47.000, Pr: 20.88, Csh: 8,815.39
+2022-03-18, Current Trades: 1
+2022-03-18, Added Trades: 1
+2022-03-18T09:18:00, Notify Order TQQQ BGHT, Sz: 19.000, Pr: 51.67, Csh: 7,833.56
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T09:20:00, Notify Order MULN BGHT, Sz: 360.000, Pr: 2.77, Csh: 6,836.32
+2022-03-18, Current Trades: 3
+2022-03-18, Added Trades: 1
+2022-03-18T09:39:00, Notify Order GROM BGHT, Sz: 689.000, Pr: 1.46, Csh: 5,830.38
+2022-03-18T09:45:00, Notify Order NIO SLD, Shr: -47.000, ShPrc: 21.06, Csh: 6,819.97
+2022-03-18, Trade Pnl: 8.46 (0.18%), Account FPnL: 9,883.50
+2022-03-18, Current Trades: 3
+2022-03-18, Added Trades: 1
+2022-03-18T09:47:00, Notify Order GROM SLD, Shr: -689.000, ShPrc: 1.42, Csh: 6,801.40
+2022-03-18T09:47:00, Notify Order PIK BGHT, Sz: 157.000, Pr: 6.35, Csh: 6,801.40
+2022-03-18, Trade Pnl: -27.56 (-0.04%), Account FPnL: 9,916.23
+2022-03-18T09:54:00, Notify Order TQQQ SLD, Shr: -19.000, ShPrc: 52.05, Csh: 7,790.35
+2022-03-18, Trade Pnl: 7.12 (0.38%), Account FPnL: 9,953.99
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T09:58:00, Notify Order TQQQ BGHT, Sz: 19.000, Pr: 52.16, Csh: 6,799.31
+2022-03-18, Current Trades: 3
+2022-03-18, Added Trades: 1
+2022-03-18T10:02:00, Notify Order GROM BGHT, Sz: 699.000, Pr: 1.43, Csh: 5,799.74
+2022-03-18, Current Trades: 4
+2022-03-18, Added Trades: 1
+2022-03-18T10:04:00, Notify Order NIO BGHT, Sz: 47.000, Pr: 20.97, Csh: 4,814.38
+2022-03-18T10:06:00, Notify Order PIK SLD, Shr: -157.000, ShPrc: 6.40, Csh: 5,819.18
+2022-03-18, Trade Pnl: 7.85 (0.05%), Account FPnL: 9,927.32
+2022-03-18T10:08:00, Notify Order NIO SLD, Shr: -47.000, ShPrc: 20.91, Csh: 6,801.76
+2022-03-18, Trade Pnl: -2.78 (-0.06%), Account FPnL: 9,934.48
+2022-03-18T10:12:00, Notify Order MULN SLD, Shr: -360.000, ShPrc: 3.13, Csh: 7,928.56
+2022-03-18, Trade Pnl: 129.56 (0.36%), Account FPnL: 9,930.23
+2022-03-18T10:21:00, Notify Order TQQQ SLD, Shr: -19.000, ShPrc: 51.99, Csh: 8,916.38
+2022-03-18, Trade Pnl: -3.22 (-0.17%), Account FPnL: 9,922.24
+2022-03-18, Current Trades: 1
+2022-03-18, Added Trades: 1
+2022-03-18T10:23:00, Notify Order NIO BGHT, Sz: 47.000, Pr: 20.94, Csh: 7,932.20
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T10:27:00, Notify Order MULN BGHT, Sz: 326.000, Pr: 3.06, Csh: 6,934.64
+2022-03-18, Current Trades: 3
+2022-03-18, Added Trades: 1
+2022-03-18T10:30:00, Notify Order TQQQ BGHT, Sz: 19.000, Pr: 52.25, Csh: 5,941.89
+2022-03-18, Current Trades: 4
+2022-03-18, Added Trades: 1
+2022-03-18T10:33:00, Notify Order PIK BGHT, Sz: 156.000, Pr: 6.40, Csh: 4,943.49
+2022-03-18T10:41:00, Notify Order GROM SLD, Shr: -699.000, ShPrc: 1.41, Csh: 6,935.03
+2022-03-18T10:41:00, Notify Order MULN SLD, Shr: -326.000, ShPrc: 3.08, Csh: 6,935.03
+2022-03-18, Trade Pnl: -10.48 (-0.01%), Account FPnL: 9,878.32
+2022-03-18, Trade Pnl: 4.89 (0.02%), Account FPnL: 9,878.32
+2022-03-18T10:42:00, Notify Order PIK SLD, Shr: -156.000, ShPrc: 6.21, Csh: 7,903.79
+2022-03-18, Trade Pnl: -29.64 (-0.19%), Account FPnL: 9,877.13
+2022-03-18T10:45:00, Notify Order NIO SLD, Shr: -47.000, ShPrc: 20.83, Csh: 8,882.84
+2022-03-18, Trade Pnl: -5.13 (-0.11%), Account FPnL: 9,872.93
+2022-03-18T10:46:00, Notify Order TQQQ SLD, Shr: -19.000, ShPrc: 52.11, Csh: 9,872.91
+2022-03-18, Trade Pnl: -2.68 (-0.14%), Account FPnL: 9,872.91
+2022-03-18, Current Trades: 0
+2022-03-18, Added Trades: 2
+2022-03-18T10:58:00, Notify Order PIK BGHT, Sz: 157.000, Pr: 6.33, Csh: 7,886.16
+2022-03-18T10:58:00, Notify Order TQQQ BGHT, Sz: 19.000, Pr: 52.26, Csh: 7,886.16
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T11:00:00, Notify Order GROM BGHT, Sz: 719.000, Pr: 1.39, Csh: 6,886.68
+2022-03-18T11:07:00, Notify Order TQQQ SLD, Shr: -19.000, ShPrc: 52.14, Csh: 7,877.34
+2022-03-18, Trade Pnl: -2.29 (-0.12%), Account FPnL: 9,888.46
+2022-03-18T11:11:00, Notify Order PIK SLD, Shr: -157.000, ShPrc: 6.21, Csh: 8,852.31
+2022-03-18, Trade Pnl: -18.82 (-0.12%), Account FPnL: 9,873.29
+2022-03-18, Current Trades: 1
+2022-03-18, Added Trades: 1
+2022-03-18T11:18:00, Notify Order NIO BGHT, Sz: 47.000, Pr: 20.98, Csh: 7,866.25
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T11:19:00, Notify Order MULN BGHT, Sz: 334.000, Pr: 2.98, Csh: 6,869.26
+2022-03-18, Current Trades: 3
+2022-03-18, Added Trades: 1
+2022-03-18T11:20:00, Notify Order TQQQ BGHT, Sz: 19.000, Pr: 52.27, Csh: 5,876.13
+2022-03-18, Current Trades: 4
+2022-03-18, Added Trades: 1
+2022-03-18T11:22:00, Notify Order PIK BGHT, Sz: 155.000, Pr: 6.41, Csh: 4,881.81
+2022-03-18T11:26:00, Notify Order GROM SLD, Shr: -719.000, ShPrc: 1.40, Csh: 5,892.00
+2022-03-18, Trade Pnl: 10.71 (0.01%), Account FPnL: 9,869.20
+2022-03-18T11:31:00, Notify Order NIO SLD, Shr: -47.000, ShPrc: 20.86, Csh: 6,872.49
+2022-03-18, Trade Pnl: -5.57 (-0.12%), Account FPnL: 9,864.56
+2022-03-18T11:32:00, Notify Order TQQQ SLD, Shr: -19.000, ShPrc: 52.10, Csh: 7,862.39
+2022-03-18, Trade Pnl: -3.23 (-0.17%), Account FPnL: 9,855.09
+2022-03-18T11:34:00, Notify Order MULN SLD, Shr: -334.000, ShPrc: 2.97, Csh: 8,854.17
+2022-03-18, Trade Pnl: -5.21 (-0.02%), Account FPnL: 9,872.80
+2022-03-18, Current Trades: 1
+2022-03-18, Added Trades: 1
+2022-03-18T11:38:00, Notify Order TQQQ BGHT, Sz: 19.000, Pr: 52.38, Csh: 7,858.95
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T11:39:00, Notify Order NIO BGHT, Sz: 47.000, Pr: 21.04, Csh: 6,870.12
+2022-03-18, Current Trades: 3
+2022-03-18, Added Trades: 1
+2022-03-18T11:42:00, Notify Order GROM BGHT, Sz: 684.000, Pr: 1.47, Csh: 5,868.06
+2022-03-18T11:43:00, Notify Order PIK SLD, Shr: -155.000, ShPrc: 6.58, Csh: 6,888.52
+2022-03-18, Trade Pnl: 26.13 (0.17%), Account FPnL: 9,837.96
+2022-03-18, Current Trades: 3
+2022-03-18, Added Trades: 1
+2022-03-18T11:46:00, Notify Order PIK BGHT, Sz: 149.000, Pr: 6.68, Csh: 5,893.20
+2022-03-18T11:54:00, Notify Order NIO SLD, Shr: -47.000, ShPrc: 20.98, Csh: 6,879.22
+2022-03-18, Trade Pnl: -2.81 (-0.06%), Account FPnL: 9,808.97
+2022-03-18T11:55:00, Notify Order PIK SLD, Shr: -149.000, ShPrc: 6.42, Csh: 7,835.80
+2022-03-18, Trade Pnl: -38.74 (-0.26%), Account FPnL: 9,796.03
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T11:57:00, Notify Order GROM SLD, Shr: -684.000, ShPrc: 1.41, Csh: 7,803.27
+2022-03-18T11:57:00, Notify Order MULN BGHT, Sz: 333.000, Pr: 2.99, Csh: 7,803.27
+2022-03-18, Trade Pnl: -38.92 (-0.06%), Account FPnL: 9,795.67
+2022-03-18T12:08:00, Notify Order MULN SLD, Shr: -333.000, ShPrc: 2.91, Csh: 8,773.96
+2022-03-18, Trade Pnl: -24.98 (-0.08%), Account FPnL: 9,773.76
+2022-03-18, Current Trades: 1
+2022-03-18, Added Trades: 1
+2022-03-18T12:12:00, Notify Order GROM BGHT, Sz: 709.000, Pr: 1.42, Csh: 7,767.96
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T12:21:00, Notify Order MULN BGHT, Sz: 337.000, Pr: 2.96, Csh: 6,768.76
+2022-03-18, Current Trades: 3
+2022-03-18, Added Trades: 1
+2022-03-18T12:26:00, Notify Order PIK BGHT, Sz: 158.000, Pr: 6.31, Csh: 5,771.78
+2022-03-18T12:29:00, Notify Order GROM SLD, Shr: -709.000, ShPrc: 1.42, Csh: 6,778.56
+2022-03-18, Trade Pnl: 0.78 (0.00%), Account FPnL: 9,790.73
+2022-03-18, Current Trades: 3
+2022-03-18, Added Trades: 1
+2022-03-18T12:31:00, Notify Order NIO BGHT, Sz: 47.000, Pr: 20.93, Csh: 5,794.82
+2022-03-18T12:40:00, Notify Order MULN SLD, Shr: -337.000, ShPrc: 2.89, Csh: 6,767.63
+2022-03-18, Trade Pnl: -26.39 (-0.08%), Account FPnL: 9,741.61
+2022-03-18T12:41:00, Notify Order NIO SLD, Shr: -47.000, ShPrc: 20.75, Csh: 7,743.12
+2022-03-18, Trade Pnl: -8.26 (-0.18%), Account FPnL: 9,742.71
+2022-03-18T12:42:00, Notify Order TQQQ SLD, Shr: -19.000, ShPrc: 53.03, Csh: 8,750.78
+2022-03-18, Trade Pnl: 12.44 (0.65%), Account FPnL: 9,741.60
+2022-03-18T12:43:00, Notify Order PIK SLD, Shr: -158.000, ShPrc: 6.28, Csh: 9,743.02
+2022-03-18, Trade Pnl: -4.74 (-0.03%), Account FPnL: 9,743.02
+2022-03-18, Current Trades: 0
+2022-03-18, Added Trades: 1
+2022-03-18T12:50:00, Notify Order TQQQ BGHT, Sz: 18.000, Pr: 53.02, Csh: 8,788.66
+2022-03-18, Current Trades: 1
+2022-03-18, Added Trades: 1
+2022-03-18T12:55:00, Notify Order NIO BGHT, Sz: 48.000, Pr: 20.83, Csh: 7,789.06
+2022-03-18, Current Trades: 2
+2022-03-18, Added Trades: 1
+2022-03-18T12:56:00, Notify Order MULN BGHT, Sz: 346.000, Pr: 2.89, Csh: 6,789.12
+2022-03-18T12:59:00, Notify Order MULN SLD, Shr: -346.000, ShPrc: 2.88, Csh: 9,741.95
+2022-03-18T12:59:00, Notify Order NIO SLD, Shr: -48.000, ShPrc: 20.79, Csh: 9,741.95
+2022-03-18T12:59:00, Notify Order TQQQ SLD, Shr: -18.000, ShPrc: 53.15, Csh: 9,741.95
+2022-03-18, Trade Pnl: -1.73 (-0.01%), Account FPnL: 9,741.95
+2022-03-18, Trade Pnl: -1.68 (-0.03%), Account FPnL: 9,741.95
+2022-03-18, Trade Pnl: 2.34 (0.13%), Account FPnL: 9,741.95
+
+Cerebro Execution Time: 0.04 min
+
+***********************
+** PORTFOLIO SUMMARY **
+***********************
+Starting Portfolio Value: 10,000.00
+Final Portfolio Value: 9,741.95
+P/L: -258.05
+Final Cash In Hand: 9,741.95
+
+********************
+** SAVING FIGURES **
+********************
+
+*****************************
+** WINNERS AND LOSERS ($$) **
+*****************************
+Biggest Winners
+   Name         Max
+0  MULN  237.323625
+1  MULN  167.380244
+
+Biggest Losers
+   Name         Min
+0   PIK -295.685453
+1  KAVL -156.760672
+
+FINAL VALUE Winners
+   Name    FinalVal
+0  MULN  152.301027
+1   NIO   43.126432
+2  SQQQ   42.274330
+
+FINAL VALUE Losers
+   Name    FinalVal
+0   PIK -287.015388
+1  KAVL -156.760672
+2  SQQQ  -35.927979

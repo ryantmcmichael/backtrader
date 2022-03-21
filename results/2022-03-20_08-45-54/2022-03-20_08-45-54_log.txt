@@ -1,0 +1,519 @@
+Summary of Backtest: No note saved
+
+Start Date of Backtest: 2022-03-13 00:00:00
+End Date of Backtest: 2022-03-19 00:00:00
+
+*****************
+** ADDING DATA **
+*****************
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_AAL_2022-03-15_2022-03-16.csv
+
+*****************************************************
+** LAUNCHING CEREBRO AT 2022-03-20 08:45:53.812044 **
+*****************************************************
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T06:54:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.39, Csh: 8,999.65
+2022-03-15T06:55:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.27, Csh: 9,992.20
+2022-03-15, Trade Pnl: -7.80 (-0.12%), Account FPnL: 9,992.20
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T06:56:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.31, Csh: 8,997.15
+2022-03-15T06:57:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.40, Csh: 9,998.09
+2022-03-15, Trade Pnl: 5.89 (0.09%), Account FPnL: 9,998.09
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T06:58:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.41, Csh: 9,011.53
+2022-03-15T06:59:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.43, Csh: 9,999.05
+2022-03-15, Trade Pnl: 0.96 (0.02%), Account FPnL: 9,999.05
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:00:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.40, Csh: 9,013.77
+2022-03-15T07:01:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.49, Csh: 10,004.90
+2022-03-15, Trade Pnl: 5.86 (0.09%), Account FPnL: 10,004.90
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:02:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.48, Csh: 9,014.22
+2022-03-15T07:03:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.38, Csh: 9,998.22
+2022-03-15, Trade Pnl: -6.69 (-0.10%), Account FPnL: 9,998.22
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:04:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.43, Csh: 9,010.54
+2022-03-15T07:05:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.44, Csh: 9,998.70
+2022-03-15, Trade Pnl: 0.48 (0.01%), Account FPnL: 9,998.70
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:06:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.38, Csh: 9,014.38
+2022-03-15T07:07:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.30, Csh: 9,993.66
+2022-03-15, Trade Pnl: -5.04 (-0.08%), Account FPnL: 9,993.66
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:08:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.29, Csh: 8,999.81
+2022-03-15T07:09:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.31, Csh: 9,995.29
+2022-03-15, Trade Pnl: 1.62 (0.02%), Account FPnL: 9,995.29
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:21:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.43, Csh: 9,007.85
+2022-03-15T07:22:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.41, Csh: 9,994.41
+2022-03-15, Trade Pnl: -0.87 (-0.01%), Account FPnL: 9,994.41
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:23:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.43, Csh: 9,007.21
+2022-03-15T07:24:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.44, Csh: 9,995.37
+2022-03-15, Trade Pnl: 0.96 (0.01%), Account FPnL: 9,995.37
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:25:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.45, Csh: 9,006.25
+2022-03-15T07:26:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.41, Csh: 9,992.33
+2022-03-15, Trade Pnl: -3.05 (-0.05%), Account FPnL: 9,992.33
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:27:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.38, Csh: 9,007.81
+2022-03-15T07:28:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.44, Csh: 9,995.97
+2022-03-15, Trade Pnl: 3.64 (0.06%), Account FPnL: 9,995.97
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:29:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.49, Csh: 9,004.61
+2022-03-15T07:30:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.56, Csh: 10,000.35
+2022-03-15, Trade Pnl: 4.38 (0.07%), Account FPnL: 10,000.35
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:31:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.55, Csh: 9,005.47
+2022-03-15T07:32:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.56, Csh: 10,001.31
+2022-03-15, Trade Pnl: 0.96 (0.02%), Account FPnL: 10,001.31
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:33:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.56, Csh: 9,005.15
+2022-03-15T07:34:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.47, Csh: 9,995.23
+2022-03-15, Trade Pnl: -6.08 (-0.09%), Account FPnL: 9,995.23
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:35:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.42, Csh: 9,008.35
+2022-03-15T07:36:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.44, Csh: 9,996.19
+2022-03-15, Trade Pnl: 0.96 (0.02%), Account FPnL: 9,996.19
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:37:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.47, Csh: 9,006.43
+2022-03-15T07:38:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.50, Csh: 9,998.43
+2022-03-15, Trade Pnl: 2.24 (0.03%), Account FPnL: 9,998.43
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:39:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.53, Csh: 9,004.51
+2022-03-15T07:40:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.55, Csh: 9,999.71
+2022-03-15, Trade Pnl: 1.28 (0.02%), Account FPnL: 9,999.71
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:41:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.64, Csh: 9,014.39
+2022-03-15T07:42:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.66, Csh: 10,000.97
+2022-03-15, Trade Pnl: 1.26 (0.02%), Account FPnL: 10,000.97
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:43:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.70, Csh: 9,011.87
+2022-03-15T07:44:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.74, Csh: 10,003.49
+2022-03-15, Trade Pnl: 2.52 (0.04%), Account FPnL: 10,003.49
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:45:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.78, Csh: 9,009.39
+2022-03-15T07:46:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.73, Csh: 10,000.38
+2022-03-15, Trade Pnl: -3.11 (-0.05%), Account FPnL: 10,000.38
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:47:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.76, Csh: 9,007.50
+2022-03-15T07:48:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.70, Csh: 9,996.92
+2022-03-15, Trade Pnl: -3.47 (-0.06%), Account FPnL: 9,996.92
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:49:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.76, Csh: 9,004.03
+2022-03-15T07:50:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.76, Csh: 9,997.04
+2022-03-15, Trade Pnl: 0.12 (0.00%), Account FPnL: 9,997.04
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:51:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.72, Csh: 9,006.68
+2022-03-15T07:52:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.69, Csh: 9,995.15
+2022-03-15, Trade Pnl: -1.89 (-0.03%), Account FPnL: 9,995.15
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:53:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.70, Csh: 9,006.05
+2022-03-15T07:54:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.69, Csh: 9,994.20
+2022-03-15, Trade Pnl: -0.94 (-0.01%), Account FPnL: 9,994.20
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:55:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.76, Csh: 9,001.64
+2022-03-15T07:56:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.77, Csh: 9,995.15
+2022-03-15, Trade Pnl: 0.95 (0.02%), Account FPnL: 9,995.15
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:57:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.75, Csh: 9,002.72
+2022-03-15T07:58:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.74, Csh: 9,994.05
+2022-03-15, Trade Pnl: -1.10 (-0.02%), Account FPnL: 9,994.05
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T07:59:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.72, Csh: 9,004.01
+2022-03-15T08:00:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.77, Csh: 9,997.83
+2022-03-15, Trade Pnl: 3.78 (0.06%), Account FPnL: 9,997.83
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T08:01:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.75, Csh: 9,005.58
+2022-03-15T08:02:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.65, Csh: 9,991.85
+2022-03-15, Trade Pnl: -5.99 (-0.10%), Account FPnL: 9,991.85
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T08:03:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.64, Csh: 9,006.42
+2022-03-15T08:04:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.65, Csh: 9,992.69
+2022-03-15, Trade Pnl: 0.84 (0.01%), Account FPnL: 9,992.69
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T08:32:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.64, Csh: 9,007.37
+2022-03-15T08:33:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.64, Csh: 9,992.69
+2022-03-15, Trade Pnl: 0.00 (0.00%), Account FPnL: 9,992.69
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T08:34:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.61, Csh: 8,993.33
+2022-03-15T08:35:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.61, Csh: 9,992.37
+2022-03-15, Trade Pnl: -0.32 (-0.01%), Account FPnL: 9,992.37
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T08:36:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.62, Csh: 8,992.37
+2022-03-15T08:37:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.60, Csh: 9,991.09
+2022-03-15, Trade Pnl: -1.28 (-0.02%), Account FPnL: 9,991.09
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T08:38:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.60, Csh: 8,992.69
+2022-03-15T08:39:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.59, Csh: 9,990.13
+2022-03-15, Trade Pnl: -0.96 (-0.02%), Account FPnL: 9,990.13
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T08:40:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.56, Csh: 8,994.61
+2022-03-15T08:41:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.52, Csh: 9,988.21
+2022-03-15, Trade Pnl: -1.92 (-0.03%), Account FPnL: 9,988.21
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T08:50:00, Notify Order AAL BGHT, Sz: 63.000, Pr: 15.65, Csh: 9,001.94
+2022-03-15T08:51:00, Notify Order AAL SLD, Shr: -63.000, ShPrc: 15.65, Csh: 9,987.58
+2022-03-15, Trade Pnl: -0.63 (-0.01%), Account FPnL: 9,987.58
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T08:52:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.62, Csh: 8,987.58
+2022-03-15T08:53:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.60, Csh: 9,986.30
+2022-03-15, Trade Pnl: -1.28 (-0.02%), Account FPnL: 9,986.30
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T08:54:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.60, Csh: 8,988.22
+2022-03-15T08:55:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.48, Csh: 9,978.94
+2022-03-15, Trade Pnl: -7.36 (-0.12%), Account FPnL: 9,978.94
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:03:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.35, Csh: 8,981.51
+2022-03-15T10:04:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.36, Csh: 9,979.85
+2022-03-15, Trade Pnl: 0.91 (0.01%), Account FPnL: 9,979.85
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:05:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.36, Csh: 8,981.45
+2022-03-15T10:06:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.33, Csh: 9,977.90
+2022-03-15, Trade Pnl: -1.95 (-0.03%), Account FPnL: 9,977.90
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:07:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.32, Csh: 8,982.10
+2022-03-15T10:08:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.32, Csh: 9,977.90
+2022-03-15, Trade Pnl: 0.00 (0.00%), Account FPnL: 9,977.90
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:09:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.33, Csh: 8,981.45
+2022-03-15T10:10:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.31, Csh: 9,976.60
+2022-03-15, Trade Pnl: -1.30 (-0.02%), Account FPnL: 9,976.60
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:11:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.32, Csh: 8,980.80
+2022-03-15T10:12:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.29, Csh: 9,974.65
+2022-03-15, Trade Pnl: -1.95 (-0.03%), Account FPnL: 9,974.65
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:13:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.28, Csh: 8,981.45
+2022-03-15T10:14:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.25, Csh: 9,972.83
+2022-03-15, Trade Pnl: -1.82 (-0.03%), Account FPnL: 9,972.83
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:29:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.27, Csh: 8,980.28
+2022-03-15T10:30:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.24, Csh: 9,970.81
+2022-03-15, Trade Pnl: -2.02 (-0.03%), Account FPnL: 9,970.81
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:31:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.28, Csh: 8,977.61
+2022-03-15T10:32:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.28, Csh: 9,971.14
+2022-03-15, Trade Pnl: 0.33 (0.01%), Account FPnL: 9,971.14
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:33:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.30, Csh: 8,976.64
+2022-03-15T10:34:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.32, Csh: 9,972.58
+2022-03-15, Trade Pnl: 1.44 (0.02%), Account FPnL: 9,972.58
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:35:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.32, Csh: 8,976.78
+2022-03-15T10:36:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.35, Csh: 9,974.85
+2022-03-15, Trade Pnl: 2.27 (0.03%), Account FPnL: 9,974.85
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:37:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.36, Csh: 8,976.45
+2022-03-15T10:38:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.35, Csh: 9,974.20
+2022-03-15, Trade Pnl: -0.65 (-0.01%), Account FPnL: 9,974.20
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:39:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.33, Csh: 8,977.75
+2022-03-15T10:40:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.30, Csh: 9,972.25
+2022-03-15, Trade Pnl: -1.95 (-0.03%), Account FPnL: 9,972.25
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:41:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.31, Csh: 8,977.01
+2022-03-15T10:42:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.28, Csh: 9,970.21
+2022-03-15, Trade Pnl: -2.04 (-0.03%), Account FPnL: 9,970.21
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:43:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.30, Csh: 8,975.87
+2022-03-15T10:44:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.28, Csh: 9,969.07
+2022-03-15, Trade Pnl: -1.14 (-0.02%), Account FPnL: 9,969.07
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T10:45:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.28, Csh: 8,975.93
+2022-03-15T10:46:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.26, Csh: 9,967.51
+2022-03-15, Trade Pnl: -1.57 (-0.02%), Account FPnL: 9,967.51
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T11:06:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.26, Csh: 8,975.93
+2022-03-15T11:07:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.23, Csh: 9,965.88
+2022-03-15, Trade Pnl: -1.63 (-0.03%), Account FPnL: 9,965.88
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T11:08:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.23, Csh: 8,975.93
+2022-03-15T11:09:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.22, Csh: 9,965.22
+2022-03-15, Trade Pnl: -0.66 (-0.01%), Account FPnL: 9,965.22
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T11:10:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.20, Csh: 8,976.90
+2022-03-15T11:11:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.20, Csh: 9,964.90
+2022-03-15, Trade Pnl: -0.33 (-0.01%), Account FPnL: 9,964.90
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T11:35:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.23, Csh: 8,975.23
+2022-03-15T11:36:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.24, Csh: 9,965.62
+2022-03-15, Trade Pnl: 0.72 (0.01%), Account FPnL: 9,965.62
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T11:37:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.21, Csh: 8,976.97
+2022-03-15T11:38:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.21, Csh: 9,965.33
+2022-03-15, Trade Pnl: -0.29 (-0.00%), Account FPnL: 9,965.33
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T11:39:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.18, Csh: 8,978.63
+2022-03-15T11:40:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.17, Csh: 9,964.68
+2022-03-15, Trade Pnl: -0.65 (-0.01%), Account FPnL: 9,964.68
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T11:41:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.20, Csh: 8,976.68
+2022-03-15T11:42:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.21, Csh: 9,965.33
+2022-03-15, Trade Pnl: 0.65 (0.01%), Account FPnL: 9,965.33
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T11:43:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.19, Csh: 8,977.98
+2022-03-15T11:44:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.20, Csh: 9,965.98
+2022-03-15, Trade Pnl: 0.65 (0.01%), Account FPnL: 9,965.98
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T11:48:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.28, Csh: 8,972.78
+2022-03-15T11:49:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.28, Csh: 9,965.98
+2022-03-15, Trade Pnl: 0.00 (0.00%), Account FPnL: 9,965.98
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T11:50:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.31, Csh: 8,970.83
+2022-03-15T11:51:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.31, Csh: 9,966.31
+2022-03-15, Trade Pnl: 0.32 (0.00%), Account FPnL: 9,966.31
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T11:52:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.31, Csh: 8,970.92
+2022-03-15T11:53:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.27, Csh: 9,963.47
+2022-03-15, Trade Pnl: -2.84 (-0.04%), Account FPnL: 9,963.47
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T11:54:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.30, Csh: 8,968.97
+2022-03-15T11:55:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.30, Csh: 9,963.14
+2022-03-15, Trade Pnl: -0.33 (-0.01%), Account FPnL: 9,963.14
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T11:56:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.31, Csh: 8,967.99
+2022-03-15T11:57:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.31, Csh: 9,963.10
+2022-03-15, Trade Pnl: -0.05 (-0.00%), Account FPnL: 9,963.10
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T11:58:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.31, Csh: 8,967.96
+2022-03-15T11:59:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.33, Csh: 9,964.41
+2022-03-15, Trade Pnl: 1.31 (0.02%), Account FPnL: 9,964.41
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:00:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.35, Csh: 8,966.66
+2022-03-15T12:01:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.34, Csh: 9,963.76
+2022-03-15, Trade Pnl: -0.65 (-0.01%), Account FPnL: 9,963.76
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:02:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.35, Csh: 8,966.01
+2022-03-15T12:03:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.34, Csh: 9,962.98
+2022-03-15, Trade Pnl: -0.78 (-0.01%), Account FPnL: 9,962.98
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:04:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.34, Csh: 8,966.20
+2022-03-15T12:05:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.32, Csh: 9,962.00
+2022-03-15, Trade Pnl: -0.98 (-0.02%), Account FPnL: 9,962.00
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:06:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.34, Csh: 8,964.90
+2022-03-15T12:07:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.35, Csh: 9,962.33
+2022-03-15, Trade Pnl: 0.33 (0.01%), Account FPnL: 9,962.33
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:08:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.36, Csh: 8,963.60
+2022-03-15T12:09:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.39, Csh: 9,963.95
+2022-03-15, Trade Pnl: 1.63 (0.03%), Account FPnL: 9,963.95
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:10:00, Notify Order AAL BGHT, Sz: 65.000, Pr: 15.37, Csh: 8,964.90
+2022-03-15T12:11:00, Notify Order AAL SLD, Shr: -65.000, ShPrc: 15.39, Csh: 9,965.50
+2022-03-15, Trade Pnl: 1.55 (0.02%), Account FPnL: 9,965.50
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:12:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.40, Csh: 8,979.90
+2022-03-15T12:13:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.42, Csh: 9,966.78
+2022-03-15, Trade Pnl: 1.28 (0.02%), Account FPnL: 9,966.78
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:14:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.40, Csh: 8,981.50
+2022-03-15T12:15:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.39, Csh: 9,966.46
+2022-03-15, Trade Pnl: -0.32 (-0.01%), Account FPnL: 9,966.46
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:16:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.40, Csh: 8,981.18
+2022-03-15T12:17:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.43, Csh: 9,968.38
+2022-03-15, Trade Pnl: 1.92 (0.03%), Account FPnL: 9,968.38
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:18:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.45, Csh: 8,979.26
+2022-03-15T12:19:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.44, Csh: 9,967.74
+2022-03-15, Trade Pnl: -0.64 (-0.01%), Account FPnL: 9,967.74
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:20:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.44, Csh: 8,979.26
+2022-03-15T12:21:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.44, Csh: 9,967.42
+2022-03-15, Trade Pnl: -0.32 (-0.01%), Account FPnL: 9,967.42
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:22:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.45, Csh: 8,978.63
+2022-03-15T12:23:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.43, Csh: 9,966.46
+2022-03-15, Trade Pnl: -0.96 (-0.01%), Account FPnL: 9,966.46
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:24:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.43, Csh: 8,979.26
+2022-03-15T12:25:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.44, Csh: 9,967.10
+2022-03-15, Trade Pnl: 0.64 (0.01%), Account FPnL: 9,967.10
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:26:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.43, Csh: 8,979.90
+2022-03-15T12:27:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.42, Csh: 9,966.78
+2022-03-15, Trade Pnl: -0.32 (-0.01%), Account FPnL: 9,966.78
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:28:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.40, Csh: 8,981.50
+2022-03-15T12:29:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.40, Csh: 9,966.78
+2022-03-15, Trade Pnl: 0.00 (0.00%), Account FPnL: 9,966.78
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:30:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.39, Csh: 8,981.82
+2022-03-15T12:31:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.40, Csh: 9,967.49
+2022-03-15, Trade Pnl: 0.70 (0.01%), Account FPnL: 9,967.49
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:38:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.45, Csh: 8,978.37
+2022-03-15T12:39:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.44, Csh: 9,966.21
+2022-03-15, Trade Pnl: -1.28 (-0.02%), Account FPnL: 9,966.21
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:40:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.44, Csh: 8,977.73
+2022-03-15T12:41:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.43, Csh: 9,964.93
+2022-03-15, Trade Pnl: -1.28 (-0.02%), Account FPnL: 9,964.93
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:42:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.45, Csh: 8,976.23
+2022-03-15T12:43:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.47, Csh: 9,965.99
+2022-03-15, Trade Pnl: 1.06 (0.02%), Account FPnL: 9,965.99
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:44:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.44, Csh: 8,977.51
+2022-03-15T12:45:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.47, Csh: 9,967.59
+2022-03-15, Trade Pnl: 1.60 (0.03%), Account FPnL: 9,967.59
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:46:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.44, Csh: 8,979.11
+2022-03-15T12:47:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.48, Csh: 9,969.51
+2022-03-15, Trade Pnl: 1.92 (0.03%), Account FPnL: 9,969.51
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:48:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.46, Csh: 8,980.13
+2022-03-15T12:49:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.48, Csh: 9,970.53
+2022-03-15, Trade Pnl: 1.02 (0.02%), Account FPnL: 9,970.53
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:50:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.51, Csh: 8,977.89
+2022-03-15T12:51:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.52, Csh: 9,971.49
+2022-03-15, Trade Pnl: 0.96 (0.01%), Account FPnL: 9,971.49
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:52:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.52, Csh: 8,978.21
+2022-03-15T12:53:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.52, Csh: 9,971.49
+2022-03-15, Trade Pnl: 0.00 (0.00%), Account FPnL: 9,971.49
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:54:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.53, Csh: 8,977.57
+2022-03-15T12:55:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.53, Csh: 9,971.49
+2022-03-15, Trade Pnl: 0.00 (0.00%), Account FPnL: 9,971.49
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:56:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.52, Csh: 8,977.89
+2022-03-15T12:57:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.57, Csh: 9,974.37
+2022-03-15, Trade Pnl: 2.88 (0.05%), Account FPnL: 9,974.37
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-15T12:58:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 15.57, Csh: 8,978.06
+2022-03-15T12:59:00, Notify Order AAL SLD, Shr: -64.000, ShPrc: 15.56, Csh: 9,973.90
+2022-03-15, Trade Pnl: -0.47 (-0.01%), Account FPnL: 9,973.90
+2022-03-15, Current Trades: 0
+2022-03-15, Added Trades: 1
+2022-03-18T13:00:00, Notify Order AAL BGHT, Sz: 64.000, Pr: 16.75, Csh: 8,901.90
+
+Cerebro Execution Time: 0.01 min
+
+***********************
+** PORTFOLIO SUMMARY **
+***********************
+Starting Portfolio Value: 10,000.00
+Final Portfolio Value: 9,973.90
+P/L: -26.10
+Final Cash In Hand: 8,901.90
+
+********************
+** SAVING FIGURES **
+********************
+
+*****************************
+** WINNERS AND LOSERS ($$) **
+*****************************
+Biggest Winners
+  Name       Max
+0  AAL  4.904987
+
+Biggest Losers
+  Name        Min
+0  AAL -37.999763
+
+FINAL VALUE Winners
+  Name   FinalVal
+0  AAL -26.099182
+
+FINAL VALUE Losers
+  Name   FinalVal
+0  AAL -26.099182

@@ -1,0 +1,13 @@
+Summary of Backtest: No note saved
+
+Start Date of Backtest: 2022-03-13 00:00:00
+End Date of Backtest: 2022-03-19 00:00:00
+
+*****************
+** ADDING DATA **
+*****************
+Added Data C:/Users/rtm/Documents/Personal/Stock_Market/Python/universe_data/sp500/stock_data/yf/0_0_1_0_AAL_2022-03-15_2022-03-16.csv
+
+*****************************************************
+** LAUNCHING CEREBRO AT 2022-03-20 08:46:20.046209 **
+*****************************************************

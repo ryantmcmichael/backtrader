@@ -59,6 +59,7 @@ from .envelope import *
 from .heikinashi import *
 from .lrsi import *
 from .macd import *
+from .mfi import *
 from .momentum import *
 from .oscillator import *
 from .percentchange import *
