@@ -5,6 +5,13 @@ Created on Sun Apr 10 08:35:21 2022
 @author: rtm
 """
 
+#########
+# This script reads in "agg_result" which is the result of a backtest.
+# The script takes the Daily PnL generated from daytrading and compares it to
+# the momentum gauges, to check for correlation. We are trying to answer the
+# question: "Which days are best to trade with my strategy?"
+##########
+
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt

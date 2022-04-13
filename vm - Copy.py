@@ -61,127 +61,6 @@ class TestStrategy(bt.Strategy):
             print('{}, {}'.format(dt, txt))
 
 
-    def __init__(self):
-        self.ntrades = 0
-        self.o = dict()
-        self.holding = dict()
-
-        self.m1_data = self.datas[::2]
-        self.rs_data = self.datas[1::2]
-
-
-        # Create a dictionary to hold all indicators
-        self.m1_inds = dict()
-        for i, d in enumerate(self.m1_data):
-            # Create dict to hold all datafeeds
-            self.m1_inds[d] = dict()
-
-
-        # Create a dictionary to hold all indicators
-        self.inds = dict()
-        # Loop over each datafeed to make an indicator for each feed
-        for i, rs in enumerate(self.rs_data):
-            # Create dict to hold all datafeeds
-            self.inds[rs] = dict()
-
-            # Create SMA Short indicator on all datafeeds
-            self.inds[rs]['smashort'] = bt.indicators.SimpleMovingAverage(
-                rs.close, period=self.p.smashort)
-
-            # Create SMA Long indicator on all datafeeds
-            self.inds[rs]['smalong'] = bt.indicators.SimpleMovingAverage(
-                rs.close, period=self.p.smalong)
-
-            # Create SMA Exit indicator on all datafeeds
-            self.inds[rs]['smaexit'] = bt.indicators.SimpleMovingAverage(
-                rs.close, period=self.p.smaexit)
-
-            self.inds[rs]['atr'] = bt.indicators.ATR(rs, plot=False)
-
-            # Create RSI for Plotting
-            # self.inds[rs]['rsi'] = bt.indicators.RSI(rs.close, safediv=True,
-            #                                         safehigh=100, safelow=0)
-
-            # Create DMI for Plotting
-            # self.inds[rs]['dmi'] = bt.indicators.DMI(rs)
-
-            # Create MFI for Plotting
-            # self.inds[rs]['mfi'] = bt.indicators.MoneyFlowIndicator(rs)
-
-            # Create Ultimate Oscillator for Plotting
-            # self.inds[rs]['uo'] = bt.indicators.UltimateOscillator(rs)
-
-            # The Merit Function
-            self.inds[rs]['merit'] = merit_vm_indicator.meritsimple(rs,
-                        smashort=self.p.smashort, smalong=self.p.smalong,
-                        rsithresh=self.p.rsithresh, mfithresh=self.p.mfithresh,
-                        uothresh=self.p.uothresh, atrfactor=self.p.atrfactor)
-
-
-    def next(self):
-
-        for i, (d, rs) in enumerate(zip(self.m1_data, self.rs_data)):
-            dt, (dn, rsn), dtrade = (self.datetime.datetime(),
-                (d._name.split('_')[0], rs._name.split('_')[0]),
-                datetime.datetime.strptime(d._name.split('_')[1],'%Y-%m-%d').date())
-
-            self.log('BROKER: {}'.format(self.broker.getvalue()),doprint=False)
-            pos = self.getposition(rs).size
-
-            # Buy Logic
-            # no position / no orders & correct date
-            if (not pos and not self.o.get(rs,None) and
-                self.ntrades < 2 and
-                dt.date() == dtrade and
-                dt.time() >= self.p.tradestart and
-                dt.time() < self.p.tradestop):
-
-                self.log('No Position/Orders, {}, {}, {:.2f}, {:.2f}'.format(dn,
-                        self.inds[rs]['merit'].l.m_up[-1],
-                         d.open[0], d.close[0]), doprint=True)
-                if (self.inds[rs]['merit'].l.m_up[-1] < 5 and
-                    self.inds[rs]['merit'].l.m_up[0] == 5):
-
-                    pstp = max(rs.close[0]-self.inds[rs]['atr']*self.p.atrfactor,
-                               self.p.maxstop)
-                    o1 = self.buy(data=rs, exectype=bt.Order.Market,
-                                  transmit=False)
-                    o2 = self.sell(data=rs, exectype=bt.Order.Stop,
-                                   price=pstp, size=o1.size,
-                                   transmit=True, parent=o1)
-                    self.o[rs] = [o1, o2]
-                    self.holding[rs] = 0
-
-                    self.log('BUY, {}, {:.2f}, {:.2f}'.format(dn, rs.close[0], pstp),
-                                     doprint=True)
-
-            # Sell Logic
-            elif pos and len(self.o[rs])<3:
-                self.log('Position, {}, {}, {:.2f}, {:.2f}, {:.2f}, {:.2f}'.format(
-                    dn,
-                    self.inds[rs]['merit'].l.m_up[-1],
-                    d.open[0], d.low[0], d.close[0],
-                    self.inds[rs]['smaexit'][0]), doprint=True)
-                self.holding[rs] = self.holding[rs]+1
-
-                if (rs.close[0] < self.inds[rs]['smaexit'][0]):# or
-                    #self.inds[rs]['merit'].l.m_down[0] < 3):
-
-                    # Create new close order
-                    o = self.close(data=rs)
-                    self.o[rs].append(o) # manual order to list of orders
-
-                    # Cancel stop order
-                    self.cancel(self.o[rs][1])
-
-                    self.log('MERIT SELL & CANCEL STOP, {}'.format(dn),
-                             doprint=True)
-
-            # else:
-            #     self.log('Else, {}, {}, {:.2f}, {:.2f}'.format(dn,
-            #         self.inds[rs]['merit'].l.m_up[-1],
-            #         d.open[0],d.close[0]), doprint=True)
-
 
 
     def notify_order(self, order):
@@ -200,27 +79,27 @@ class TestStrategy(bt.Strategy):
                 self.ntrades = self.ntrades+1
                 self.log('{} BUY EXECUTED, Price: {:.2f}, PnL: {:.2f}'.format(
                     dn, order.executed.price, order.executed.pnl),
-                    doprint=True)
-                # self.buyprice[rs] = order.executed.price
+                    doprint=False)
+                # self.buyprice[d] = order.executed.price
 
             elif order.issell():
                 self.ntrades = self.ntrades-1
                 self.log('{} SELL EXECUTED, Price: {:.2f}, PnL: {:.2f}'.format(
                     dn, order.executed.price, order.executed.pnl),
-                    doprint=True)
+                    doprint=False)
     
         elif order.status in [order.Canceled, order.Margin, order.Rejected]:
             self.log('----- ORDER CANCELED/MARGIN/REJECTED')
 
-        whichord = ['MARKET ORDER', 'STOP ORDER', 'MERIT EXIT']
+        whichord = ['MARKET ORDER', 'STOP ORDER', 'MERIT EXIT', '???']
         if not order.alive(): # not alive - nullify
             dorders = self.o[order.data]
             idx = dorders.index(order)
             dorders[idx] = None
-            if idx>2:
-                self.log('{}, {}'.format(idx,dn),doprint=True)
-            self.log('-- {} No longer alive {}'.format(dn, whichord[idx]),
-                     doprint=True)
+            # if idx>2:
+            #     self.log('{}, {}'.format(idx,dn),doprint=True)
+            self.log('-- No longer alive {}'.format(whichord[idx]),
+                     doprint=False)
 
         if not any(dorders):
             dorders[:] = [] # empty list - New orders allowed
@@ -236,6 +115,103 @@ class TestStrategy(bt.Strategy):
             trade.pnl, self.broker.getvalue()), doprint=False)
 
 
+
+
+    def __init__(self):
+        self.ntrades = 0
+        self.o = dict()
+        self.holding = dict()
+
+        # Create a dictionary to hold all indicators
+        self.inds = dict()
+        # Loop over each datafeed to make an indicator for each feed
+
+        for i, d in enumerate(self.datas):
+            # Create dict to hold all datafeeds
+            self.inds[d] = dict()
+
+            # Create SMA Short indicator on all datafeeds
+            self.inds[d]['smashort'] = bt.indicators.SimpleMovingAverage(
+                d.close, period=self.p.smashort)
+
+            # Create SMA Long indicator on all datafeeds
+            self.inds[d]['smalong'] = bt.indicators.SimpleMovingAverage(
+                d.close, period=self.p.smalong)
+
+            # Create SMA Exit indicator on all datafeeds
+            self.inds[d]['smaexit'] = bt.indicators.SimpleMovingAverage(
+                d.close, period=self.p.smaexit)
+
+            self.inds[d]['atr'] = bt.indicators.ATR(d, plot=False)
+
+            # Create RSI for Plotting
+            # self.inds[d]['rsi'] = bt.indicators.RSI(d.close, safediv=True,
+            #                                         safehigh=100, safelow=0)
+
+            # Create DMI for Plotting
+            # self.inds[d]['dmi'] = bt.indicators.DMI(d)
+
+            # Create MFI for Plotting
+            # self.inds[d]['mfi'] = bt.indicators.MoneyFlowIndicator(d)
+
+            # Create Ultimate Oscillator for Plotting
+            # self.inds[d]['uo'] = bt.indicators.UltimateOscillator(d)
+
+            # The Merit Function
+            self.inds[d]['merit'] = merit_vm_indicator.meritsimple(d,
+                        smashort=self.p.smashort, smalong=self.p.smalong,
+                        rsithresh=self.p.rsithresh, mfithresh=self.p.mfithresh,
+                        uothresh=self.p.uothresh, atrfactor=self.p.atrfactor)
+
+
+    def next(self):
+        for i, d in enumerate(self.datas):
+            dt, dn, dtrade = (self.datetime.datetime(), d._name.split('_')[0],
+                datetime.datetime.strptime(d._name.split('_')[1],'%Y-%m-%d').date())
+            self.log('BROKER: {}'.format(self.broker.getvalue()),doprint=False)
+            pos = self.getposition(d).size
+
+            # Buy Logic
+            # no position / no orders & correct date
+            if (not pos and not self.o.get(d,None) and
+                self.ntrades < 4 and
+                dt.date() == dtrade and
+                dt.time() >= self.p.tradestart and
+                dt.time() < self.p.tradestop):
+
+                if (self.inds[d]['merit'].l.m_up[-1] < 5 and
+                    self.inds[d]['merit'].l.m_up[0] == 5):
+
+                    pstp = max(d.close[0]-self.inds[d]['atr']*self.p.atrfactor,
+                               self.p.maxstop)
+                    o1 = self.buy(data=d, exectype=bt.Order.Market,
+                                  transmit=False)
+                    o2 = self.sell(data=d, exectype=bt.Order.Stop,
+                                   price=pstp, size=o1.size,
+                                   transmit=True, parent=o1)
+                    self.o[d] = [o1, o2]
+                    self.holding[d] = 0
+
+                    self.log('BUY, {}, {:.2f}, {:.2f}'.format(dn, d.close[0], pstp),
+                                     doprint=False)
+
+            # Sell Logic
+            elif pos:
+                self.holding[d] = self.holding[d]+1
+
+                if (d.close[0] < self.inds[d]['smaexit'] or
+                    self.inds[d]['merit'].l.m_down[0] < 3):
+
+                    # Cancel all open orders (e.g. Stop-Order)
+                    for x in self.o[d]:
+                        self.cancel(x)
+
+                    # Create new close order
+                    o = self.close(data=d)
+                    self.o[d].append(o) # manual order to list of orders
+                    self.log('MERIT SELL & CANCEL STOP, {}, {}'.format(dn, self.o[d]),
+                             doprint=False)
+
     def stop(self):
         print('\nShort SMA: {}, '.format(self.p.smashort) +
                  'Long SMA: {}, '.format(self.p.smalong) +
@@ -246,8 +222,8 @@ class TestStrategy(bt.Strategy):
 
 if __name__ == '__main__':
     optim = False
-    plotting = True
-    plotreturn = True
+    plotting = False
+    plotreturn = False
     startcash = 10000
     size = 1000
 
@@ -279,12 +255,12 @@ if __name__ == '__main__':
         (datetime.datetime.strptime(date_start,'%Y-%m-%d') -
         datetime.timedelta(days=1)).date()] = startcash
 
-    for idate in dates[0:1]:
+    for idate in dates[0::1]:
         print('\n=========== BEGINNING SIMULATION FOR {}'.format(idate))
         t0 = time.perf_counter()
 
         # Determine whether it's a day to trade
-        path = folder + 'Simulated_Watchlists/Market/{}/*.csv'.format(idate.strftime('%Y-%m-%d'))
+        path = folder + 'Simulated_Watchlists/{}/*.csv'.format(idate.strftime('%Y-%m-%d'))
         if len(glob.glob(path)) == 0:
             continue
 
@@ -292,14 +268,14 @@ if __name__ == '__main__':
         cerebro = bt.Cerebro(maxcpus=1, runonce=False, stdstats=True)
 
         # Add Data to Cerebro
-        for datapath in glob.glob(path)[0:1]:
+        for datapath in glob.glob(path):
             nm = '_'.join(list(np.array(
                 datapath.split('\\')[-1].split('_'))[[4, 5]])).replace('.csv','')
             #print('LOADING {}'.format(nm))
             data = MinuteData(dataname=datapath,
                               timeframe=bt.TimeFrame.Minutes, plot=plotting)
-            cerebro.adddata(data, name='{}_1min'.format(nm))
-            cerebro.resampledata(data, name='{}_5min'.format(nm),
+            # cerebro.adddata(data, name=nm)
+            cerebro.resampledata(data, name=nm,
                                  timeframe=bt.TimeFrame.Minutes, compression=5)
     
         # Add Strategy
