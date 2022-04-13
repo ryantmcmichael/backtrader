@@ -237,7 +237,8 @@ class Strat1(bt.Strategy):
             idx = dorders.index(order)
             dorders[idx] = None
 
-            if all(x is None for x in dorders):
+            # CHECK THIS IF THINGS SEEM BROKEN
+            if not any(dorders):
                 dorders[:] = []  # empty list - New orders allowed  
 
         # Stop loss code?

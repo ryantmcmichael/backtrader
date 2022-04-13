@@ -24,6 +24,7 @@ from __future__ import (absolute_import, division, print_function,
 
 import backtrader as bt
 from backtrader.indicators import SumN, TrueLow, TrueRange
+from . import DivZeroByZero
 
 
 class UltimateOscillator(bt.Indicator):
@@ -69,9 +70,15 @@ class UltimateOscillator(bt.Indicator):
         bp = self.data.close - TrueLow(self.data)
         tr = TrueRange(self.data)
 
-        av7 = SumN(bp, period=self.p.p1) / SumN(tr, period=self.p.p1)
-        av14 = SumN(bp, period=self.p.p2) / SumN(tr, period=self.p.p2)
-        av28 = SumN(bp, period=self.p.p3) / SumN(tr, period=self.p.p3)
+        # NEW CODE
+        av7 = DivZeroByZero(SumN(bp, period=self.p.p1), SumN(tr, period=self.p.p1),100,0)
+        av14 = DivZeroByZero(SumN(bp, period=self.p.p2), SumN(tr, period=self.p.p2),100,0)
+        av28 = DivZeroByZero(SumN(bp, period=self.p.p3), SumN(tr, period=self.p.p3),100,0)
+
+        # ORIGINAL CODE
+        # av7 = SumN(bp, period=self.p.p1) / SumN(tr, period=self.p.p1)
+        # av14 = SumN(bp, period=self.p.p2) / SumN(tr, period=self.p.p2)
+        # av28 = SumN(bp, period=self.p.p3) / SumN(tr, period=self.p.p3)
 
         # Multiply/divide floats outside of formula to reduce line objects
         factor = 100.0 / (4.0 + 2.0 + 1.0)

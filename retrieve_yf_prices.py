@@ -1,34 +1,38 @@
 # -*- coding: utf-8 -*-
 
+import os
+import glob
 import yfinance as yf
 import pandas as pd
+import datetime
+import numpy as np
 
-# Enter the tickers for the past week (to retrieve from yfinance)
-a= {'Date':[
-        ['2022-03-14','2022-03-15'],
-        ['2022-03-15','2022-03-16'],
-        ['2022-03-16','2022-03-17'],
-        ['2022-03-18','2022-03-19']
-        ],
-    'Tick':[
-        ['SQQQ','MRNA'],
-        ['AAL','KAVL','MULN','SQQQ'],
-        ['IMPP','PLTR','SOFI'],
-        ['PIK','NIO','MULN','TQQQ','GROM']
-        ]
-    }
+#financialmodelingprep
 
-fol = (r'C:/Users/rtm/Documents/Personal/Stock_Market/' +
-           'Python/universe_data/sp500/stock_data/yf/')
+fol = r'C:/Users/rtm/Desktop/TOS_Watchlists/Market/'
 
-for i in range(len(a['Date'])):
+# use glob to get all the csv files 
+# in the folder
+csv_files = glob.glob(os.path.join(fol, "*.csv"))
 
-    sdate = a['Date'][i][0]
-    edate = a['Date'][i][1]
-    ticks = a['Tick'][i]
+# loop over the list of csv files
+for f in csv_files:
+    tradedate = '-'.join(f.split("\\")[-1].split('-')[0:3])
+    sdate = (datetime.datetime.strptime(tradedate,'%Y-%m-%d') -
+             datetime.timedelta(days=1)).strftime('%Y-%m-%d')
+    edate = (datetime.datetime.strptime(tradedate,'%Y-%m-%d') +
+             datetime.timedelta(days=1)).strftime('%Y-%m-%d')
+    # read the csv file
+    ticks = pd.read_csv(f,skiprows=3)['Symbol'].tolist()
 
     data = yf.download(ticks, start=sdate,
                        end=edate, interval='1m', group_by='ticker')
+
+    isExist = os.path.exists(fol + tradedate)
+    if not isExist:
+        # Create a new directory because it does not exist
+        os.makedirs(fol + tradedate)
+        print("Created new directory")
 
     for j in ticks:
         ind = ( data[j][['High','Low','Open','Close','Volume']]
@@ -38,6 +42,33 @@ for i in range(len(a['Date'])):
                         'America/Los_Angeles').dt.tz_localize(None) )
     
         ind = ind.fillna(method='bfill')
-    
-        ind.to_csv(fol + '0_0_1_0_' + j + '_' + sdate + '_' + edate + '.csv',
+        ind = ind.fillna(method='ffill')
+
+        # print(ind.iloc[-1]['Close'])
+
+        # ind = ind.append(pd.DataFrame(
+        #     [[datetime.strptime('2022-04-02 06:30','%Y-%m-%d %H:%M'),0, 0, 0, 0,0]],
+        #     columns=['Date','High','Low','Open','Close','Volume']),
+        #     ignore_index=True)
+
+        ind['High'] = ind['High'].replace(to_replace=0,method='bfill')
+        ind['High'] = ind['High'].replace(to_replace=0,method='ffill')
+
+        ind['Low'] = ind['Low'].replace(to_replace=0,method='bfill')
+        ind['Low'] = ind['Low'].replace(to_replace=0,method='ffill')
+
+        ind['Open'] = ind['Open'].replace(to_replace=0,method='bfill')
+        ind['Open'] = ind['Open'].replace(to_replace=0,method='ffill')
+
+        ind['Close'] = ind['Close'].replace(to_replace=0,method='bfill')
+        ind['Close'] = ind['Close'].replace(to_replace=0,method='ffill')
+
+        ind['Volume'] = ind['Volume'].replace(to_replace=0,method='bfill')
+        ind['Volume'] = ind['Volume'].replace(to_replace=0,method='ffill')
+
+        if (ind==0).sum().sum() > 0:
+            print(j)
+            print((ind==0).sum().sum())
+
+        ind.to_csv(fol + tradedate + '/0_0_1_0_' + j + '_' + sdate + '_' + tradedate + '.csv',
                    header=True, index=False)
