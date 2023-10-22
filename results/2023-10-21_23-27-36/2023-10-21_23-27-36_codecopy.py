@@ -181,7 +181,7 @@ class Strat1(bt.Strategy):
                     # Create dictionary of stocks I might buy
                     dict_list.append({
                         'Data':d,
-                        'Merit':self.inds[d]['merit'].l.m_up[0] })
+                        'Merit':self.inds[d]['merit'].l.m[0] })
                         
         if len(dict_list)>0:
             self.log('Current Trades: {}'
@@ -415,7 +415,7 @@ if __name__ == '__main__':
     # NEED TO EDIT
     ys=2022;ms=3;ds=13
     ye=2022;me=3;de=19
-    mnt_folder = ('C:/Users/ryant/Documents/Stock_Market/Python/' +
+    mnt_folder = ('C:/Users/rtm/Documents/Personal/Stock_Market/Python/' +
                     'universe_data/sp500/stock_data/yf/')
     ############
 
@@ -674,7 +674,7 @@ if __name__ == '__main__':
               style='line',tickrotation=30) #bar or candle
     fig[0][0].subplots_adjust(left=0.01,right=0.92,top=0.99,bottom=0.15)
     
-    f = ('C:/Users/ryant/Documents/Stock_Market/Python/' +
+    f = ('C:/Users/rtm/Documents/Personal/Stock_Market/Python/' +
                     'universe_data/sp500/stock_data/yf/benchmark/' +
                     '0_0_1_0_SPY_2022-03-13_2022-03-19.csv')
     bench = pd.read_csv(f,index_col='Date',parse_dates=True)
