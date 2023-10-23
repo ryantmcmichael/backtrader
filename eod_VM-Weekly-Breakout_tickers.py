@@ -30,6 +30,7 @@ for dt in vm_list['Date'].unique():
 
     d1 = datetime.datetime.strptime(dt + ' 06:00', '%m/%d/%Y %H:%M')
     d1 = d1 - datetime.timedelta(days=7)
+
     unixtime1 = time.mktime(d1.timetuple())
     d2 = d1 + datetime.timedelta(hours=180)
     unixtime2 = time.mktime(d2.timetuple())
@@ -54,7 +55,10 @@ for dt in vm_list['Date'].unique():
         df = pd.DataFrame(resp)
         df['Datetime'] = pd.to_datetime(df['datetime'], format='%Y-%m-%d %H:%M:%S')
         df = df[['Datetime','open','high','low','close','volume']]
-        df['Datetime'] = df['Datetime'] - datetime.timedelta(hours=7)
+
+        #aht['call_start'] = aht['start'].dt.tz_localize('US/Eastern').dt.tz_convert('US/Central')
+
+        df['Datetime'] = df['Datetime'].dt.tz_localize('UTC').dt.tz_convert('US/Pacific')
         df = (df.set_index('Datetime')
           .between_time('06:30', '13:00')
           .reset_index())

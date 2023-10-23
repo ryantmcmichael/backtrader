@@ -16,17 +16,19 @@ import datetime
 # Root folder that contains subfolders for each week
 rootdir = r'C:/Users/ryant/Documents/Stock_Market/Python/universe_data/sp500/stock_data/VM Weekly Breakout/data/'
 
-# Choose the time that the stocks will be purchased
-tradetime = '06:30:00'
-print('\nPurchase Time {}'.format(tradetime))
+# Choose the time that the stocks will be purchased. Lock to nearest good timestamp (not all stocks have valid data)
+buytime = '7:00:00'
+print('\nPurchase Time {}'.format(buytime))
 
 # Choose the STOP and LIMIT order percentages
-stop_pct = 0.95
-limit_pct = 1.03
+stop_pct = 0.97
+limit_pct = 1.05
 
 # Initialize metrics
 pnl_weekly = []
-trade_dates = []
+sell_dates = []
+
+bad_ticks=[]
 
 # loop over the list of csv files
 for fol in os.listdir(rootdir):
@@ -44,19 +46,29 @@ for fol in os.listdir(rootdir):
         #print('\nFile Loop {}'.format(file))
 
         ticker = file.split('_')[4]
-        tradedate = file.split('_')[5]
+        buydate = file.split('_')[5]
 
-        # Initialize the buytime and EOW as a datetime object
-        buytime = datetime.datetime.strptime(tradedate + ' ' + tradetime,'%Y-%m-%d %H:%M:%S')
-        eow = datetime.datetime.combine(buytime.date() + datetime.timedelta(days=7), datetime.time(12,59,00))
+        # Initialize the buy datetime and EOW as a datetime object
+        buydatetime = datetime.datetime.strptime(buydate + ' ' + buytime,'%Y-%m-%d %H:%M:%S')
 
         # Read the dataframe
         d = pd.read_csv(fpath)
+        d['Datetime'] = d['Datetime'].str[:-6]
         d['Datetime'] = pd.to_datetime(d['Datetime'])
         d = d.set_index('Datetime')
+        d=d[d.index >= buydatetime]
+        eow = d.index[-1]
 
-        # Extract the BUY price using the buytime
-        pbuy = d.loc[buytime, 'close']
+
+        # Extract the BUY price using the buy datetime
+        # Account for Christmas Eve, Good Friday, 4th of July, November Half-Day
+        # JUST PICK CLOSEST TIME TO THE DESIRED BUYTIME
+        if buydatetime not in d.index:
+            pnl_tickers.append(np.nan)
+            bad_ticks.append([ticker,eow])
+            continue
+
+        pbuy = d.loc[buydatetime, 'close']
 
         # Determine the time of the first stop trigger or limit trigger
         # Note: They may not occur before EOW
@@ -88,24 +100,30 @@ for fol in os.listdir(rootdir):
         pnl_tickers.append(pnl)
 
         # Print the trade
-        print('{}: Bought @ {:.2f}, {} @ {:.2f} at {}, PNL: {:.2f}%'.format(ticker,pbuy,trigger,psell,selltime,pnl))
+        print('{}: Bought @ {:.2f} at {}, {} @ {:.2f} at {}, PNL: {:.2f}%'.format(ticker,pbuy,buytime,trigger,psell,selltime,pnl))
 
-    print('Total Weekly PNL {:.2f}%'.format(np.average(pnl_tickers)))
-    pnl_weekly.append(np.average(pnl_tickers))
-    trade_dates.append(tradedate)
+    print('Total Weekly PNL {:.2f}%'.format(np.nanmean(pnl_tickers)))
+    pnl_weekly.append(np.nanmean(pnl_tickers))
+    sell_dates.append(eow.date().strftime('%Y-%m-%d'))
+
+print('\n***** SUMMARY')
+print('PNL: {:.0f}%'.format(np.nansum(pnl_weekly)))
+
+ann = ((1 + np.nansum(pnl_weekly)/100)**(1/5)-1)*100
+print('Annualized: {:.1f}%'.format(ann))
 
 plt.close("all")
 # Plot the trade
 d['close'].plot(grid=True, style='-', color='k', label=ticker, legend=True)
-plt.axvline(x = buytime, color = 'm', label = 'BUY')
+plt.axvline(x = buydatetime, color = 'm', label = 'BUY')
 plt.axvline(x = selltime, color = 'm', label = 'SELL')
 plt.axhline(y = pbuy*stop_pct, color = 'r', label = 'Stop', linestyle = '--')
 plt.axhline(y = pbuy*limit_pct, color = 'lime', label = 'Limit', linestyle = '--')
 
-results = pd.DataFrame(pnl_weekly,index=trade_dates,columns=['PNL'])
+results = pd.DataFrame(pnl_weekly,index=sell_dates,columns=['PNL'])
 fix,ax = plt.subplots()
 colormat=np.where(results['PNL']>0, 'g','r')
-ax.bar(trade_dates, results['PNL'], width=0.75, color=colormat)
+ax.bar(sell_dates, results['PNL'], width=0.75, color=colormat)
 plt.axhline(y=0,color='black',linestyle='-')
 
 
