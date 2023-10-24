@@ -40,8 +40,10 @@ for dt in vm_list['Date'].unique():
     if not isExist:
         os.makedirs(svpath)
 
+    valid_days = []
     for ticker in vm_list.loc[vm_list['Date']==dt,'Ticker']:
 
+        time.sleep(0.5)
         resp = api.get_intraday_historical_data(
             symbol = ticker,
             from_unix_time = unixtime1, to_unix_time = unixtime2,
@@ -49,19 +51,20 @@ for dt in vm_list['Date'].unique():
 
         if not resp:
             print('.... {} FAILED'.format(ticker))
-            fail_dates.append(d2.date())
             continue
 
         df = pd.DataFrame(resp)
         df['Datetime'] = pd.to_datetime(df['datetime'], format='%Y-%m-%d %H:%M:%S')
         df = df[['Datetime','open','high','low','close','volume']]
 
-        #aht['call_start'] = aht['start'].dt.tz_localize('US/Eastern').dt.tz_convert('US/Central')
-
         df['Datetime'] = df['Datetime'].dt.tz_localize('UTC').dt.tz_convert('US/Pacific')
         df = (df.set_index('Datetime')
           .between_time('06:30', '13:00')
           .reset_index())
+
+        valid_days.append(len(df['Datetime'].dt.date.unique()))
+
+        df['Datetime'] = df['Datetime'].dt.strftime('%Y-%m-%d %H:%M:%S')
 
         df.to_csv(svpath + '/0_0_1_0_' + ticker + '_' +
                     d1.date().strftime('%Y-%m-%d') + '_' +
@@ -70,3 +73,15 @@ for dt in vm_list['Date'].unique():
 
         print('.... {}'.format(ticker))
 
+    if valid_days[0]<6 and len(set(valid_days))==1:
+        fail_dates.append([dt,'Holiday?'])
+        print('May have contained a HOLIDAY')
+    elif len(set(valid_days))>1:
+        fail_dates.append([dt,'Bad Ticker(s)?'])
+        print('May have contained bad ticker(s)!')
+    elif len(valid_days)<4:
+        fail_dates.append([dt,'Bad Ticker(s)?'])
+        print('May have contained bad ticker(s)!')
+
+df_fail = pd.DataFrame(fail_dates,columns=['Date','Reason'])
+df_fail.to_csv(fol + '/Failures.csv',header=True,index=False)
