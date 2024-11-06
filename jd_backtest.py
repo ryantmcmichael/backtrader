@@ -14,11 +14,10 @@ import datetime
 # https://seekingalpha.com/mp/1201-value-momentum-breakouts/articles/5274410-v-m-weekly-breakout-stocks
 
 # Root folder that contains subfolders for each week
-rootdir = r'C:/Users/ryant/Documents/Stock_Market/Python/universe_data/sp500/stock_data/VM Weekly Breakout/data/'
+rootdir = r'C:/Users/ryant/Documents/Stock_Market/Python/universe_data/VM Weekly Breakout/data/'
 
 # Choose the time that the stocks will be purchased. Lock to nearest good timestamp (not all stocks have valid data)
-buytime = '7:00:00'
-print('\nIntended Purchase Time {}'.format(buytime))
+buytime = '6:35:00'
 
 # Choose the STOP and LIMIT order percentages
 stop_pct = 0.97
@@ -103,6 +102,7 @@ dates_list = [datetime.datetime.strptime(sell_date, '%Y-%m-%d').date() for sell_
 num_yrs = ((max(dates_list)-min(dates_list)).days)/365
 
 print('\n***** SUMMARY')
+print('\nIntended Purchase Time {}'.format(buytime))
 print('PNL: {:.0f}%'.format(np.nansum(pnl_weekly)))
 
 ann = ((1 + np.nansum(pnl_weekly)/100)**(1/num_yrs)-1)*100

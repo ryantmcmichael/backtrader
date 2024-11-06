@@ -15,7 +15,7 @@ import pandas as pd
 import datetime
 import time
 
-fol = r'C:/Users/ryant/Documents/Stock_Market/Python/universe_data/sp500/stock_data/VM Weekly Breakout'
+fol = r'C:/Users/ryant/Documents/Stock_Market/Python/universe_data/VM Weekly Breakout'
 vm_list = pd.read_csv(fol + '/Weekly_Breakout.csv')
 
 # load the key from the enviroment variables
