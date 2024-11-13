@@ -15,8 +15,12 @@ import pandas as pd
 import datetime
 import time
 
+# TODO: SAVE THE SECTOR
+
+# Generate the weekly picks by downloading the .html version of the webpage
+# and copy-pasting into an excel file.
 fol = r'C:/Users/ryant/Documents/Stock_Market/Python/universe_data/VM Weekly Breakout'
-vm_list = pd.read_csv(fol + '/Weekly_Breakout.csv')
+vm_list = pd.read_csv(fol + '/JD_RAW_MDA_Weekly_Picks.csv')
 
 # load the key from the enviroment variables
 # api_key = os.environ['API_EOD']
