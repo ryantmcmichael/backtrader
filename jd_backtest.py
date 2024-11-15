@@ -18,6 +18,10 @@ import mplfinance as mpf
 # Root folder that contains subfolders for each week
 rootdir = r'C:/Users/ryant/Documents/Stock_Market/Python/universe_data/VM Weekly Breakout/'
 
+ticker_sectors = pd.read_csv(rootdir + 'ticker_sectors.csv',
+                      names=['Ticker','Sector'],index_col='Ticker')
+ticker_sectors = ticker_sectors[~ticker_sectors.index.duplicated(keep='first')]
+
 mrkt_ga = pd.read_csv(rootdir + 'daily-market-momentum-ga.csv',
                       names=['DateTime','Pos','Neg','Index','Ann1','Ann2'],
                       header=0,index_col=0).drop(['Ann1','Ann2'],axis=1).dropna()
@@ -89,6 +93,8 @@ for buy_bound in ['high','low']:
         for fpath in csv_files:
             file = os.path.basename(fpath)
             ticker = file.split('_')[4]
+            sector = ticker_sectors.loc[ticker].Sector
+            print(sector)
 
             # TODO: Load all sector gauge data into dataframe
             # LOOKUP SECTOR for stock, do not enter trade if Neg > 40
