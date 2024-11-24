@@ -22,6 +22,7 @@ ticker_sectors = pd.read_csv(rootdir + 'ticker_sectors.csv',
                       names=['Ticker','Sector'],index_col='Ticker')
 ticker_sectors = ticker_sectors[~ticker_sectors.index.duplicated(keep='first')]
 
+# Load the daily market and sp500 gauges
 mrkt_ga = pd.read_csv(rootdir + 'daily-market-momentum-ga.csv',
                       names=['DateTime','Pos','Neg','Index','Ann1','Ann2'],
                       header=0,index_col=0).drop(['Ann1','Ann2'],axis=1).dropna()
@@ -29,18 +30,46 @@ sp500_ga = pd.read_csv(rootdir + 'daily-sp-500-momentum-ga.csv',
                        names=['DateTime','Pos','Neg','Index','Ann1','Ann2'],
                        header=0,index_col=0).drop(['Ann1','Ann2'],axis=1).dropna()
 
+
+# Load the sector daily gauges into a single dataframe
+sindex = 0
+csv_files = glob.glob(os.path.join(rootdir+'Daily Sector Gauges/', "*.csv"))
+for fpath in csv_files:
+    file = os.path.basename(fpath)
+    sname = file[:-4]
+    if sindex == 0:
+        s = pd.read_csv(fpath,usecols=[0,1,2],
+                    names=['Date',sname + ' Pos',sname + ' Neg'],
+                    header=0).dropna()
+        s['Date'] = pd.to_datetime(s['Date'])
+        s['Date'] = pd.to_datetime(s['Date'].dt.date)
+        s = s.set_index('Date')
+    else:
+        s1 = pd.read_csv(fpath, usecols=[0,1,2],
+                    names=['Date',sname + ' Pos',sname + ' Neg'],
+                    header=0).dropna()
+        s1['Date'] = pd.to_datetime(s1['Date'])
+        s1['Date'] = pd.to_datetime(s1['Date'].dt.date)
+        s1 = s1.set_index('Date')
+        s[sname + ' Pos'] = s1[sname + ' Pos']
+        s[sname + ' Neg'] = s1[sname + ' Neg']
+    sindex = sindex + 1
+
+# Add time to sector index, to reflect updates after market close
+s.index = s.index + datetime.timedelta(hours=20)
+
 # Choose the time that the stocks will be purchased. Lock to nearest good timestamp (not all stocks have valid data)
 buystart_time = '6:33:00'
 buystop_time = '6:36:00'
 
 nyse = mcal.get_calendar('NYSE')
-mkt_cal = nyse.schedule(start_date='2018-01-01', end_date='2025-01-01')
+mkt_cal = nyse.schedule(start_date='2021-01-01', end_date='2025-01-01')
 
 # Choose the STOP and LIMIT order percentages
 stop_pct = 0.93
 limit_pct = 1.10
 
-for buy_bound in ['high','low']:
+for buy_bound in ['high']:
 
     # Initialize metrics
     pnl_weekly = []
@@ -52,7 +81,6 @@ for buy_bound in ['high','low']:
 
     # loop over the list of csv files
     for fol in os.listdir(rootdir + 'data/'):
-        #print('\n********** INITIATING BACKTEST {} **'.format(fol))
         csv_files = glob.glob(os.path.join(rootdir+'data/'+fol, "*.csv"))
 
         date1 = (datetime.datetime.strptime(fol, '%Y-%m-%d') -
@@ -85,6 +113,8 @@ for buy_bound in ['high','low']:
             num_skip = num_skip + 4
             continue
 
+        print(' ')
+        #print('\n********** INITIATING BACKTEST {} **'.format(fol))
 
         # Initialize metrics
         pnl_tickers = []
@@ -94,11 +124,21 @@ for buy_bound in ['high','low']:
             file = os.path.basename(fpath)
             ticker = file.split('_')[4]
             sector = ticker_sectors.loc[ticker].Sector
-            print(sector)
 
-            # TODO: Load all sector gauge data into dataframe
+            # if ticker != 'LTHM':
+            #     continue
+
             # LOOKUP SECTOR for stock, do not enter trade if Neg > 40
             # Exit trade if Neg > Pos or Neg > 40
+            if (s.shift(1)[s.index >= buydate].iloc[0][sector + ' Neg'] >
+                s.shift(1)[s.index >= buydate].iloc[0][sector + ' Pos']):
+                num_skip = num_skip + 1
+                continue
+
+            if s.shift(1)[s.index >= buydate].iloc[0][sector + ' Neg'] >= 40:
+                num_skip = num_skip + 1
+                continue
+
 
             # Read the dataframe
             d = pd.read_csv(fpath)
@@ -210,15 +250,39 @@ for buy_bound in ['high','low']:
                 first_sp500_negpos = eow
 
 
+            #################### SECTOR GAUGE SIGNAL ########################
+            dt_filter = (s.index >= buydate) & (s.index < selldate)
+            if not s[dt_filter][s[dt_filter][sector + ' Neg'] >= 40].empty:
+                first_s_neg40 = d[ d.index >= s[dt_filter]
+                                  [s[dt_filter][sector + ' Neg'] >= 40]
+                                  .index[0]].index[0]
+            # If there's not a trigger, then set it to be EOW
+            else:
+                first_s_neg40 = eow
+
+            # If there's a SECTOR Gauge trigger, Neg > Pos, assign the timestamp
+            # Timestamp will occur at the open of the following day
+            if not s[dt_filter][s[dt_filter][sector + ' Neg'] >=
+                                      s[dt_filter][sector + ' Pos']].empty:
+                first_s_negpos = d[ d.index > s[dt_filter]
+                                  [s[dt_filter][sector + ' Neg'] >=
+                                   s[dt_filter][sector + ' Pos']]
+                                  .index[0]].index[0]
+            # If there's not a trigger, then set it to be EOW
+            else:
+                first_s_negpos = eow
+
             # Compare the timestamp for the first stop, the first limit,
             # the first market and sp500 gauge signals, and eow
             # The earliest trigger defines the termination of the trade
             exit_dict = {'SellTime':
                        [first_mrkt_neg40, first_mrkt_negpos,
                         first_sp500_neg40, first_sp500_negpos,
+                        first_s_neg40, first_s_negpos,
                         first_limit, first_stop],
                        'Trigger':['Mrkt Neg > 40', 'Mrkt Neg > Pos',
                                'SP500 Neg > 40','SP500 Neg > Pos',
+                               sector + ' Neg > 40', sector + ' Neg > Pos',
                                'Limit', 'Stop']}
             exit_df = pd.DataFrame(data=exit_dict).sort_values(by=['SellTime'])
             selltime = exit_df.iloc[0].SellTime
@@ -235,8 +299,10 @@ for buy_bound in ['high','low']:
 
             # Print the trade
             num_trade = num_trade + 1
-            #print('{}: Bought @ {:.2f} on {}, {} @ {:.2f} on {}, PNL: {:.2f}%'.format(ticker,pbuy,actual_buydatetime,trigger,psell,selltime,pnl))
+            print('{}: Bought @ {:.2f} on {}, {} @ {:.2f} on {}, PNL: {:.2f}%'.format(ticker,pbuy,actual_buydatetime,trigger,psell,selltime,pnl))
 
+        if len(pnl_tickers) == 0:
+            continue
         #print('Total Weekly PNL {:.2f}%'.format(np.nanmean(pnl_tickers)))
         pnl_weekly.append(np.nanmean(pnl_tickers))
         sell_dates.append(eow.date().strftime('%Y-%m-%d'))

@@ -14,8 +14,7 @@ import os
 import pandas as pd
 import datetime
 import time
-
-# TODO: SAVE THE SECTOR
+import yfinance as yf
 
 # Generate the weekly picks by downloading the .html version of the webpage
 # and copy-pasting into an excel file.
@@ -28,6 +27,7 @@ API_KEY = '5e98828c864a88.41999009'
 api = APIClient(API_KEY)
 
 fail_dates=[]
+sector_list = []
 
 for dt in vm_list['Date'].unique():
     print(dt)
@@ -75,6 +75,11 @@ for dt in vm_list['Date'].unique():
                     d2.date().strftime('%Y-%m-%d') +
                     '.csv', header=True, index=False)
 
+        # Fetch the sector, append list
+        # Need ERROR CATCHING on the sector
+        tickerdata = yf.Ticker(ticker)
+        sector_list.append([ticker,tickerdata.info['sector']])
+
         print('.... {}'.format(ticker))
 
     if valid_days[0]<6 and len(set(valid_days))==1:
@@ -89,3 +94,6 @@ for dt in vm_list['Date'].unique():
 
 df_fail = pd.DataFrame(fail_dates,columns=['Date','Reason'])
 df_fail.to_csv(fol + '/Failures.csv',header=True,index=False)
+
+df_sector = pd.DataFrame(sector_list, columns=['Ticker','Sector'])
+df_sector.to_csv(fol + '/ticker_sector.csv',header=True,index=False)
