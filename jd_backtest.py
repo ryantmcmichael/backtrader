@@ -18,7 +18,7 @@ import mplfinance as mpf
 # Root folder that contains subfolders for each week
 rootdir = r'C:/Users/ryant/Documents/Stock_Market/Python/universe_data/VM Weekly Breakout/'
 
-ticker_sectors = pd.read_csv(rootdir + 'ticker_sectors.csv',
+ticker_sectors = pd.read_csv(rootdir + 'ticker_sector.csv',
                       names=['Ticker','Sector'],index_col='Ticker')
 ticker_sectors = ticker_sectors[~ticker_sectors.index.duplicated(keep='first')]
 
@@ -59,17 +59,17 @@ for fpath in csv_files:
 s.index = s.index + datetime.timedelta(hours=20)
 
 # Choose the time that the stocks will be purchased. Lock to nearest good timestamp (not all stocks have valid data)
-buystart_time = '6:33:00'
-buystop_time = '6:36:00'
+buystart_time = '6:32:00'
+buystop_time = '6:40:00'
 
 nyse = mcal.get_calendar('NYSE')
 mkt_cal = nyse.schedule(start_date='2021-01-01', end_date='2025-01-01')
 
 # Choose the STOP and LIMIT order percentages
-stop_pct = 0.93
-limit_pct = 1.10
+stop_pct = 0.90
+limit_pct = 1.25
 
-for buy_bound in ['high']:
+for buy_bound in ['expected']:
 
     # Initialize metrics
     pnl_weekly = []
@@ -113,6 +113,7 @@ for buy_bound in ['high']:
             num_skip = num_skip + 4
             continue
 
+
         print(' ')
         #print('\n********** INITIATING BACKTEST {} **'.format(fol))
 
@@ -125,20 +126,18 @@ for buy_bound in ['high']:
             ticker = file.split('_')[4]
             sector = ticker_sectors.loc[ticker].Sector
 
-            # if ticker != 'LTHM':
-            #     continue
-
-            # LOOKUP SECTOR for stock, do not enter trade if Neg > 40
-            # Exit trade if Neg > Pos or Neg > 40
-            if (s.shift(1)[s.index >= buydate].iloc[0][sector + ' Neg'] >
+            # Do not enter trade if Sector Neg > Pos
+            if (s.shift(1)[s.index >= buydate].iloc[0][sector + ' Neg'] >=
                 s.shift(1)[s.index >= buydate].iloc[0][sector + ' Pos']):
                 num_skip = num_skip + 1
+                print('**** Avoided trade due to Sector Gauge Neg > Pos')
                 continue
 
-            if s.shift(1)[s.index >= buydate].iloc[0][sector + ' Neg'] >= 40:
-                num_skip = num_skip + 1
-                continue
-
+            # # Do not enter trade if Sector Neg > 40
+            # if s.shift(1)[s.index >= buydate].iloc[0][sector + ' Neg'] >= 40:
+            #     num_skip = num_skip + 1
+            #     print('Avoided trade due to Sector Gauge Negative > 40')
+            #     continue
 
             # Read the dataframe
             d = pd.read_csv(fpath)
@@ -149,7 +148,7 @@ for buy_bound in ['high']:
             if d.index[-1].strftime('%Y-%m-%d') == selldate:
                 eow = d.index[-55]
             else:
-                #print('No data on sell date')
+                print('**** No data on sell date')
                 num_skip = num_skip + 1
                 continue
 
@@ -167,19 +166,36 @@ for buy_bound in ['high']:
                 num_skip = num_skip + 1
                 continue
 
-            # Combine the "high" and "low" fields, take average and stdev. This becomes
-            # the bounding cases for the buy price.
-            pbuy_mean = pbuy_list[['high','low']].stack().mean()
-            pbuy_high = pbuy_list['high'].max()
-            pbuy_low = pbuy_list['low'].min()
-            pbuy_std = pbuy_list[['low','high']].std()
+            # Determine the buy price. Can choose:
+            # "best" (buying at the low)
+            # "worst" (buying at the high)
+            # "expected" (buying at a weighted average of highs and lows)
+            if buy_bound == 'expected':
+                pmax = np.ceil(pbuy_list['high'].max()*100)/100
+                pmin = np.floor(pbuy_list['low'].min()*100)/100
+                prange = np.linspace(pmin,pmax,num=int((pmax-pmin)/0.01+1))
 
-            if buy_bound == 'high':
-                pbuy = pbuy_high
-                actual_buydatetime = pbuy_list[pbuy_list['high']==pbuy_high].index[0]
-            elif buy_bound == 'low':
+                dtest=pd.DataFrame(index=prange)
+                for x in range(len(pbuy_list.index)):
+                    dtest[pbuy_list.index[x]] = 0
+                    dtest[pbuy_list.index[x]][(pbuy_list.iloc[x].low <= dtest.index) & (pbuy_list.iloc[x].high >= dtest.index-0.01)]=1
+                dtest['sum'] = dtest.sum(axis=1)
+                dtest['p(x)'] = dtest['sum']/dtest['sum'].sum()
+
+                pbuy = (dtest['p(x)']*dtest.index).sum()
+                actual_buydatetime = pbuy_list.index[-1]
+
+            elif buy_bound == 'best':
+                pbuy_low = pbuy_list['low'].min()
+
                 pbuy = pbuy_low
                 actual_buydatetime = pbuy_list[pbuy_list['low']==pbuy_low].index[0]
+
+            elif buy_bound == 'worst':
+                pbuy_high = pbuy_list['high'].max()
+                pbuy = pbuy_high
+                actual_buydatetime = pbuy_list[pbuy_list['high']==pbuy_high].index[0]
+
 
 
             ################## LIMIT AND STOP LOSSES ########################

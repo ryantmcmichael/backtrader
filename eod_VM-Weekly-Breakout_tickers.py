@@ -28,6 +28,7 @@ api = APIClient(API_KEY)
 
 fail_dates=[]
 sector_list = []
+fail_sector = []
 
 for dt in vm_list['Date'].unique():
     print(dt)
@@ -78,7 +79,11 @@ for dt in vm_list['Date'].unique():
         # Fetch the sector, append list
         # Need ERROR CATCHING on the sector
         tickerdata = yf.Ticker(ticker)
-        sector_list.append([ticker,tickerdata.info['sector']])
+        if 'sector' in tickerdata.info:
+            sector_list.append([ticker,tickerdata.info['sector']])
+        else:
+            print('**** {} Sector not found'.format(ticker))
+            fail_sector.append([ticker,'No sector data in Yahoo'])
 
         print('.... {}'.format(ticker))
 
@@ -93,7 +98,13 @@ for dt in vm_list['Date'].unique():
         print('May have contained bad ticker(s)!')
 
 df_fail = pd.DataFrame(fail_dates,columns=['Date','Reason'])
-df_fail.to_csv(fol + '/Failures.csv',header=True,index=False)
+df_fail.to_csv(fol + '/date_failures.csv',header=True,index=False)
 
+for x in range(len(sector_list)):
+    if sector_list[x][1] == 'Financial Services':
+        sector_list[x][1] = 'Financial'
 df_sector = pd.DataFrame(sector_list, columns=['Ticker','Sector'])
-df_sector.to_csv(fol + '/ticker_sector.csv',header=True,index=False)
+df_sector.to_csv(fol + '/ticker_sector_yahoo.csv',header=True,index=False)
+
+df_fail_sector = pd.DataFrame(fail_sector,columns=['Ticker','Sector'])
+df_fail_sector.to_csv(fol + '/sector_failures_yahoo.csv',header=True,index=False)
