@@ -60,10 +60,10 @@ s.index = s.index + datetime.timedelta(hours=20)
 
 # Choose the time that the stocks will be purchased. Lock to nearest good timestamp (not all stocks have valid data)
 buystart_time = '6:32:00'
-buystop_time = '6:40:00'
+buystop_time = '6:36:00'
 
 nyse = mcal.get_calendar('NYSE')
-mkt_cal = nyse.schedule(start_date='2021-01-01', end_date='2025-01-01')
+mkt_cal = nyse.schedule(start_date='2021-01-01', end_date=datetime.datetime.now().date().strftime('%Y-%m-%d'))
 
 # Choose the STOP and LIMIT order percentages
 stop_pct = 0.90
@@ -170,50 +170,58 @@ for buy_bound in ['expected']:
             # "best" (buying at the low)
             # "worst" (buying at the high)
             # "expected" (buying at a weighted average of highs and lows)
-            if buy_bound == 'expected':
-                pmax = np.ceil(pbuy_list['high'].max()*100)/100
-                pmin = np.floor(pbuy_list['low'].min()*100)/100
-                prange = np.linspace(pmin,pmax,num=int((pmax-pmin)/0.01+1))
+            pmax = np.ceil(pbuy_list['high'].max()*100)/100
+            pmin = np.floor(pbuy_list['low'].min()*100)/100
+            prange = np.linspace(pmin,pmax,num=int((pmax-pmin)/0.01+1))
 
-                dtest=pd.DataFrame(index=prange)
-                for x in range(len(pbuy_list.index)):
-                    dtest[pbuy_list.index[x]] = 0
-                    dtest[pbuy_list.index[x]][(pbuy_list.iloc[x].low <= dtest.index) & (pbuy_list.iloc[x].high >= dtest.index-0.01)]=1
-                dtest['sum'] = dtest.sum(axis=1)
-                dtest['p(x)'] = dtest['sum']/dtest['sum'].sum()
+            dtest=pd.DataFrame(index=prange)
+            for x in range(len(pbuy_list.index)):
+                dtest[pbuy_list.index[x]] = 0
+                dtest[pbuy_list.index[x]][(pbuy_list.iloc[x].low <= dtest.index) & (pbuy_list.iloc[x].high >= dtest.index-0.01)]=1
+            dtest['sum'] = dtest.sum(axis=1)
+            dtest['p(x)'] = dtest['sum']/dtest['sum'].sum()
 
-                pbuy = (dtest['p(x)']*dtest.index).sum()
-                actual_buydatetime = pbuy_list.index[-1]
-
-            elif buy_bound == 'best':
-                pbuy_low = pbuy_list['low'].min()
-
-                pbuy = pbuy_low
-                actual_buydatetime = pbuy_list[pbuy_list['low']==pbuy_low].index[0]
-
-            elif buy_bound == 'worst':
-                pbuy_high = pbuy_list['high'].max()
-                pbuy = pbuy_high
-                actual_buydatetime = pbuy_list[pbuy_list['high']==pbuy_high].index[0]
+            d[['Expected Stop','Expected Limit','Worst Stop','Worst Limit',
+               'Best Stop','Best Limit']] = [
+                (dtest['p(x)']*dtest.index).sum()*stop_pct,
+                (dtest['p(x)']*dtest.index).sum()*limit_pct,
+                pbuy_list['high'].max()*stop_pct,
+                pbuy_list['high'].max()*limit_pct,
+                pbuy_list['low'].min()*stop_pct,
+                pbuy_list['low'].min()*limit_pct]
 
 
+            d[['Expected Limit','Worst Limit','Best Limit']] = d[[
+                'Expected Limit','Worst Limit','Best Limit']].gt(d['high'],axis='rows')
+            d[['Expected Stop','Worst Stop','Best Stop']] = d[[
+                'Expected Stop','Worst Stop','Best Stop']].lt(d['low'],axis='rows')
+
+            actual_buydatetime = pbuy_list.index[-1]
 
             ################## LIMIT AND STOP LOSSES ########################
             # Determine the time of the first stop trigger or limit trigger
             # Note: They may never occur
-            # If there's a stoploss trigger somewhere, assign it
-            if not d[d['low'] <= pbuy*stop_pct].empty:
-                first_stop = d[d['low'] <= pbuy*stop_pct].index[0]
-            # If there's not a stoploss trigger, then set it to be EOW
-            else:
-                first_stop = eow
 
-            # If there's a limit trigger somewhere, assign it
-            if not d[d['high'] >= pbuy*limit_pct].empty:
-                first_limit = d[d['high'] >= pbuy*limit_pct].index[0]
-            # If there's not a limit trigger, then set it to be EOW
+            # WORST Case
+            if not d[~(d['Worst Stop'] & d['Worst Limit'])].empty:
+                worst_stop_limit = d[~(d['Worst Stop'] & d['Worst Limit'])].index[0]
+            # If there's not a stop or limit trigger, then set it to be EOW
             else:
-                first_limit = eow
+                worst_stop_limit = eow
+
+            # BEST Case
+            if not d[~(d['Best Stop'] & d['Best Limit'])].empty:
+                best_stop_limit = d[~(d['Best Stop'] & d['Best Limit'])].index[0]
+            # If there's not a stop or limit trigger, then set it to be EOW
+            else:
+                best_stop_limit = eow
+
+            # EXPECTED Case
+            if not d[~(d['Expected Stop'] & d['Expected Limit'])].empty:
+                expected_stop_limit = d[~(d['Expected Stop'] & d['Expected Limit'])].index[0]
+            # If there's not a stop or limit trigger, then set it to be EOW
+            else:
+                expected_stop_limit = eow
 
 
             #################### MARKET GAUGE SIGNAL ########################
@@ -287,6 +295,10 @@ for buy_bound in ['expected']:
             # If there's not a trigger, then set it to be EOW
             else:
                 first_s_negpos = eow
+
+
+            # TODO: HERE'S WHERE I LEFT OFF...NEED TO AGGREGATE THE SELL TIMES
+            # FOR EACH CASE EXPECTED, BEST, WORST
 
             # Compare the timestamp for the first stop, the first limit,
             # the first market and sp500 gauge signals, and eow
