@@ -67,251 +67,246 @@ mkt_cal = nyse.schedule(start_date='2021-01-01', end_date=datetime.datetime.now(
 
 # Choose the STOP and LIMIT order percentages
 stop_pct = 0.90
-limit_pct = 1.25
+limit_pct = 1.10
 
-for buy_bound in ['expected']:
+# Initialize metrics
+dict_pnl = {'Best':{}, 'Worst': {}, 'Expected': {}}
+pnl_weekly = []
+sell_dates = []
 
-    # Initialize metrics
-    pnl_weekly = []
-    sell_dates = []
+bad_ticks=[]
+num_trade = 0
+num_skip = 0
 
-    bad_ticks=[]
-    num_trade = 0
-    num_skip = 0
+# loop over the list of csv files
+for fol in os.listdir(rootdir + 'data/'):
+    csv_files = glob.glob(os.path.join(rootdir+'data/'+fol, "*.csv"))
 
-    # loop over the list of csv files
-    for fol in os.listdir(rootdir + 'data/'):
-        csv_files = glob.glob(os.path.join(rootdir+'data/'+fol, "*.csv"))
+    date1 = (datetime.datetime.strptime(fol, '%Y-%m-%d') -
+             datetime.timedelta(days=7)).strftime('%Y-%m-%d')
+    date2 = fol
 
-        date1 = (datetime.datetime.strptime(fol, '%Y-%m-%d') -
-                 datetime.timedelta(days=7)).strftime('%Y-%m-%d')
-        date2 = fol
-
-        buydate = mkt_cal[mkt_cal.index >= date1].index[0].strftime('%Y-%m-%d')
-        selldate = mkt_cal[mkt_cal.index <= date2].index[-1].strftime('%Y-%m-%d')
+    buydate = mkt_cal[mkt_cal.index >= date1].index[0].strftime('%Y-%m-%d')
+    selldate = mkt_cal[mkt_cal.index <= date2].index[-1].strftime('%Y-%m-%d')
 
 
-        # If Market Gauges are Negative, don't buy
-        if (mrkt_ga.shift(1)[mrkt_ga.index >= buydate].iloc[0].Neg >
-            mrkt_ga.shift(1)[mrkt_ga.index >= buydate].iloc[0].Pos):
-            num_skip = num_skip + 4
+    # If Market Gauges are Negative, don't buy
+    if (mrkt_ga.shift(1)[mrkt_ga.index >= buydate].iloc[0].Neg >
+        mrkt_ga.shift(1)[mrkt_ga.index >= buydate].iloc[0].Pos):
+        num_skip = num_skip + 4
+        continue
+
+    # If Market Gauge Negative Value > 40, don't buy
+    if mrkt_ga.shift(1)[mrkt_ga.index >= buydate].iloc[0].Neg >= 40:
+        num_skip = num_skip + 4
+        continue
+
+    # If SP500 Gauges are Negative, don't buy
+    if (sp500_ga.shift(1)[sp500_ga.index >= buydate].iloc[0].Neg >
+        sp500_ga.shift(1)[sp500_ga.index >= buydate].iloc[0].Pos):
+        num_skip = num_skip + 4
+        continue
+
+    # If SP500 Gauge Negative Value > 40, don't buy
+    if sp500_ga.shift(1)[sp500_ga.index >= buydate].iloc[0].Neg >= 40:
+        num_skip = num_skip + 4
+        continue
+
+
+    # print(' ')
+    #print('\n********** INITIATING BACKTEST {} **'.format(fol))
+
+    # loop over each week of data (each folder)
+    for fpath in csv_files:
+        file = os.path.basename(fpath)
+        ticker = file.split('_')[4]
+        sector = ticker_sectors.loc[ticker].Sector
+
+        # Do not enter trade if Sector Neg > Pos
+        # if (s.shift(1)[s.index >= buydate].iloc[0][sector + ' Neg'] >=
+        #     s.shift(1)[s.index >= buydate].iloc[0][sector + ' Pos']):
+        #     num_skip = num_skip + 1
+        #     # print('**** Avoided trade due to Sector Gauge Neg > Pos')
+        #     continue
+
+        # # Do not enter trade if Sector Neg > 40
+        # if s.shift(1)[s.index >= buydate].iloc[0][sector + ' Neg'] >= 40:
+        #     num_skip = num_skip + 1
+        #     print('Avoided trade due to Sector Gauge Negative > 40')
+        #     continue
+
+        # Read the dataframe
+        d = pd.read_csv(fpath)
+        d['Datetime'] = pd.to_datetime(d['Datetime'])
+        d = d.set_index('Datetime')
+        d=d[d.index >= (buydate + ' ' + buystart_time)]
+
+        if d.index[-1].strftime('%Y-%m-%d') == selldate:
+            eow = d.index[-55]
+        else:
+            # print('**** No data on sell date')
+            num_skip = num_skip + 1
             continue
 
-        # If Market Gauge Negative Value > 40, don't buy
-        if mrkt_ga.shift(1)[mrkt_ga.index >= buydate].iloc[0].Neg >= 40:
-            num_skip = num_skip + 4
+        # Extract the BUY price using the buy datetime
+        if d.index[0].strftime('%Y-%m-%d') == buydate:
+            pbuy_list = d[(d.index >= (buydate + ' ' + buystart_time)) &
+                      (d.index <= (buydate + ' ' + buystop_time))]
+        else:
+            #print('{} No data on buy date {}'.format(ticker,buydate))
+            num_skip = num_skip + 1
             continue
 
-        # If SP500 Gauges are Negative, don't buy
-        if (sp500_ga.shift(1)[sp500_ga.index >= buydate].iloc[0].Neg >
-            sp500_ga.shift(1)[sp500_ga.index >= buydate].iloc[0].Pos):
-            num_skip = num_skip + 4
+        if pbuy_list.empty:
+            #print('{} No data at the open {}'.format(ticker,buydate))
+            num_skip = num_skip + 1
             continue
 
-        # If SP500 Gauge Negative Value > 40, don't buy
-        if sp500_ga.shift(1)[sp500_ga.index >= buydate].iloc[0].Neg >= 40:
-            num_skip = num_skip + 4
-            continue
+        # Determine the buy price. Can choose:
+        # "best" (buying at the low)
+        # "worst" (buying at the high)
+        # "expected" (buying at a weighted average of highs and lows)
+        pmax = np.ceil(pbuy_list['high'].max()*100)/100
+        pmin = np.floor(pbuy_list['low'].min()*100)/100
+        prange = np.linspace(pmin,pmax,num=int((pmax-pmin)/0.01+1))
+
+        dtest=pd.DataFrame(index=prange)
+        for x in range(len(pbuy_list.index)):
+            dtest[pbuy_list.index[x]] = 0
+            dtest[pbuy_list.index[x]][(pbuy_list.iloc[x].low <= dtest.index) & (pbuy_list.iloc[x].high >= dtest.index-0.01)]=1
+        dtest['sum'] = dtest.sum(axis=1)
+        dtest['p(x)'] = dtest['sum']/dtest['sum'].sum()
+
+        dp_scenarios = pd.DataFrame(data=[pbuy_list['low'].min(),
+                                     pbuy_list['high'].max(),
+                                     (dtest['p(x)']*dtest.index).sum()],
+                                    index=['Best','Worst','Expected'],
+                                    columns=['Price'])
+
+        d[['Best Stop','Best Limit','Worst Stop','Worst Limit',
+           'Expected Stop','Expected Limit']] = [
+            dp_scenarios.loc['Best','Price']*stop_pct,
+            dp_scenarios.loc['Best','Price']*limit_pct,
+            dp_scenarios.loc['Worst','Price']*stop_pct,
+            dp_scenarios.loc['Worst','Price']*limit_pct,
+            dp_scenarios.loc['Expected','Price']*stop_pct,
+            dp_scenarios.loc['Expected','Price']*limit_pct]
 
 
-        print(' ')
-        #print('\n********** INITIATING BACKTEST {} **'.format(fol))
+        d[['Expected Limit','Worst Limit','Best Limit']] = d[[
+            'Expected Limit','Worst Limit','Best Limit']].gt(d['high'],axis='rows')
+        d[['Expected Stop','Worst Stop','Best Stop']] = d[[
+            'Expected Stop','Worst Stop','Best Stop']].lt(d['low'],axis='rows')
 
-        # Initialize metrics
-        pnl_tickers = []
+        actual_buydatetime = pbuy_list.index[-1]
 
-        # loop over each week of data (each folder)
-        for fpath in csv_files:
-            file = os.path.basename(fpath)
-            ticker = file.split('_')[4]
-            sector = ticker_sectors.loc[ticker].Sector
 
-            # Do not enter trade if Sector Neg > Pos
-            if (s.shift(1)[s.index >= buydate].iloc[0][sector + ' Neg'] >=
-                s.shift(1)[s.index >= buydate].iloc[0][sector + ' Pos']):
-                num_skip = num_skip + 1
-                print('**** Avoided trade due to Sector Gauge Neg > Pos')
-                continue
+        #################### MARKET GAUGE SIGNAL ########################
+        # If there's a Market Gauge trigger, Neg > 40, assign the timestamp
+        # Timestamp will occur at the open of the following day
+        dt_filter = (mrkt_ga.index > buydate) & (mrkt_ga.index < selldate)
+        if not mrkt_ga[dt_filter][mrkt_ga[dt_filter]['Neg'] >= 40].empty:
+            first_mrkt_neg40 = d[ d.index > mrkt_ga[dt_filter]
+                              [mrkt_ga[dt_filter]['Neg'] >= 40]
+                              .index[0]].index[0]
+        # If there's not a trigger, then set it to be EOW
+        else:
+            first_mrkt_neg40 = eow
 
-            # # Do not enter trade if Sector Neg > 40
-            # if s.shift(1)[s.index >= buydate].iloc[0][sector + ' Neg'] >= 40:
-            #     num_skip = num_skip + 1
-            #     print('Avoided trade due to Sector Gauge Negative > 40')
-            #     continue
+        # If there's a Market Gauge trigger, Neg > Pos, assign the timestamp
+        # Timestamp will occur at the open of the following day
+        if not mrkt_ga[dt_filter][mrkt_ga[dt_filter]['Neg'] >=
+                                  mrkt_ga[dt_filter]['Pos']].empty:
+            first_mrkt_negpos = d[ d.index > mrkt_ga[dt_filter]
+                              [mrkt_ga[dt_filter]['Neg'] >=
+                               mrkt_ga[dt_filter]['Pos']]
+                              .index[0]].index[0]
+        # If there's not a trigger, then set it to be EOW
+        else:
+            first_mrkt_negpos = eow
 
-            # Read the dataframe
-            d = pd.read_csv(fpath)
-            d['Datetime'] = pd.to_datetime(d['Datetime'])
-            d = d.set_index('Datetime')
-            d=d[d.index >= (buydate + ' ' + buystart_time)]
 
-            if d.index[-1].strftime('%Y-%m-%d') == selldate:
-                eow = d.index[-55]
+        #################### SP500 GAUGE SIGNAL ########################
+        # If there's a SP500 Gauge trigger, Neg > 40, assign the timestamp
+        # Timestamp will occur at the open of the following day
+        dt_filter = (sp500_ga.index > buydate) & (sp500_ga.index < selldate)
+        if not sp500_ga[dt_filter][sp500_ga[dt_filter]['Neg'] >= 40].empty:
+            first_sp500_neg40 = d[ d.index > sp500_ga[dt_filter]
+                              [sp500_ga[dt_filter]['Neg'] >= 40]
+                              .index[0]].index[0]
+        # If there's not a trigger, then set it to be EOW
+        else:
+            first_sp500_neg40 = eow
+
+        # If there's a SP500 Gauge trigger, Neg > Pos, assign the timestamp
+        # Timestamp will occur at the open of the following day
+        if not sp500_ga[dt_filter][sp500_ga[dt_filter]['Neg'] >=
+                                  sp500_ga[dt_filter]['Pos']].empty:
+            first_sp500_negpos = d[ d.index > sp500_ga[dt_filter]
+                              [sp500_ga[dt_filter]['Neg'] >=
+                               sp500_ga[dt_filter]['Pos']]
+                              .index[0]].index[0]
+        # If there's not a trigger, then set it to be EOW
+        else:
+            first_sp500_negpos = eow
+
+
+        #################### SECTOR GAUGE SIGNAL ########################
+        dt_filter = (s.index >= buydate) & (s.index < selldate)
+
+        if not s[dt_filter][s[dt_filter][sector + ' Neg'] >= 40].empty:
+            first_s_neg40 = d[ d.index >= s[dt_filter]
+                              [s[dt_filter][sector + ' Neg'] >= 40]
+                              .index[0]].index[0]
+        # If there's not a trigger, then set it to be EOW
+        else:
+            first_s_neg40 = eow
+
+        # If there's a SECTOR Gauge trigger, Neg > Pos, assign the timestamp
+        # Timestamp will occur at the open of the following day
+        if not s[dt_filter][s[dt_filter][sector + ' Neg'] >=
+                                  s[dt_filter][sector + ' Pos']].empty:
+            first_s_negpos = d[ d.index > s[dt_filter]
+                              [s[dt_filter][sector + ' Neg'] >=
+                               s[dt_filter][sector + ' Pos']]
+                              .index[0]].index[0]
+        # If there's not a trigger, then set it to be EOW
+        else:
+            first_s_negpos = eow
+
+
+        ################## LIMIT AND STOP LOSSES ########################
+        # Determine the time of the first stop trigger or limit trigger
+        # Note: They may never occur
+
+        for x in ['Best','Worst','Expected']:
+            if not d[~d[x + ' Stop']].empty:
+                dp_scenarios.loc[x,'Stop'] = d[~d[x + ' Stop']].index[0]
             else:
-                print('**** No data on sell date')
-                num_skip = num_skip + 1
-                continue
+                dp_scenarios.loc[x,'Stop'] = eow
 
-            # Extract the BUY price using the buy datetime
-            if d.index[0].strftime('%Y-%m-%d') == buydate:
-                pbuy_list = d[(d.index >= (buydate + ' ' + buystart_time)) &
-                          (d.index <= (buydate + ' ' + buystop_time))]
+            if not d[~d[x + ' Limit']].empty:
+                dp_scenarios.loc[x,'Limit'] = d[~d[x + ' Limit']].index[0]
             else:
-                #print('{} No data on buy date {}'.format(ticker,buydate))
-                num_skip = num_skip + 1
-                continue
-
-            if pbuy_list.empty:
-                #print('{} No data at the open {}'.format(ticker,buydate))
-                num_skip = num_skip + 1
-                continue
-
-            # Determine the buy price. Can choose:
-            # "best" (buying at the low)
-            # "worst" (buying at the high)
-            # "expected" (buying at a weighted average of highs and lows)
-            pmax = np.ceil(pbuy_list['high'].max()*100)/100
-            pmin = np.floor(pbuy_list['low'].min()*100)/100
-            prange = np.linspace(pmin,pmax,num=int((pmax-pmin)/0.01+1))
-
-            dtest=pd.DataFrame(index=prange)
-            for x in range(len(pbuy_list.index)):
-                dtest[pbuy_list.index[x]] = 0
-                dtest[pbuy_list.index[x]][(pbuy_list.iloc[x].low <= dtest.index) & (pbuy_list.iloc[x].high >= dtest.index-0.01)]=1
-            dtest['sum'] = dtest.sum(axis=1)
-            dtest['p(x)'] = dtest['sum']/dtest['sum'].sum()
-
-            d[['Expected Stop','Expected Limit','Worst Stop','Worst Limit',
-               'Best Stop','Best Limit']] = [
-                (dtest['p(x)']*dtest.index).sum()*stop_pct,
-                (dtest['p(x)']*dtest.index).sum()*limit_pct,
-                pbuy_list['high'].max()*stop_pct,
-                pbuy_list['high'].max()*limit_pct,
-                pbuy_list['low'].min()*stop_pct,
-                pbuy_list['low'].min()*limit_pct]
+                dp_scenarios.loc[x,'Limit'] = eow
 
 
-            d[['Expected Limit','Worst Limit','Best Limit']] = d[[
-                'Expected Limit','Worst Limit','Best Limit']].gt(d['high'],axis='rows')
-            d[['Expected Stop','Worst Stop','Best Stop']] = d[[
-                'Expected Stop','Worst Stop','Best Stop']].lt(d['low'],axis='rows')
-
-            actual_buydatetime = pbuy_list.index[-1]
-
-            ################## LIMIT AND STOP LOSSES ########################
-            # Determine the time of the first stop trigger or limit trigger
-            # Note: They may never occur
-
-            # WORST Case
-            if not d[~(d['Worst Stop'] & d['Worst Limit'])].empty:
-                worst_stop_limit = d[~(d['Worst Stop'] & d['Worst Limit'])].index[0]
-            # If there's not a stop or limit trigger, then set it to be EOW
-            else:
-                worst_stop_limit = eow
-
-            # BEST Case
-            if not d[~(d['Best Stop'] & d['Best Limit'])].empty:
-                best_stop_limit = d[~(d['Best Stop'] & d['Best Limit'])].index[0]
-            # If there's not a stop or limit trigger, then set it to be EOW
-            else:
-                best_stop_limit = eow
-
-            # EXPECTED Case
-            if not d[~(d['Expected Stop'] & d['Expected Limit'])].empty:
-                expected_stop_limit = d[~(d['Expected Stop'] & d['Expected Limit'])].index[0]
-            # If there's not a stop or limit trigger, then set it to be EOW
-            else:
-                expected_stop_limit = eow
-
-
-            #################### MARKET GAUGE SIGNAL ########################
-            # If there's a Market Gauge trigger, Neg > 40, assign the timestamp
-            # Timestamp will occur at the open of the following day
-            dt_filter = (mrkt_ga.index > buydate) & (mrkt_ga.index < selldate)
-            if not mrkt_ga[dt_filter][mrkt_ga[dt_filter]['Neg'] >= 40].empty:
-                first_mrkt_neg40 = d[ d.index > mrkt_ga[dt_filter]
-                                  [mrkt_ga[dt_filter]['Neg'] >= 40]
-                                  .index[0]].index[0]
-            # If there's not a trigger, then set it to be EOW
-            else:
-                first_mrkt_neg40 = eow
-
-            # If there's a Market Gauge trigger, Neg > Pos, assign the timestamp
-            # Timestamp will occur at the open of the following day
-            if not mrkt_ga[dt_filter][mrkt_ga[dt_filter]['Neg'] >=
-                                      mrkt_ga[dt_filter]['Pos']].empty:
-                first_mrkt_negpos = d[ d.index > mrkt_ga[dt_filter]
-                                  [mrkt_ga[dt_filter]['Neg'] >=
-                                   mrkt_ga[dt_filter]['Pos']]
-                                  .index[0]].index[0]
-            # If there's not a trigger, then set it to be EOW
-            else:
-                first_mrkt_negpos = eow
-
-
-            #################### SP500 GAUGE SIGNAL ########################
-            # If there's a SP500 Gauge trigger, Neg > 40, assign the timestamp
-            # Timestamp will occur at the open of the following day
-            dt_filter = (sp500_ga.index > buydate) & (sp500_ga.index < selldate)
-            if not sp500_ga[dt_filter][sp500_ga[dt_filter]['Neg'] >= 40].empty:
-                first_sp500_neg40 = d[ d.index > sp500_ga[dt_filter]
-                                  [sp500_ga[dt_filter]['Neg'] >= 40]
-                                  .index[0]].index[0]
-            # If there's not a trigger, then set it to be EOW
-            else:
-                first_sp500_neg40 = eow
-
-            # If there's a SP500 Gauge trigger, Neg > Pos, assign the timestamp
-            # Timestamp will occur at the open of the following day
-            if not sp500_ga[dt_filter][sp500_ga[dt_filter]['Neg'] >=
-                                      sp500_ga[dt_filter]['Pos']].empty:
-                first_sp500_negpos = d[ d.index > sp500_ga[dt_filter]
-                                  [sp500_ga[dt_filter]['Neg'] >=
-                                   sp500_ga[dt_filter]['Pos']]
-                                  .index[0]].index[0]
-            # If there's not a trigger, then set it to be EOW
-            else:
-                first_sp500_negpos = eow
-
-
-            #################### SECTOR GAUGE SIGNAL ########################
-            dt_filter = (s.index >= buydate) & (s.index < selldate)
-            if not s[dt_filter][s[dt_filter][sector + ' Neg'] >= 40].empty:
-                first_s_neg40 = d[ d.index >= s[dt_filter]
-                                  [s[dt_filter][sector + ' Neg'] >= 40]
-                                  .index[0]].index[0]
-            # If there's not a trigger, then set it to be EOW
-            else:
-                first_s_neg40 = eow
-
-            # If there's a SECTOR Gauge trigger, Neg > Pos, assign the timestamp
-            # Timestamp will occur at the open of the following day
-            if not s[dt_filter][s[dt_filter][sector + ' Neg'] >=
-                                      s[dt_filter][sector + ' Pos']].empty:
-                first_s_negpos = d[ d.index > s[dt_filter]
-                                  [s[dt_filter][sector + ' Neg'] >=
-                                   s[dt_filter][sector + ' Pos']]
-                                  .index[0]].index[0]
-            # If there's not a trigger, then set it to be EOW
-            else:
-                first_s_negpos = eow
-
-
-            # TODO: HERE'S WHERE I LEFT OFF...NEED TO AGGREGATE THE SELL TIMES
-            # FOR EACH CASE EXPECTED, BEST, WORST
-
-            # Compare the timestamp for the first stop, the first limit,
-            # the first market and sp500 gauge signals, and eow
-            # The earliest trigger defines the termination of the trade
+        # Compare the timestamp for the first stop, the first limit,
+        # the first market and sp500 gauge signals, and eow
+        # The earliest trigger defines the termination of the trade
+        num_trade = num_trade + 1
+        for x in dp_scenarios.index:
             exit_dict = {'SellTime':
                        [first_mrkt_neg40, first_mrkt_negpos,
                         first_sp500_neg40, first_sp500_negpos,
-                        first_s_neg40, first_s_negpos,
-                        first_limit, first_stop],
+                        # first_s_neg40,
+                        # first_s_negpos,
+                        dp_scenarios.loc[x,'Stop'], dp_scenarios.loc[x,'Limit']],
                        'Trigger':['Mrkt Neg > 40', 'Mrkt Neg > Pos',
                                'SP500 Neg > 40','SP500 Neg > Pos',
-                               sector + ' Neg > 40', sector + ' Neg > Pos',
-                               'Limit', 'Stop']}
+                                # sector + ' Neg > 40',
+                                # sector + ' Neg > Pos',
+                               'Stop','Limit']}
             exit_df = pd.DataFrame(data=exit_dict).sort_values(by=['SellTime'])
             selltime = exit_df.iloc[0].SellTime
             if selltime == eow:
@@ -322,45 +317,46 @@ for buy_bound in ['expected']:
 
             # Extract the sell price based on the termination of the trade. Calculate pnl
             psell = d.loc[selltime,'open']
-            pnl = (psell/pbuy-1)*100
-            pnl_tickers.append(pnl)
+            dict_pnl[x][buydate,ticker] = (psell/dp_scenarios.loc[x,'Price']-1)*100
 
             # Print the trade
-            num_trade = num_trade + 1
-            print('{}: Bought @ {:.2f} on {}, {} @ {:.2f} on {}, PNL: {:.2f}%'.format(ticker,pbuy,actual_buydatetime,trigger,psell,selltime,pnl))
+            # print('{} {}: Bought @ {:.2f} on {}, {} @ {:.2f} on {}, PNL: {:.2f}%'.format(x,
+            #     ticker, dp_scenarios.loc[x,'Price'],
+            #     actual_buydatetime, trigger, psell, selltime, dict_pnl[x][buydate,ticker]))
+        # print('')
 
-        if len(pnl_tickers) == 0:
-            continue
-        #print('Total Weekly PNL {:.2f}%'.format(np.nanmean(pnl_tickers)))
-        pnl_weekly.append(np.nanmean(pnl_tickers))
-        sell_dates.append(eow.date().strftime('%Y-%m-%d'))
+df_pnl = pd.DataFrame(dict_pnl)
+df_pnl.index.names=['Date','Ticker']
+df_pnl.index = df_pnl.index.set_levels([pd.to_datetime(df_pnl.index.levels[0]), df_pnl.index.levels[1]])
 
-    dates_list = [datetime.datetime.strptime(sell_date, '%Y-%m-%d').date() for sell_date in sell_dates]
-    num_yrs = ((max(dates_list)-min(dates_list)).days)/365
+dates_list = df_pnl.index.get_level_values(0).unique()
+num_yrs = ((dates_list.max()-dates_list.min()).days)/365
 
-    print('\n***** SUMMARY FOR {}'.format(buy_bound))
-    print('Traded {} ({:.1f}%) of the securities. Skipped {}.'.format(num_trade,num_trade/(num_trade+num_skip)*100,num_skip))
-    print('Purchased between {} and {}'.format(buystart_time, buystop_time))
-    print('Total PNL: {:.0f}%'.format(np.nansum(pnl_weekly)))
+pnl_weekly = df_pnl.groupby('Date').mean()
 
-    ann = np.nansum(pnl_weekly)/num_yrs
-    print('Annualized: {:.1f}% (${:.2f} profit/loss per year, if trading $1,000 each week)\n'.format(ann,ann/100*1000))
+pnl_yearly = df_pnl.groupby('Date').mean()
+pnl_yearly.index = pnl_yearly.index.year
+pnl_yearly = pnl_yearly.groupby('Date').sum()
 
+print('\n***** SUMMARY')
+print('Traded {} ({:.1f}%) of the securities. Skipped {}.'.format(num_trade,num_trade/(num_trade+num_skip)*100,num_skip))
+print('Purchased between {} and {}'.format(buystart_time, buystop_time))
+print('-- TOTAL PNL')
+print('Best PNL: {:.0f}% ({:.0f}% Ann.)'.format(pnl_weekly.sum().Best, pnl_weekly.sum().Best/num_yrs))
+print('Expected PNL: {:.0f}% ({:.0f}% Ann.)'.format(pnl_weekly.sum().Expected, pnl_weekly.sum().Expected/num_yrs))
+print('Worst PNL: {:.0f}% ({:.0f}% Ann.)'.format(pnl_weekly.sum().Worst, pnl_weekly.sum().Worst/num_yrs))
 
 plt.close("all")
 # Plot the trade
 wtmd = dict(warn_too_much_data=10000000000000)
 mpf.plot(d, title=ticker, type='hollow_and_filled', style='yahoo',
-        hlines=dict(hlines=[pbuy*stop_pct,pbuy*limit_pct],colors=['r','g'],linestyle='-'),
+        hlines=dict(hlines=[dp_scenarios.loc[x,'Price'],dp_scenarios.loc[x,'Price']*stop_pct,
+                            dp_scenarios.loc[x,'Price']*limit_pct],
+                            colors=['k','r','g'],linestyle='-'),
         vlines=dict(vlines=[actual_buydatetime,selltime],colors=['g','r'],linestyle='-',alpha=0.3,linewidths=2),
         **wtmd)
 
-# Plot the weekly returns
-results = pd.DataFrame(pnl_weekly,index=sell_dates,columns=['PNL'])
-fig, ax = plt.subplots()
-colormat=np.where(results['PNL']>0, 'g','r')
-ax.bar(sell_dates, results['PNL'], width=0.75, color=colormat)
-plt.axhline(y=0,color='black',linestyle='-')
-
-# TODO Plot the annual returns
+# # Plot the weekly returns
+pnl_weekly[['Best','Expected','Worst']].plot.bar(color=['g','k','r'])
+pnl_yearly[['Best','Expected','Worst']].plot.bar(color=['g','k','r'])
 
