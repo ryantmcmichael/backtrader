@@ -1,0 +1,804 @@
+{
+  "trades": [
+    {
+      "ticker": "BLDE",
+      "entry_datetime": "2023-12-29T06:33:00",
+      "entry_price": 3.612933333333333,
+      "investment": 25000.0,
+      "shares": 6919.585193932909,
+      "exit_datetime": "2024-01-05T12:59:00",
+      "exit_price": 3.1301,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "TAL",
+      "entry_datetime": "2023-12-29T06:33:00",
+      "entry_price": 12.236666666666666,
+      "investment": 25000.0,
+      "shares": 2043.0400435848544,
+      "exit_datetime": "2024-01-05T12:59:00",
+      "exit_price": 12.6401,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "WRAP",
+      "entry_datetime": "2023-12-29T06:33:00",
+      "entry_price": 2.999966666666667,
+      "investment": 25000.0,
+      "shares": 8333.425926954744,
+      "exit_datetime": "2024-01-05T12:59:00",
+      "exit_price": 2.8001,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "YALA",
+      "entry_datetime": "2023-12-29T06:33:00",
+      "entry_price": 6.163333333333334,
+      "investment": 25000.0,
+      "shares": 4056.246619794483,
+      "exit_datetime": "2024-01-05T12:59:00",
+      "exit_price": 5.865,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "GEOS",
+      "entry_datetime": "2024-01-05T06:31:00",
+      "entry_price": 12.8314,
+      "investment": 25000.0,
+      "shares": 1948.3454650310955,
+      "exit_datetime": "2024-01-12T06:30:00",
+      "exit_price": 13.45,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "SANA",
+      "entry_datetime": "2024-01-05T06:31:00",
+      "entry_price": 4.8974,
+      "investment": 25000.0,
+      "shares": 5104.749458896557,
+      "exit_datetime": "2024-01-10T06:35:00",
+      "exit_price": 5.87688,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "VTEX",
+      "entry_datetime": "2024-01-05T06:31:00",
+      "entry_price": 7.171866666666666,
+      "investment": 25000.0,
+      "shares": 3485.842830318467,
+      "exit_datetime": "2024-01-12T06:30:00",
+      "exit_price": 7.63,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "YMAB",
+      "entry_datetime": "2024-01-05T06:31:00",
+      "entry_price": 6.687866666666667,
+      "investment": 25000.0,
+      "shares": 3738.1128012918916,
+      "exit_datetime": "2024-01-12T06:30:00",
+      "exit_price": 7.58,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "AMLX",
+      "entry_datetime": "2024-01-26T06:32:00",
+      "entry_price": 15.8714,
+      "investment": 25000.0,
+      "shares": 1575.1603513237649,
+      "exit_datetime": "2024-02-01T06:30:00",
+      "exit_price": 16.03,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "EVLV",
+      "entry_datetime": "2024-01-26T06:32:00",
+      "entry_price": 4.693266666666667,
+      "investment": 25000.0,
+      "shares": 5326.780209946163,
+      "exit_datetime": "2024-02-01T06:30:00",
+      "exit_price": 4.4,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "PAYS",
+      "entry_datetime": "2024-01-26T06:32:00",
+      "entry_price": 2.9362999999999997,
+      "investment": 25000.0,
+      "shares": 8514.11640499949,
+      "exit_datetime": "2024-02-01T06:30:00",
+      "exit_price": 3.12,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "SERA",
+      "entry_datetime": "2024-01-26T06:32:00",
+      "entry_price": 6.395333333333333,
+      "investment": 25000.0,
+      "shares": 3909.1003856979046,
+      "exit_datetime": "2024-02-01T06:30:00",
+      "exit_price": 7.12,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "ELTK",
+      "entry_datetime": "2024-02-02T06:34:00",
+      "entry_price": 19.553333333333335,
+      "investment": 25000.0,
+      "shares": 1278.5543811796795,
+      "exit_datetime": "2024-02-05T06:30:00",
+      "exit_price": 19.68,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "INSP",
+      "entry_datetime": "2024-02-02T06:34:00",
+      "entry_price": 216.21456666666666,
+      "investment": 25000.0,
+      "shares": 115.62588212912576,
+      "exit_datetime": "2024-02-05T06:30:00",
+      "exit_price": 216.96,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "PFMT",
+      "entry_datetime": "2024-02-02T06:34:00",
+      "entry_price": 2.9299999999999997,
+      "investment": 25000.0,
+      "shares": 8532.423208191127,
+      "exit_datetime": "2024-02-05T06:30:00",
+      "exit_price": 2.91,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "YRD",
+      "entry_datetime": "2024-02-02T06:34:00",
+      "entry_price": 4.519933333333333,
+      "investment": 25000.0,
+      "shares": 5531.055030310182,
+      "exit_datetime": "2024-02-05T06:30:00",
+      "exit_price": 4.59,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "BTDR",
+      "entry_datetime": "2024-02-09T06:32:00",
+      "entry_price": 8.7133,
+      "investment": 25000.0,
+      "shares": 2869.177005267809,
+      "exit_datetime": "2024-02-14T06:30:00",
+      "exit_price": 8.9,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "HIVE",
+      "entry_datetime": "2024-02-09T06:32:00",
+      "entry_price": 3.6098666666666666,
+      "investment": 25000.0,
+      "shares": 6925.463544359903,
+      "exit_datetime": "2024-02-14T06:30:00",
+      "exit_price": 3.96,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "MARA",
+      "entry_datetime": "2024-02-09T06:32:00",
+      "entry_price": 23.677033333333338,
+      "investment": 25000.0,
+      "shares": 1055.8755249461149,
+      "exit_datetime": "2024-02-14T06:30:00",
+      "exit_price": 29.03,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "PYXS",
+      "entry_datetime": "2024-02-09T06:32:00",
+      "entry_price": 3.9426,
+      "investment": 25000.0,
+      "shares": 6340.993253183178,
+      "exit_datetime": "2024-02-12T06:56:00",
+      "exit_price": 4.73112,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "GYRE",
+      "entry_datetime": "2024-02-16T06:32:00",
+      "entry_price": 17.1566,
+      "investment": 25000.0,
+      "shares": 1457.165172586643,
+      "exit_datetime": "2024-02-22T06:30:00",
+      "exit_price": 14.36,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "MPU",
+      "entry_datetime": "2024-02-16T06:32:00",
+      "entry_price": 3.387966666666667,
+      "investment": 25000.0,
+      "shares": 7379.0572516455295,
+      "exit_datetime": "2024-02-22T06:30:00",
+      "exit_price": 2.76,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "PRLD",
+      "entry_datetime": "2024-02-16T06:32:00",
+      "entry_price": 3.5583333333333336,
+      "investment": 25000.0,
+      "shares": 7025.761124121779,
+      "exit_datetime": "2024-02-16T07:34:00",
+      "exit_price": 4.2700000000000005,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "YMM",
+      "entry_datetime": "2024-02-16T06:32:00",
+      "entry_price": 6.616666666666667,
+      "investment": 25000.0,
+      "shares": 3778.337531486146,
+      "exit_datetime": "2024-02-22T06:30:00",
+      "exit_price": 6.4,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "ERII",
+      "entry_datetime": "2024-03-01T06:33:00",
+      "entry_price": 16.169933333333336,
+      "investment": 25000.0,
+      "shares": 1546.0793489150642,
+      "exit_datetime": "2024-03-06T06:30:00",
+      "exit_price": 15.54,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "LAC",
+      "entry_datetime": "2024-03-01T06:33:00",
+      "entry_price": 5.52,
+      "investment": 25000.0,
+      "shares": 4528.985507246377,
+      "exit_datetime": "2024-03-06T06:30:00",
+      "exit_price": 5.04,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "ORIC",
+      "entry_datetime": "2024-03-01T06:33:00",
+      "entry_price": 14.653333333333334,
+      "investment": 25000.0,
+      "shares": 1706.0964513193812,
+      "exit_datetime": "2024-03-06T06:30:00",
+      "exit_price": 15.71,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "RMBS",
+      "entry_datetime": "2024-03-01T06:33:00",
+      "entry_price": 61.67466666666667,
+      "investment": 25000.0,
+      "shares": 405.3528190937392,
+      "exit_datetime": "2024-03-06T06:30:00",
+      "exit_price": 63.69,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "OPRA",
+      "entry_datetime": "2024-03-08T06:32:00",
+      "entry_price": 14.946666666666665,
+      "investment": 25000.0,
+      "shares": 1672.613737734166,
+      "exit_datetime": "2024-03-12T06:30:00",
+      "exit_price": 15.7,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "QSI",
+      "entry_datetime": "2024-03-08T06:32:00",
+      "entry_price": 2.2249999999999996,
+      "investment": 25000.0,
+      "shares": 11235.955056179777,
+      "exit_datetime": "2024-03-12T06:30:00",
+      "exit_price": 2.01,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "RGTI",
+      "entry_datetime": "2024-03-08T06:32:00",
+      "entry_price": 2.23,
+      "investment": 25000.0,
+      "shares": 11210.762331838565,
+      "exit_datetime": "2024-03-12T06:30:00",
+      "exit_price": 1.96,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "VYGR",
+      "entry_datetime": "2024-03-08T06:32:00",
+      "entry_price": 9.697866666666666,
+      "investment": 25000.0,
+      "shares": 2577.8865454945417,
+      "exit_datetime": "2024-03-12T06:30:00",
+      "exit_price": 9.0,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "GEOS",
+      "entry_datetime": "2024-03-22T06:32:00",
+      "entry_price": 13.165,
+      "investment": 25000.0,
+      "shares": 1898.97455374098,
+      "exit_datetime": "2024-03-25T06:30:00",
+      "exit_price": 13.54,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "IMNM",
+      "entry_datetime": "2024-03-22T06:32:00",
+      "entry_price": 24.405,
+      "investment": 25000.0,
+      "shares": 1024.3802499487808,
+      "exit_datetime": "2024-03-25T06:30:00",
+      "exit_price": 24.53,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "LAAC",
+      "entry_datetime": "2024-03-22T06:32:00",
+      "entry_price": 5.541666666666667,
+      "investment": 25000.0,
+      "shares": 4511.278195488721,
+      "exit_datetime": "2024-03-25T06:30:00",
+      "exit_price": 5.0,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "RSI",
+      "entry_datetime": "2024-03-22T06:32:00",
+      "entry_price": 6.478333333333333,
+      "investment": 25000.0,
+      "shares": 3859.0172369436586,
+      "exit_datetime": "2024-03-25T06:30:00",
+      "exit_price": 6.58,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "FLNC",
+      "entry_datetime": "2024-03-28T06:34:00",
+      "entry_price": 17.308333333333334,
+      "investment": 25000.0,
+      "shares": 1444.3909484833896,
+      "exit_datetime": "2024-04-03T06:30:00",
+      "exit_price": 16.13,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "GBIO",
+      "entry_datetime": "2024-03-28T06:34:00",
+      "entry_price": 3.8433333333333337,
+      "investment": 25000.0,
+      "shares": 6504.77016478751,
+      "exit_datetime": "2024-04-01T11:45:00",
+      "exit_price": 4.612,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "MTTR",
+      "entry_datetime": "2024-03-28T06:34:00",
+      "entry_price": 2.1318333333333332,
+      "investment": 25000.0,
+      "shares": 11726.995543741694,
+      "exit_datetime": "2024-04-03T06:30:00",
+      "exit_price": 2.04,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "ZENV",
+      "entry_datetime": "2024-03-28T06:34:00",
+      "entry_price": 2.5033333333333334,
+      "investment": 25000.0,
+      "shares": 9986.684420772302,
+      "exit_datetime": "2024-04-03T06:30:00",
+      "exit_price": 2.55,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "CLSK",
+      "entry_datetime": "2024-05-10T06:32:00",
+      "entry_price": 17.80333333333333,
+      "investment": 25000.0,
+      "shares": 1404.2314173375773,
+      "exit_datetime": "2024-05-13T06:30:00",
+      "exit_price": 16.05,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "ORN",
+      "entry_datetime": "2024-05-10T06:32:00",
+      "entry_price": 8.541666666666666,
+      "investment": 25000.0,
+      "shares": 2926.829268292683,
+      "exit_datetime": "2024-05-13T06:30:00",
+      "exit_price": 8.65,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "SYRE",
+      "entry_datetime": "2024-05-10T06:32:00",
+      "entry_price": 37.79,
+      "investment": 25000.0,
+      "shares": 661.5506747816883,
+      "exit_datetime": "2024-05-13T06:30:00",
+      "exit_price": 37.22,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "TRUP",
+      "entry_datetime": "2024-05-10T06:32:00",
+      "entry_price": 26.346666666666664,
+      "investment": 25000.0,
+      "shares": 948.8866396761134,
+      "exit_datetime": "2024-05-13T06:30:00",
+      "exit_price": 26.28,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "CLAR",
+      "entry_datetime": "2024-05-17T06:32:00",
+      "entry_price": 6.709966666666666,
+      "investment": 25000.0,
+      "shares": 3725.800923005082,
+      "exit_datetime": "2024-05-23T06:30:00",
+      "exit_price": 6.76,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "HL",
+      "entry_datetime": "2024-05-17T06:32:00",
+      "entry_price": 5.814899999999999,
+      "investment": 25000.0,
+      "shares": 4299.300073947962,
+      "exit_datetime": "2024-05-23T06:30:00",
+      "exit_price": 5.96,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "MARA",
+      "entry_datetime": "2024-05-17T06:32:00",
+      "entry_price": 20.4967,
+      "investment": 25000.0,
+      "shares": 1219.7085384476525,
+      "exit_datetime": "2024-05-23T06:30:00",
+      "exit_price": 21.46,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "NG",
+      "entry_datetime": "2024-05-17T06:32:00",
+      "entry_price": 3.4251666666666662,
+      "investment": 25000.0,
+      "shares": 7298.914894652329,
+      "exit_datetime": "2024-05-23T06:30:00",
+      "exit_price": 3.58,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "IGMS",
+      "entry_datetime": "2024-07-12T06:32:00",
+      "entry_price": 10.184333333333333,
+      "investment": 25000.0,
+      "shares": 2454.750760972736,
+      "exit_datetime": "2024-07-18T06:39:00",
+      "exit_price": 12.25,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "LZM",
+      "entry_datetime": "2024-07-12T06:32:00",
+      "entry_price": 9.056666666666667,
+      "investment": 25000.0,
+      "shares": 2760.3974972396027,
+      "exit_datetime": "2024-07-19T12:59:00",
+      "exit_price": 8.26,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "VERA",
+      "entry_datetime": "2024-07-12T06:32:00",
+      "entry_price": 38.30133333333333,
+      "investment": 25000.0,
+      "shares": 652.7187913388568,
+      "exit_datetime": "2024-07-19T12:59:00",
+      "exit_price": 34.63,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "VRDN",
+      "entry_datetime": "2024-07-12T06:32:00",
+      "entry_price": 13.31,
+      "investment": 25000.0,
+      "shares": 1878.2870022539444,
+      "exit_datetime": "2024-07-16T07:15:00",
+      "exit_price": 15.972,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "INGN",
+      "entry_datetime": "2024-07-19T06:33:00",
+      "entry_price": 9.049966666666666,
+      "investment": 25000.0,
+      "shares": 2762.4411139635877,
+      "exit_datetime": "2024-07-25T06:30:00",
+      "exit_price": 9.37,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "NCMI",
+      "entry_datetime": "2024-07-19T06:33:00",
+      "entry_price": 5.076666666666666,
+      "investment": 25000.0,
+      "shares": 4924.491135915956,
+      "exit_datetime": "2024-07-25T06:30:00",
+      "exit_price": 5.55,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "RPTX",
+      "entry_datetime": "2024-07-19T06:33:00",
+      "entry_price": 4.1233,
+      "investment": 25000.0,
+      "shares": 6063.104794703271,
+      "exit_datetime": "2024-07-25T06:30:00",
+      "exit_price": 3.88,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "USLM",
+      "entry_datetime": "2024-07-19T06:33:00",
+      "entry_price": 77.6,
+      "investment": 25000.0,
+      "shares": 322.16494845360825,
+      "exit_datetime": "2024-07-25T06:30:00",
+      "exit_price": 82.52,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "BCYC",
+      "entry_datetime": "2024-09-20T06:32:00",
+      "entry_price": 25.31656666666667,
+      "investment": 25000.0,
+      "shares": 987.4956714773066,
+      "exit_datetime": "2024-09-27T12:59:00",
+      "exit_price": 23.2,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "CNTX",
+      "entry_datetime": "2024-09-20T06:32:00",
+      "entry_price": 2.3866333333333336,
+      "investment": 25000.0,
+      "shares": 10475.006634170868,
+      "exit_datetime": "2024-09-27T06:51:00",
+      "exit_price": 1.789975,
+      "exit_reason": "Loss Target"
+    },
+    {
+      "ticker": "GATO",
+      "entry_datetime": "2024-09-20T06:32:00",
+      "entry_price": 15.388333333333334,
+      "investment": 25000.0,
+      "shares": 1624.6073865482508,
+      "exit_datetime": "2024-09-27T12:59:00",
+      "exit_price": 15.91,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "TALK",
+      "entry_datetime": "2024-09-20T06:32:00",
+      "entry_price": 2.2516666666666665,
+      "investment": 25000.0,
+      "shares": 11102.886750555146,
+      "exit_datetime": "2024-09-27T12:59:00",
+      "exit_price": 2.03,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "APPS",
+      "entry_datetime": "2024-09-27T06:31:00",
+      "entry_price": 3.0800666666666667,
+      "investment": 25000.0,
+      "shares": 8116.707430575096,
+      "exit_datetime": "2024-10-03T06:30:00",
+      "exit_price": 2.75,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "HYLN",
+      "entry_datetime": "2024-09-27T06:31:00",
+      "entry_price": 2.4340333333333333,
+      "investment": 25000.0,
+      "shares": 10271.017926349954,
+      "exit_datetime": "2024-10-03T06:30:00",
+      "exit_price": 2.38,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "ICHR",
+      "entry_datetime": "2024-09-27T06:31:00",
+      "entry_price": 32.056533333333334,
+      "investment": 25000.0,
+      "shares": 779.8722257345356,
+      "exit_datetime": "2024-10-03T06:30:00",
+      "exit_price": 30.93,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "PPTA",
+      "entry_datetime": "2024-09-27T06:31:00",
+      "entry_price": 10.0284,
+      "investment": 25000.0,
+      "shares": 2492.9201068964144,
+      "exit_datetime": "2024-10-03T06:30:00",
+      "exit_price": 9.01,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "BVN",
+      "entry_datetime": "2024-10-11T06:33:00",
+      "entry_price": 13.97,
+      "investment": 25000.0,
+      "shares": 1789.5490336435219,
+      "exit_datetime": "2024-10-18T12:59:00",
+      "exit_price": 13.7,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "CELH",
+      "entry_datetime": "2024-10-11T06:33:00",
+      "entry_price": 34.18,
+      "investment": 25000.0,
+      "shares": 731.4218841427736,
+      "exit_datetime": "2024-10-18T12:59:00",
+      "exit_price": 33.86,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "RSI",
+      "entry_datetime": "2024-10-11T06:33:00",
+      "entry_price": 11.090133333333334,
+      "investment": 25000.0,
+      "shares": 2254.256035394825,
+      "exit_datetime": "2024-10-18T12:59:00",
+      "exit_price": 11.01,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "SYM",
+      "entry_datetime": "2024-10-11T06:33:00",
+      "entry_price": 29.91,
+      "investment": 25000.0,
+      "shares": 835.8408559010364,
+      "exit_datetime": "2024-10-18T12:59:00",
+      "exit_price": 30.05,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "AVDX",
+      "entry_datetime": "2024-10-18T06:32:00",
+      "entry_price": 8.469866666666666,
+      "investment": 25000.0,
+      "shares": 2951.640324916567,
+      "exit_datetime": "2024-10-24T06:30:00",
+      "exit_price": 8.26,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "CXDO",
+      "entry_datetime": "2024-10-18T06:32:00",
+      "entry_price": 5.826599999999999,
+      "investment": 25000.0,
+      "shares": 4290.666941269352,
+      "exit_datetime": "2024-10-24T06:30:00",
+      "exit_price": 5.79,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "NPWR",
+      "entry_datetime": "2024-10-18T06:32:00",
+      "entry_price": 8.006666666666666,
+      "investment": 25000.0,
+      "shares": 3122.398001665279,
+      "exit_datetime": "2024-10-23T06:48:00",
+      "exit_price": 9.607999999999999,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "SVM",
+      "entry_datetime": "2024-10-18T06:32:00",
+      "entry_price": 4.9783333333333335,
+      "investment": 25000.0,
+      "shares": 5021.760964178105,
+      "exit_datetime": "2024-10-24T06:30:00",
+      "exit_price": 4.89,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "HYLN",
+      "entry_datetime": "2024-11-08T06:31:00",
+      "entry_price": 2.5666666666666664,
+      "investment": 25000.0,
+      "shares": 9740.25974025974,
+      "exit_datetime": "2024-11-14T06:30:00",
+      "exit_price": 2.75,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "MNMD",
+      "entry_datetime": "2024-11-08T06:31:00",
+      "entry_price": 7.963333333333334,
+      "investment": 25000.0,
+      "shares": 3139.3888656341564,
+      "exit_datetime": "2024-11-14T06:30:00",
+      "exit_price": 8.44,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "TNYA",
+      "entry_datetime": "2024-11-08T06:31:00",
+      "entry_price": 2.9223666666666666,
+      "investment": 25000.0,
+      "shares": 8554.710223449032,
+      "exit_datetime": "2024-11-12T10:30:00",
+      "exit_price": 2.191775,
+      "exit_reason": "Loss Target"
+    },
+    {
+      "ticker": "ZNTL",
+      "entry_datetime": "2024-11-08T06:31:00",
+      "entry_price": 3.8333333333333335,
+      "investment": 25000.0,
+      "shares": 6521.739130434782,
+      "exit_datetime": "2024-11-14T06:30:00",
+      "exit_price": 3.97,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "JOBY",
+      "entry_datetime": "2024-11-29T06:33:00",
+      "entry_price": 8.348333333333334,
+      "investment": 25000.0,
+      "shares": 2994.6097025354356,
+      "exit_datetime": "2024-12-06T06:30:00",
+      "exit_price": 8.32,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "OPAD",
+      "entry_datetime": "2024-11-29T06:33:00",
+      "entry_price": 4.84,
+      "investment": 25000.0,
+      "shares": 5165.289256198347,
+      "exit_datetime": "2024-12-06T06:30:00",
+      "exit_price": 4.25,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "OPEN",
+      "entry_datetime": "2024-11-29T06:33:00",
+      "entry_price": 2.4066666666666667,
+      "investment": 25000.0,
+      "shares": 10387.811634349031,
+      "exit_datetime": "2024-12-06T06:30:00",
+      "exit_price": 2.21,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "VNET",
+      "entry_datetime": "2024-11-29T06:33:00",
+      "entry_price": 4.109966666666666,
+      "investment": 25000.0,
+      "shares": 6082.774393952913,
+      "exit_datetime": "2024-12-06T06:30:00",
+      "exit_price": 4.15,
+      "exit_reason": "MG Signal"
+    }
+  ]
+}

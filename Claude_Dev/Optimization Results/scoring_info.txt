@@ -1,0 +1,12 @@
+Original Scoring Configuration:
+-----------------------------
+
+Weights:
+gain_weight: 0.4
+drawdown_weight: 0.3
+winrate_weight: 0.3
+
+Normalization Methods:
+gain_normalization: 1 - ((max_gain - gain) / max(max_gain - gains))
+drawdown_normalization: 1 - (drawdown / max_drawdown)
+winrate_normalization: winrate / 100

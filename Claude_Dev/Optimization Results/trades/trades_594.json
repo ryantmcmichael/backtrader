@@ -1,0 +1,804 @@
+{
+  "trades": [
+    {
+      "ticker": "BLDE",
+      "entry_datetime": "2023-12-29T06:32:00",
+      "entry_price": 3.612933333333333,
+      "investment": 25000.0,
+      "shares": 6919.585193932909,
+      "exit_datetime": "2024-01-05T12:59:00",
+      "exit_price": 3.1301,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "TAL",
+      "entry_datetime": "2023-12-29T06:32:00",
+      "entry_price": 12.050333333333334,
+      "investment": 25000.0,
+      "shares": 2074.631407153329,
+      "exit_datetime": "2024-01-05T12:59:00",
+      "exit_price": 12.6401,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "WRAP",
+      "entry_datetime": "2023-12-29T06:32:00",
+      "entry_price": 2.9636,
+      "investment": 25000.0,
+      "shares": 8435.6863274396,
+      "exit_datetime": "2024-01-05T12:59:00",
+      "exit_price": 2.8001,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "YALA",
+      "entry_datetime": "2023-12-29T06:32:00",
+      "entry_price": 6.151666666666667,
+      "investment": 25000.0,
+      "shares": 4063.9393118396097,
+      "exit_datetime": "2024-01-05T12:59:00",
+      "exit_price": 5.865,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "GEOS",
+      "entry_datetime": "2024-01-05T06:30:00",
+      "entry_price": 12.699999999999998,
+      "investment": 25000.0,
+      "shares": 1968.5039370078744,
+      "exit_datetime": "2024-01-12T12:59:00",
+      "exit_price": 14.01,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "SANA",
+      "entry_datetime": "2024-01-05T06:30:00",
+      "entry_price": 4.937666666666666,
+      "investment": 25000.0,
+      "shares": 5063.120232228449,
+      "exit_datetime": "2024-01-10T06:33:00",
+      "exit_price": 5.678316666666666,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "VTEX",
+      "entry_datetime": "2024-01-05T06:30:00",
+      "entry_price": 7.22,
+      "investment": 25000.0,
+      "shares": 3462.603878116344,
+      "exit_datetime": "2024-01-12T12:59:00",
+      "exit_price": 7.78,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "YMAB",
+      "entry_datetime": "2024-01-05T06:30:00",
+      "entry_price": 6.75,
+      "investment": 25000.0,
+      "shares": 3703.703703703704,
+      "exit_datetime": "2024-01-08T07:35:00",
+      "exit_price": 7.762499999999999,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "AMLX",
+      "entry_datetime": "2024-01-26T06:31:00",
+      "entry_price": 15.744,
+      "investment": 25000.0,
+      "shares": 1587.9065040650407,
+      "exit_datetime": "2024-02-02T12:59:00",
+      "exit_price": 15.78,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "EVLV",
+      "entry_datetime": "2024-01-26T06:31:00",
+      "entry_price": 4.695,
+      "investment": 25000.0,
+      "shares": 5324.813631522897,
+      "exit_datetime": "2024-02-02T12:59:00",
+      "exit_price": 4.46,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "PAYS",
+      "entry_datetime": "2024-01-26T06:31:00",
+      "entry_price": 2.9161,
+      "investment": 25000.0,
+      "shares": 8573.094201159081,
+      "exit_datetime": "2024-02-02T12:59:00",
+      "exit_price": 3.0,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "SERA",
+      "entry_datetime": "2024-01-26T06:31:00",
+      "entry_price": 6.263333333333333,
+      "investment": 25000.0,
+      "shares": 3991.4848323576375,
+      "exit_datetime": "2024-01-30T06:44:00",
+      "exit_price": 7.2028333333333325,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "ELTK",
+      "entry_datetime": "2024-02-02T06:33:00",
+      "entry_price": 19.672066666666666,
+      "investment": 25000.0,
+      "shares": 1270.8374988562464,
+      "exit_datetime": "2024-02-09T12:59:00",
+      "exit_price": 18.89,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "INSP",
+      "entry_datetime": "2024-02-02T06:33:00",
+      "entry_price": 216.42166666666665,
+      "investment": 25000.0,
+      "shares": 115.51523645968904,
+      "exit_datetime": "2024-02-09T12:59:00",
+      "exit_price": 194.87,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "PFMT",
+      "entry_datetime": "2024-02-02T06:33:00",
+      "entry_price": 2.8861000000000003,
+      "investment": 25000.0,
+      "shares": 8662.208516683413,
+      "exit_datetime": "2024-02-09T12:59:00",
+      "exit_price": 2.89,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "YRD",
+      "entry_datetime": "2024-02-02T06:33:00",
+      "entry_price": 4.539933333333333,
+      "investment": 25000.0,
+      "shares": 5506.688791318522,
+      "exit_datetime": "2024-02-09T12:59:00",
+      "exit_price": 4.37,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "BTDR",
+      "entry_datetime": "2024-02-09T06:31:00",
+      "entry_price": 8.857266666666666,
+      "investment": 25000.0,
+      "shares": 2822.541190284437,
+      "exit_datetime": "2024-02-16T09:36:00",
+      "exit_price": 7.085813333333333,
+      "exit_reason": "Loss Target"
+    },
+    {
+      "ticker": "HIVE",
+      "entry_datetime": "2024-02-09T06:31:00",
+      "entry_price": 3.58,
+      "investment": 25000.0,
+      "shares": 6983.240223463687,
+      "exit_datetime": "2024-02-14T11:13:00",
+      "exit_price": 4.12,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "MARA",
+      "entry_datetime": "2024-02-09T06:31:00",
+      "entry_price": 23.330033333333333,
+      "investment": 25000.0,
+      "shares": 1071.5801234746057,
+      "exit_datetime": "2024-02-12T07:40:00",
+      "exit_price": 26.829538333333332,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "PYXS",
+      "entry_datetime": "2024-02-09T06:31:00",
+      "entry_price": 3.8828,
+      "investment": 25000.0,
+      "shares": 6438.652518800865,
+      "exit_datetime": "2024-02-09T07:41:00",
+      "exit_price": 4.4652199999999995,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "GYRE",
+      "entry_datetime": "2024-02-16T06:31:00",
+      "entry_price": 16.693333333333335,
+      "investment": 25000.0,
+      "shares": 1497.6038338658145,
+      "exit_datetime": "2024-02-23T09:23:00",
+      "exit_price": 19.197333333333333,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "MPU",
+      "entry_datetime": "2024-02-16T06:31:00",
+      "entry_price": 3.376633333333333,
+      "investment": 25000.0,
+      "shares": 7403.824322056487,
+      "exit_datetime": "2024-02-23T12:59:00",
+      "exit_price": 3.0,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "PRLD",
+      "entry_datetime": "2024-02-16T06:31:00",
+      "entry_price": 3.525233333333334,
+      "investment": 25000.0,
+      "shares": 7091.7291526802,
+      "exit_datetime": "2024-02-16T06:48:00",
+      "exit_price": 4.0540183333333335,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "YMM",
+      "entry_datetime": "2024-02-16T06:31:00",
+      "entry_price": 6.612966666666666,
+      "investment": 25000.0,
+      "shares": 3780.451537131595,
+      "exit_datetime": "2024-02-23T12:59:00",
+      "exit_price": 6.37,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ERII",
+      "entry_datetime": "2024-03-01T06:32:00",
+      "entry_price": 16.136666666666667,
+      "investment": 25000.0,
+      "shares": 1549.266680437926,
+      "exit_datetime": "2024-03-08T12:59:00",
+      "exit_price": 15.19,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "LAC",
+      "entry_datetime": "2024-03-01T06:32:00",
+      "entry_price": 5.585,
+      "investment": 25000.0,
+      "shares": 4476.275738585497,
+      "exit_datetime": "2024-03-08T12:59:00",
+      "exit_price": 5.33,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ORIC",
+      "entry_datetime": "2024-03-01T06:32:00",
+      "entry_price": 13.986666666666666,
+      "investment": 25000.0,
+      "shares": 1787.4165872259296,
+      "exit_datetime": "2024-03-06T06:41:00",
+      "exit_price": 16.084666666666664,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "RMBS",
+      "entry_datetime": "2024-03-01T06:32:00",
+      "entry_price": 61.31166666666667,
+      "investment": 25000.0,
+      "shares": 407.7527387392285,
+      "exit_datetime": "2024-03-08T12:59:00",
+      "exit_price": 63.75,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "OPRA",
+      "entry_datetime": "2024-03-08T06:31:00",
+      "entry_price": 14.823599999999999,
+      "investment": 25000.0,
+      "shares": 1686.4999055560054,
+      "exit_datetime": "2024-03-13T07:28:00",
+      "exit_price": 17.04714,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "QSI",
+      "entry_datetime": "2024-03-08T06:31:00",
+      "entry_price": 2.126666666666667,
+      "investment": 25000.0,
+      "shares": 11755.485893416926,
+      "exit_datetime": "2024-03-15T12:59:00",
+      "exit_price": 1.74,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "RGTI",
+      "entry_datetime": "2024-03-08T06:31:00",
+      "entry_price": 2.186666666666667,
+      "investment": 25000.0,
+      "shares": 11432.926829268292,
+      "exit_datetime": "2024-03-15T12:59:00",
+      "exit_price": 1.9603,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "VYGR",
+      "entry_datetime": "2024-03-08T06:31:00",
+      "entry_price": 9.666666666666666,
+      "investment": 25000.0,
+      "shares": 2586.206896551724,
+      "exit_datetime": "2024-03-15T12:59:00",
+      "exit_price": 9.28,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "GEOS",
+      "entry_datetime": "2024-03-22T06:31:00",
+      "entry_price": 13.165,
+      "investment": 25000.0,
+      "shares": 1898.97455374098,
+      "exit_datetime": "2024-03-28T12:58:00",
+      "exit_price": 13.19,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "IMNM",
+      "entry_datetime": "2024-03-22T06:31:00",
+      "entry_price": 24.405,
+      "investment": 25000.0,
+      "shares": 1024.3802499487808,
+      "exit_datetime": "2024-03-28T12:59:00",
+      "exit_price": 24.65,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "LAAC",
+      "entry_datetime": "2024-03-22T06:31:00",
+      "entry_price": 5.506666666666667,
+      "investment": 25000.0,
+      "shares": 4539.9515738498785,
+      "exit_datetime": "2024-03-28T12:59:00",
+      "exit_price": 5.39,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "RSI",
+      "entry_datetime": "2024-03-22T06:31:00",
+      "entry_price": 6.491666666666666,
+      "investment": 25000.0,
+      "shares": 3851.0911424903725,
+      "exit_datetime": "2024-03-28T12:59:00",
+      "exit_price": 6.51,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "FLNC",
+      "entry_datetime": "2024-03-28T06:33:00",
+      "entry_price": 17.200033333333334,
+      "investment": 25000.0,
+      "shares": 1453.4855552605518,
+      "exit_datetime": "2024-04-05T12:59:00",
+      "exit_price": 16.62,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "GBIO",
+      "entry_datetime": "2024-03-28T06:33:00",
+      "entry_price": 3.8433333333333337,
+      "investment": 25000.0,
+      "shares": 6504.77016478751,
+      "exit_datetime": "2024-04-01T07:23:00",
+      "exit_price": 4.419833333333333,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "MTTR",
+      "entry_datetime": "2024-03-28T06:33:00",
+      "entry_price": 2.0980000000000003,
+      "investment": 25000.0,
+      "shares": 11916.110581506195,
+      "exit_datetime": "2024-04-05T12:59:00",
+      "exit_price": 2.035,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ZENV",
+      "entry_datetime": "2024-03-28T06:33:00",
+      "entry_price": 2.5033333333333334,
+      "investment": 25000.0,
+      "shares": 9986.684420772302,
+      "exit_datetime": "2024-04-01T06:30:00",
+      "exit_price": 2.878833333333333,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "CLSK",
+      "entry_datetime": "2024-05-10T06:31:00",
+      "entry_price": 17.7433,
+      "investment": 25000.0,
+      "shares": 1408.982545524226,
+      "exit_datetime": "2024-05-17T12:59:00",
+      "exit_price": 16.03,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ORN",
+      "entry_datetime": "2024-05-10T06:31:00",
+      "entry_price": 8.373333333333333,
+      "investment": 25000.0,
+      "shares": 2985.668789808917,
+      "exit_datetime": "2024-05-15T08:26:00",
+      "exit_price": 9.629333333333332,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "SYRE",
+      "entry_datetime": "2024-05-10T06:31:00",
+      "entry_price": 37.5379,
+      "investment": 25000.0,
+      "shares": 665.9935691660961,
+      "exit_datetime": "2024-05-17T12:59:00",
+      "exit_price": 37.86,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "TRUP",
+      "entry_datetime": "2024-05-10T06:31:00",
+      "entry_price": 26.30333333333333,
+      "investment": 25000.0,
+      "shares": 950.449879609682,
+      "exit_datetime": "2024-05-13T09:18:00",
+      "exit_price": 30.248833333333327,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "CLAR",
+      "entry_datetime": "2024-05-17T06:31:00",
+      "entry_price": 6.709966666666666,
+      "investment": 25000.0,
+      "shares": 3725.800923005082,
+      "exit_datetime": "2024-05-24T06:30:00",
+      "exit_price": 6.74,
+      "exit_reason": "SP500 Signal"
+    },
+    {
+      "ticker": "HL",
+      "entry_datetime": "2024-05-17T06:31:00",
+      "entry_price": 5.89,
+      "investment": 25000.0,
+      "shares": 4244.4821731748725,
+      "exit_datetime": "2024-05-24T06:30:00",
+      "exit_price": 5.83,
+      "exit_reason": "SP500 Signal"
+    },
+    {
+      "ticker": "MARA",
+      "entry_datetime": "2024-05-17T06:31:00",
+      "entry_price": 20.426199999999998,
+      "investment": 25000.0,
+      "shares": 1223.9183010055715,
+      "exit_datetime": "2024-05-24T06:30:00",
+      "exit_price": 20.26,
+      "exit_reason": "SP500 Signal"
+    },
+    {
+      "ticker": "NG",
+      "entry_datetime": "2024-05-17T06:31:00",
+      "entry_price": 3.4332999999999996,
+      "investment": 25000.0,
+      "shares": 7281.624093437801,
+      "exit_datetime": "2024-05-24T06:30:00",
+      "exit_price": 3.56,
+      "exit_reason": "SP500 Signal"
+    },
+    {
+      "ticker": "IGMS",
+      "entry_datetime": "2024-07-12T06:31:00",
+      "entry_price": 10.089933333333333,
+      "investment": 25000.0,
+      "shares": 2477.717064532967,
+      "exit_datetime": "2024-07-16T10:59:00",
+      "exit_price": 11.603423333333332,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "LZM",
+      "entry_datetime": "2024-07-12T06:31:00",
+      "entry_price": 9.063333333333334,
+      "investment": 25000.0,
+      "shares": 2758.3670467083484,
+      "exit_datetime": "2024-07-19T12:59:00",
+      "exit_price": 8.26,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "VERA",
+      "entry_datetime": "2024-07-12T06:31:00",
+      "entry_price": 38.125,
+      "investment": 25000.0,
+      "shares": 655.7377049180328,
+      "exit_datetime": "2024-07-19T12:59:00",
+      "exit_price": 34.63,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "VRDN",
+      "entry_datetime": "2024-07-12T06:31:00",
+      "entry_price": 13.266666666666667,
+      "investment": 25000.0,
+      "shares": 1884.4221105527638,
+      "exit_datetime": "2024-07-16T06:31:00",
+      "exit_price": 15.256666666666666,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "INGN",
+      "entry_datetime": "2024-07-19T06:32:00",
+      "entry_price": 9.146666666666667,
+      "investment": 25000.0,
+      "shares": 2733.2361516034985,
+      "exit_datetime": "2024-07-25T06:30:00",
+      "exit_price": 9.37,
+      "exit_reason": "SP500 Signal"
+    },
+    {
+      "ticker": "NCMI",
+      "entry_datetime": "2024-07-19T06:32:00",
+      "entry_price": 5.016666666666667,
+      "investment": 25000.0,
+      "shares": 4983.388704318937,
+      "exit_datetime": "2024-07-23T08:54:00",
+      "exit_price": 5.7694,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "RPTX",
+      "entry_datetime": "2024-07-19T06:32:00",
+      "entry_price": 4.031666666666666,
+      "investment": 25000.0,
+      "shares": 6200.909466721787,
+      "exit_datetime": "2024-07-25T06:30:00",
+      "exit_price": 3.88,
+      "exit_reason": "SP500 Signal"
+    },
+    {
+      "ticker": "USLM",
+      "entry_datetime": "2024-07-19T06:32:00",
+      "entry_price": 79.26,
+      "investment": 25000.0,
+      "shares": 315.4176129195054,
+      "exit_datetime": "2024-07-25T06:30:00",
+      "exit_price": 82.52,
+      "exit_reason": "SP500 Signal"
+    },
+    {
+      "ticker": "BCYC",
+      "entry_datetime": "2024-09-20T06:31:00",
+      "entry_price": 25.633266666666668,
+      "investment": 25000.0,
+      "shares": 975.2951243046145,
+      "exit_datetime": "2024-09-27T12:59:00",
+      "exit_price": 23.2,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "CNTX",
+      "entry_datetime": "2024-09-20T06:31:00",
+      "entry_price": 2.4028,
+      "investment": 25000.0,
+      "shares": 10404.528050607625,
+      "exit_datetime": "2024-09-25T06:30:00",
+      "exit_price": 1.9222400000000002,
+      "exit_reason": "Loss Target"
+    },
+    {
+      "ticker": "GATO",
+      "entry_datetime": "2024-09-20T06:31:00",
+      "entry_price": 15.3596,
+      "investment": 25000.0,
+      "shares": 1627.6465532956588,
+      "exit_datetime": "2024-09-27T12:59:00",
+      "exit_price": 15.91,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "TALK",
+      "entry_datetime": "2024-09-20T06:31:00",
+      "entry_price": 2.235,
+      "investment": 25000.0,
+      "shares": 11185.682326621925,
+      "exit_datetime": "2024-09-27T12:59:00",
+      "exit_price": 2.03,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "APPS",
+      "entry_datetime": "2024-09-27T06:30:00",
+      "entry_price": 3.0826666666666664,
+      "investment": 25000.0,
+      "shares": 8109.861591695502,
+      "exit_datetime": "2024-10-04T12:59:00",
+      "exit_price": 2.775,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "HYLN",
+      "entry_datetime": "2024-09-27T06:30:00",
+      "entry_price": 2.4367666666666667,
+      "investment": 25000.0,
+      "shares": 10259.496874273285,
+      "exit_datetime": "2024-10-04T12:59:00",
+      "exit_price": 2.44,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ICHR",
+      "entry_datetime": "2024-09-27T06:30:00",
+      "entry_price": 32.1,
+      "investment": 25000.0,
+      "shares": 778.816199376947,
+      "exit_datetime": "2024-10-04T12:59:00",
+      "exit_price": 30.92,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "PPTA",
+      "entry_datetime": "2024-09-27T06:30:00",
+      "entry_price": 10.119333333333335,
+      "investment": 25000.0,
+      "shares": 2470.518479478226,
+      "exit_datetime": "2024-10-04T12:59:00",
+      "exit_price": 9.12,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "BVN",
+      "entry_datetime": "2024-10-11T06:32:00",
+      "entry_price": 13.953366666666668,
+      "investment": 25000.0,
+      "shares": 1791.6822941177875,
+      "exit_datetime": "2024-10-18T12:59:00",
+      "exit_price": 13.7,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "CELH",
+      "entry_datetime": "2024-10-11T06:32:00",
+      "entry_price": 34.59623333333334,
+      "investment": 25000.0,
+      "shares": 722.6220195454803,
+      "exit_datetime": "2024-10-18T12:59:00",
+      "exit_price": 33.86,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "RSI",
+      "entry_datetime": "2024-10-11T06:32:00",
+      "entry_price": 11.1,
+      "investment": 25000.0,
+      "shares": 2252.252252252252,
+      "exit_datetime": "2024-10-18T12:59:00",
+      "exit_price": 11.01,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "SYM",
+      "entry_datetime": "2024-10-11T06:32:00",
+      "entry_price": 29.490033333333333,
+      "investment": 25000.0,
+      "shares": 847.7440400768169,
+      "exit_datetime": "2024-10-18T12:59:00",
+      "exit_price": 30.05,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "AVDX",
+      "entry_datetime": "2024-10-18T06:31:00",
+      "entry_price": 8.4216,
+      "investment": 25000.0,
+      "shares": 2968.5570437921538,
+      "exit_datetime": "2024-10-24T06:30:00",
+      "exit_price": 8.26,
+      "exit_reason": "SP500 Signal"
+    },
+    {
+      "ticker": "CXDO",
+      "entry_datetime": "2024-10-18T06:31:00",
+      "entry_price": 5.723333333333334,
+      "investment": 25000.0,
+      "shares": 4368.08386721025,
+      "exit_datetime": "2024-10-24T06:30:00",
+      "exit_price": 5.79,
+      "exit_reason": "SP500 Signal"
+    },
+    {
+      "ticker": "NPWR",
+      "entry_datetime": "2024-10-18T06:31:00",
+      "entry_price": 8.0492,
+      "investment": 25000.0,
+      "shares": 3105.8987228544447,
+      "exit_datetime": "2024-10-23T06:37:00",
+      "exit_price": 9.25658,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "SVM",
+      "entry_datetime": "2024-10-18T06:31:00",
+      "entry_price": 4.995,
+      "investment": 25000.0,
+      "shares": 5005.005005005005,
+      "exit_datetime": "2024-10-24T06:30:00",
+      "exit_price": 4.89,
+      "exit_reason": "SP500 Signal"
+    },
+    {
+      "ticker": "HYLN",
+      "entry_datetime": "2024-11-08T06:30:00",
+      "entry_price": 2.565,
+      "investment": 25000.0,
+      "shares": 9746.588693957116,
+      "exit_datetime": "2024-11-13T06:53:00",
+      "exit_price": 2.94975,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "MNMD",
+      "entry_datetime": "2024-11-08T06:30:00",
+      "entry_price": 7.783066666666667,
+      "investment": 25000.0,
+      "shares": 3212.1014852757266,
+      "exit_datetime": "2024-11-08T07:43:00",
+      "exit_price": 8.950526666666667,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "TNYA",
+      "entry_datetime": "2024-11-08T06:30:00",
+      "entry_price": 2.906633333333333,
+      "investment": 25000.0,
+      "shares": 8601.016066698014,
+      "exit_datetime": "2024-11-12T07:53:00",
+      "exit_price": 2.3253066666666666,
+      "exit_reason": "Loss Target"
+    },
+    {
+      "ticker": "ZNTL",
+      "entry_datetime": "2024-11-08T06:30:00",
+      "entry_price": 3.85,
+      "investment": 25000.0,
+      "shares": 6493.506493506493,
+      "exit_datetime": "2024-11-13T06:44:00",
+      "exit_price": 4.427499999999999,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "JOBY",
+      "entry_datetime": "2024-11-29T06:32:00",
+      "entry_price": 8.3318,
+      "investment": 25000.0,
+      "shares": 3000.552101586692,
+      "exit_datetime": "2024-12-06T12:59:00",
+      "exit_price": 8.83,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "OPAD",
+      "entry_datetime": "2024-11-29T06:32:00",
+      "entry_price": 4.8933333333333335,
+      "investment": 25000.0,
+      "shares": 5108.991825613079,
+      "exit_datetime": "2024-12-06T12:56:00",
+      "exit_price": 3.91,
+      "exit_reason": "Loss Target"
+    },
+    {
+      "ticker": "OPEN",
+      "entry_datetime": "2024-11-29T06:32:00",
+      "entry_price": 2.3806999999999996,
+      "investment": 25000.0,
+      "shares": 10501.11311799051,
+      "exit_datetime": "2024-12-06T12:59:00",
+      "exit_price": 2.2,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "VNET",
+      "entry_datetime": "2024-11-29T06:32:00",
+      "entry_price": 4.056666666666667,
+      "investment": 25000.0,
+      "shares": 6162.695152013147,
+      "exit_datetime": "2024-12-06T12:59:00",
+      "exit_price": 4.115,
+      "exit_reason": "Second Friday"
+    }
+  ]
+}

@@ -1,0 +1,1034 @@
+{
+  "trades": [
+    {
+      "ticker": "FAZE",
+      "entry_datetime": "2023-01-13T06:35:00",
+      "entry_price": 2.09,
+      "investment": 25000.0,
+      "shares": 11961.722488038278,
+      "exit_datetime": "2023-01-20T12:55:00",
+      "exit_price": 0.97805,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "GOTU",
+      "entry_datetime": "2023-01-13T06:35:00",
+      "entry_price": 3.61,
+      "investment": 25000.0,
+      "shares": 6925.207756232688,
+      "exit_datetime": "2023-01-20T12:55:00",
+      "exit_price": 3.815,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "STRO",
+      "entry_datetime": "2023-01-13T06:35:00",
+      "entry_price": 7.92,
+      "investment": 25000.0,
+      "shares": 3156.565656565657,
+      "exit_datetime": "2023-01-20T12:55:00",
+      "exit_price": 7.615,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ZYME",
+      "entry_datetime": "2023-01-13T06:35:00",
+      "entry_price": 9.29,
+      "investment": 25000.0,
+      "shares": 2691.065662002153,
+      "exit_datetime": "2023-01-20T12:55:00",
+      "exit_price": 10.04,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "BZUN",
+      "entry_datetime": "2023-01-20T06:37:00",
+      "entry_price": 7.331,
+      "investment": 25000.0,
+      "shares": 3410.175965079798,
+      "exit_datetime": "2023-01-27T12:55:00",
+      "exit_price": 8.135,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "CECO",
+      "entry_datetime": "2023-01-20T06:37:00",
+      "entry_price": 14.24,
+      "investment": 25000.0,
+      "shares": 1755.6179775280898,
+      "exit_datetime": "2023-01-27T12:55:00",
+      "exit_price": 13.83,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "RERE",
+      "entry_datetime": "2023-01-20T06:37:00",
+      "entry_price": 2.95,
+      "investment": 25000.0,
+      "shares": 8474.57627118644,
+      "exit_datetime": "2023-01-27T12:55:00",
+      "exit_price": 3.09,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "TCOM",
+      "entry_datetime": "2023-01-20T06:37:00",
+      "entry_price": 38.85,
+      "investment": 25000.0,
+      "shares": 643.5006435006435,
+      "exit_datetime": "2023-01-27T12:55:00",
+      "exit_price": 39.44,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "JMIA",
+      "entry_datetime": "2023-01-26T06:34:00",
+      "entry_price": 4.133,
+      "investment": 25000.0,
+      "shares": 6048.874909266877,
+      "exit_datetime": "2023-02-03T12:55:00",
+      "exit_price": 4.6063,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "RIVN",
+      "entry_datetime": "2023-01-26T06:34:00",
+      "entry_price": 19.14,
+      "investment": 25000.0,
+      "shares": 1306.1650992685475,
+      "exit_datetime": "2023-02-03T12:55:00",
+      "exit_price": 19.92,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "TOUR",
+      "entry_datetime": "2023-01-26T06:34:00",
+      "entry_price": 2.425,
+      "investment": 25000.0,
+      "shares": 10309.278350515464,
+      "exit_datetime": "2023-02-03T12:54:00",
+      "exit_price": 2.345,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ZLAB",
+      "entry_datetime": "2023-01-26T06:34:00",
+      "entry_price": 45.17,
+      "investment": 25000.0,
+      "shares": 553.4646889528448,
+      "exit_datetime": "2023-02-03T12:55:00",
+      "exit_price": 40.08,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ERAS",
+      "entry_datetime": "2023-02-03T06:35:00",
+      "entry_price": 4.35,
+      "investment": 25000.0,
+      "shares": 5747.126436781609,
+      "exit_datetime": "2023-02-10T12:55:00",
+      "exit_price": 3.88,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "EZPW",
+      "entry_datetime": "2023-02-03T06:35:00",
+      "entry_price": 9.29,
+      "investment": 25000.0,
+      "shares": 2691.065662002153,
+      "exit_datetime": "2023-02-10T12:55:00",
+      "exit_price": 8.94,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "HCC",
+      "entry_datetime": "2023-02-03T06:35:00",
+      "entry_price": 38.89,
+      "investment": 25000.0,
+      "shares": 642.8387760349705,
+      "exit_datetime": "2023-02-10T12:55:00",
+      "exit_price": 38.485,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "TRVI",
+      "entry_datetime": "2023-02-03T06:35:00",
+      "entry_price": 2.8643,
+      "investment": 25000.0,
+      "shares": 8728.136019271724,
+      "exit_datetime": "2023-02-10T12:54:00",
+      "exit_price": 2.45,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "BRY",
+      "entry_datetime": "2023-02-10T06:35:00",
+      "entry_price": 9.17,
+      "investment": 25000.0,
+      "shares": 2726.281352235551,
+      "exit_datetime": "2023-02-17T12:55:00",
+      "exit_price": 8.945,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ESMT",
+      "entry_datetime": "2023-02-10T06:35:00",
+      "entry_price": 20.75,
+      "investment": 25000.0,
+      "shares": 1204.8192771084337,
+      "exit_datetime": "2023-02-17T12:55:00",
+      "exit_price": 20.98,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "INDI",
+      "entry_datetime": "2023-02-10T06:35:00",
+      "entry_price": 8.4799,
+      "investment": 25000.0,
+      "shares": 2948.1479734430827,
+      "exit_datetime": "2023-02-17T12:55:00",
+      "exit_price": 10.14,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "LTRX",
+      "entry_datetime": "2023-02-10T06:35:00",
+      "entry_price": 5.24,
+      "investment": 25000.0,
+      "shares": 4770.992366412213,
+      "exit_datetime": "2023-02-17T12:55:00",
+      "exit_price": 5.17,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "HCC",
+      "entry_datetime": "2023-02-17T06:36:00",
+      "entry_price": 41.23,
+      "investment": 25000.0,
+      "shares": 606.354596167839,
+      "exit_datetime": "2023-02-22T06:30:00",
+      "exit_price": 39.48,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "HDSN",
+      "entry_datetime": "2023-02-17T06:36:00",
+      "entry_price": 10.88,
+      "investment": 25000.0,
+      "shares": 2297.7941176470586,
+      "exit_datetime": "2023-02-22T06:30:00",
+      "exit_price": 10.06,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "OIS",
+      "entry_datetime": "2023-02-17T06:36:00",
+      "entry_price": 9.91,
+      "investment": 25000.0,
+      "shares": 2522.704339051463,
+      "exit_datetime": "2023-02-22T06:30:00",
+      "exit_price": 9.46,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "SWAV",
+      "entry_datetime": "2023-02-17T06:36:00",
+      "entry_price": 199.01,
+      "investment": 25000.0,
+      "shares": 125.62182804884178,
+      "exit_datetime": "2023-02-22T06:30:00",
+      "exit_price": 188.09,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "EDU",
+      "entry_datetime": "2023-03-03T06:34:00",
+      "entry_price": 44.29,
+      "investment": 33333.333333333336,
+      "shares": 752.6153383005947,
+      "exit_datetime": "2023-03-08T06:30:00",
+      "exit_price": 38.0,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "LYTS",
+      "entry_datetime": "2023-03-03T06:34:00",
+      "entry_price": 15.1499,
+      "investment": 33333.333333333336,
+      "shares": 2200.2345450024973,
+      "exit_datetime": "2023-03-08T06:30:00",
+      "exit_price": 15.03,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "SUP",
+      "entry_datetime": "2023-03-03T06:34:00",
+      "entry_price": 6.09,
+      "investment": 33333.333333333336,
+      "shares": 5473.453749315819,
+      "exit_datetime": "2023-03-08T06:30:00",
+      "exit_price": 6.39,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "ASRT",
+      "entry_datetime": "2023-04-14T06:36:00",
+      "entry_price": 6.1201,
+      "investment": 25000.0,
+      "shares": 4084.900573520041,
+      "exit_datetime": "2023-04-21T06:30:00",
+      "exit_price": 6.01,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "DO",
+      "entry_datetime": "2023-04-14T06:36:00",
+      "entry_price": 12.368,
+      "investment": 25000.0,
+      "shares": 2021.3454075032341,
+      "exit_datetime": "2023-04-21T06:30:00",
+      "exit_price": 11.52,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "IMCR",
+      "entry_datetime": "2023-04-14T06:36:00",
+      "entry_price": 53.89,
+      "investment": 25000.0,
+      "shares": 463.90796066060494,
+      "exit_datetime": "2023-04-21T06:30:00",
+      "exit_price": 59.99,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "LTHM",
+      "entry_datetime": "2023-04-14T06:36:00",
+      "entry_price": 22.2395,
+      "investment": 25000.0,
+      "shares": 1124.125992041188,
+      "exit_datetime": "2023-04-21T06:30:00",
+      "exit_price": 21.6,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "ATEX",
+      "entry_datetime": "2023-05-19T06:35:00",
+      "entry_price": 32.06,
+      "investment": 25000.0,
+      "shares": 779.7878976918278,
+      "exit_datetime": "2023-05-24T06:30:00",
+      "exit_price": 32.46,
+      "exit_reason": "SP500 Signal"
+    },
+    {
+      "ticker": "GLOB",
+      "entry_datetime": "2023-05-19T06:35:00",
+      "entry_price": 161.3738,
+      "investment": 25000.0,
+      "shares": 154.91981969811707,
+      "exit_datetime": "2023-05-24T06:30:00",
+      "exit_price": 170.14,
+      "exit_reason": "SP500 Signal"
+    },
+    {
+      "ticker": "PUMP",
+      "entry_datetime": "2023-05-19T06:35:00",
+      "entry_price": 7.485,
+      "investment": 25000.0,
+      "shares": 3340.01336005344,
+      "exit_datetime": "2023-05-24T06:30:00",
+      "exit_price": 7.72,
+      "exit_reason": "SP500 Signal"
+    },
+    {
+      "ticker": "RBBN",
+      "entry_datetime": "2023-05-19T06:35:00",
+      "entry_price": 2.8799,
+      "investment": 25000.0,
+      "shares": 8680.856974200493,
+      "exit_datetime": "2023-05-24T06:30:00",
+      "exit_price": 2.87,
+      "exit_reason": "SP500 Signal"
+    },
+    {
+      "ticker": "AVO",
+      "entry_datetime": "2023-06-09T06:34:00",
+      "entry_price": 13.07,
+      "investment": 25000.0,
+      "shares": 1912.7773527161437,
+      "exit_datetime": "2023-06-16T12:55:00",
+      "exit_price": 12.1,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "LUNR",
+      "entry_datetime": "2023-06-09T06:34:00",
+      "entry_price": 8.25,
+      "investment": 25000.0,
+      "shares": 3030.3030303030305,
+      "exit_datetime": "2023-06-12T10:22:00",
+      "exit_price": 10.3125,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "ONON",
+      "entry_datetime": "2023-06-09T06:34:00",
+      "entry_price": 29.9994,
+      "investment": 25000.0,
+      "shares": 833.35000033334,
+      "exit_datetime": "2023-06-16T12:55:00",
+      "exit_price": 29.9,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "PDD",
+      "entry_datetime": "2023-06-09T06:34:00",
+      "entry_price": 75.99,
+      "investment": 25000.0,
+      "shares": 328.99065666535074,
+      "exit_datetime": "2023-06-16T12:55:00",
+      "exit_price": 79.9409,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ASPN",
+      "entry_datetime": "2023-06-16T06:35:00",
+      "entry_price": 8.585,
+      "investment": 25000.0,
+      "shares": 2912.0559114735,
+      "exit_datetime": "2023-06-23T12:55:00",
+      "exit_price": 7.055,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "EDU",
+      "entry_datetime": "2023-06-16T06:35:00",
+      "entry_price": 42.47,
+      "investment": 25000.0,
+      "shares": 588.650812338121,
+      "exit_datetime": "2023-06-23T12:55:00",
+      "exit_price": 36.62,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ESTE",
+      "entry_datetime": "2023-06-16T06:35:00",
+      "entry_price": 13.99,
+      "investment": 25000.0,
+      "shares": 1786.9907076483203,
+      "exit_datetime": "2023-06-23T12:55:00",
+      "exit_price": 13.0399,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "TLS",
+      "entry_datetime": "2023-06-16T06:35:00",
+      "entry_price": 2.73,
+      "investment": 25000.0,
+      "shares": 9157.509157509157,
+      "exit_datetime": "2023-06-23T12:55:00",
+      "exit_price": 2.47,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "CELH",
+      "entry_datetime": "2023-06-23T06:35:00",
+      "entry_price": 149.14,
+      "investment": 25000.0,
+      "shares": 167.62773233203703,
+      "exit_datetime": "2023-06-30T12:55:00",
+      "exit_price": 149.17,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "COCO",
+      "entry_datetime": "2023-06-23T06:35:00",
+      "entry_price": 28.55,
+      "investment": 25000.0,
+      "shares": 875.6567425569177,
+      "exit_datetime": "2023-06-30T12:55:00",
+      "exit_price": 26.94,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "GENI",
+      "entry_datetime": "2023-06-23T06:35:00",
+      "entry_price": 5.985,
+      "investment": 25000.0,
+      "shares": 4177.109440267335,
+      "exit_datetime": "2023-06-30T12:55:00",
+      "exit_price": 6.185,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "PAX",
+      "entry_datetime": "2023-06-23T06:35:00",
+      "entry_price": 15.14,
+      "investment": 25000.0,
+      "shares": 1651.2549537648613,
+      "exit_datetime": "2023-06-30T12:55:00",
+      "exit_price": 14.31,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ONCY",
+      "entry_datetime": "2023-06-30T06:34:00",
+      "entry_price": 2.6899,
+      "investment": 25000.0,
+      "shares": 9294.02580021562,
+      "exit_datetime": "2023-07-07T12:53:00",
+      "exit_price": 3.04,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "RIG",
+      "entry_datetime": "2023-06-30T06:34:00",
+      "entry_price": 6.535,
+      "investment": 25000.0,
+      "shares": 3825.5547054322874,
+      "exit_datetime": "2023-07-07T12:55:00",
+      "exit_price": 7.72,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "SD",
+      "entry_datetime": "2023-06-30T06:34:00",
+      "entry_price": 15.295,
+      "investment": 25000.0,
+      "shares": 1634.5210853220008,
+      "exit_datetime": "2023-07-07T12:55:00",
+      "exit_price": 15.36,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "TTI",
+      "entry_datetime": "2023-06-30T06:34:00",
+      "entry_price": 3.435,
+      "investment": 25000.0,
+      "shares": 7278.020378457059,
+      "exit_datetime": "2023-07-07T12:55:00",
+      "exit_price": 3.655,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "KODK",
+      "entry_datetime": "2023-07-07T06:35:00",
+      "entry_price": 5.14,
+      "investment": 25000.0,
+      "shares": 4863.813229571985,
+      "exit_datetime": "2023-07-14T12:55:00",
+      "exit_price": 5.925,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "PERI",
+      "entry_datetime": "2023-07-07T06:35:00",
+      "entry_price": 34.0299,
+      "investment": 25000.0,
+      "shares": 734.6480595006157,
+      "exit_datetime": "2023-07-14T12:55:00",
+      "exit_price": 34.5416,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "SMCI",
+      "entry_datetime": "2023-07-07T06:35:00",
+      "entry_price": 256.5008,
+      "investment": 25000.0,
+      "shares": 97.4655829533475,
+      "exit_datetime": "2023-07-14T12:55:00",
+      "exit_price": 294.27,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "YMM",
+      "entry_datetime": "2023-07-07T06:35:00",
+      "entry_price": 6.74,
+      "investment": 25000.0,
+      "shares": 3709.1988130563795,
+      "exit_datetime": "2023-07-14T12:55:00",
+      "exit_price": 7.215,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ASAN",
+      "entry_datetime": "2023-07-14T06:35:00",
+      "entry_price": 24.3925,
+      "investment": 25000.0,
+      "shares": 1024.9051962693452,
+      "exit_datetime": "2023-07-21T12:55:00",
+      "exit_price": 21.545,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "AXNX",
+      "entry_datetime": "2023-07-14T06:35:00",
+      "entry_price": 52.845,
+      "investment": 25000.0,
+      "shares": 473.08165389346203,
+      "exit_datetime": "2023-07-21T12:55:00",
+      "exit_price": 54.07,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "BFLY",
+      "entry_datetime": "2023-07-14T06:35:00",
+      "entry_price": 2.475,
+      "investment": 25000.0,
+      "shares": 10101.0101010101,
+      "exit_datetime": "2023-07-21T12:55:00",
+      "exit_price": 2.42,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "JFIN",
+      "entry_datetime": "2023-07-14T06:35:00",
+      "entry_price": 6.75,
+      "investment": 25000.0,
+      "shares": 3703.703703703704,
+      "exit_datetime": "2023-07-21T12:55:00",
+      "exit_price": 6.485,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "AUTL",
+      "entry_datetime": "2023-07-21T06:34:00",
+      "entry_price": 2.8,
+      "investment": 25000.0,
+      "shares": 8928.57142857143,
+      "exit_datetime": "2023-07-28T12:55:00",
+      "exit_price": 3.165,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "CLLS",
+      "entry_datetime": "2023-07-21T06:34:00",
+      "entry_price": 2.61,
+      "investment": 25000.0,
+      "shares": 9578.544061302682,
+      "exit_datetime": "2023-07-28T12:51:00",
+      "exit_price": 2.21,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "NSSC",
+      "entry_datetime": "2023-07-21T06:34:00",
+      "entry_price": 37.35,
+      "investment": 25000.0,
+      "shares": 669.3440428380187,
+      "exit_datetime": "2023-07-28T12:55:00",
+      "exit_price": 36.44,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "SES",
+      "entry_datetime": "2023-07-21T06:34:00",
+      "entry_price": 3.09,
+      "investment": 25000.0,
+      "shares": 8090.614886731392,
+      "exit_datetime": "2023-07-28T12:55:00",
+      "exit_price": 3.045,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "AMAT",
+      "entry_datetime": "2023-07-28T06:35:00",
+      "entry_price": 148.92,
+      "investment": 25000.0,
+      "shares": 167.87536932581253,
+      "exit_datetime": "2023-08-04T12:55:00",
+      "exit_price": 145.36,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ARDX",
+      "entry_datetime": "2023-07-28T06:35:00",
+      "entry_price": 3.765,
+      "investment": 25000.0,
+      "shares": 6640.106241699867,
+      "exit_datetime": "2023-08-04T12:55:00",
+      "exit_price": 3.905,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "BLUE",
+      "entry_datetime": "2023-07-28T06:35:00",
+      "entry_price": 3.9,
+      "investment": 25000.0,
+      "shares": 6410.25641025641,
+      "exit_datetime": "2023-08-04T12:55:00",
+      "exit_price": 3.87,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "PLTR",
+      "entry_datetime": "2023-07-28T06:35:00",
+      "entry_price": 17.3944,
+      "investment": 25000.0,
+      "shares": 1437.2441705376443,
+      "exit_datetime": "2023-08-04T12:55:00",
+      "exit_price": 18.1601,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "APA",
+      "entry_datetime": "2023-08-04T06:36:00",
+      "entry_price": 42.12,
+      "investment": 25000.0,
+      "shares": 593.5422602089269,
+      "exit_datetime": "2023-08-11T06:30:00",
+      "exit_price": 44.15,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "ATEX",
+      "entry_datetime": "2023-08-04T06:36:00",
+      "entry_price": 29.4953,
+      "investment": 25000.0,
+      "shares": 847.5926673063166,
+      "exit_datetime": "2023-08-11T06:30:00",
+      "exit_price": 33.56,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "EHTH",
+      "entry_datetime": "2023-08-04T06:36:00",
+      "entry_price": 9.1463,
+      "investment": 25000.0,
+      "shares": 2733.3457245006175,
+      "exit_datetime": "2023-08-11T06:30:00",
+      "exit_price": 8.75,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "MOMO",
+      "entry_datetime": "2023-08-04T06:36:00",
+      "entry_price": 10.99,
+      "investment": 25000.0,
+      "shares": 2274.7952684258416,
+      "exit_datetime": "2023-08-11T06:30:00",
+      "exit_price": 10.09,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "CRON",
+      "entry_datetime": "2023-09-01T06:35:00",
+      "entry_price": 2.1006,
+      "investment": 25000.0,
+      "shares": 11901.361515757402,
+      "exit_datetime": "2023-09-07T06:30:00",
+      "exit_price": 1.99,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "FLNC",
+      "entry_datetime": "2023-09-01T06:35:00",
+      "entry_price": 27.345,
+      "investment": 25000.0,
+      "shares": 914.2439202779302,
+      "exit_datetime": "2023-09-07T06:30:00",
+      "exit_price": 26.05,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "GRWG",
+      "entry_datetime": "2023-09-01T06:35:00",
+      "entry_price": 3.34,
+      "investment": 25000.0,
+      "shares": 7485.029940119761,
+      "exit_datetime": "2023-09-07T06:30:00",
+      "exit_price": 3.17,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "MVST",
+      "entry_datetime": "2023-09-01T06:35:00",
+      "entry_price": 2.3,
+      "investment": 25000.0,
+      "shares": 10869.565217391306,
+      "exit_datetime": "2023-09-07T06:30:00",
+      "exit_price": 2.165,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "GRWG",
+      "entry_datetime": "2023-09-15T06:36:00",
+      "entry_price": 3.708,
+      "investment": 25000.0,
+      "shares": 6742.179072276159,
+      "exit_datetime": "2023-09-18T06:30:00",
+      "exit_price": 3.6,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "IAG",
+      "entry_datetime": "2023-09-15T06:36:00",
+      "entry_price": 2.495,
+      "investment": 25000.0,
+      "shares": 10020.040080160321,
+      "exit_datetime": "2023-09-18T06:30:00",
+      "exit_price": 2.56,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "RBBN",
+      "entry_datetime": "2023-09-15T06:36:00",
+      "entry_price": 2.915,
+      "investment": 25000.0,
+      "shares": 8576.329331046312,
+      "exit_datetime": "2023-09-18T06:30:00",
+      "exit_price": 2.84,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "TLRY",
+      "entry_datetime": "2023-09-15T06:36:00",
+      "entry_price": 3.115,
+      "investment": 25000.0,
+      "shares": 8025.6821829855535,
+      "exit_datetime": "2023-09-18T06:30:00",
+      "exit_price": 2.9,
+      "exit_reason": "MG Signal"
+    },
+    {
+      "ticker": "CRBU",
+      "entry_datetime": "2023-11-17T06:37:00",
+      "entry_price": 5.0489,
+      "investment": 25000.0,
+      "shares": 4951.573610093288,
+      "exit_datetime": "2023-11-24T11:27:00",
+      "exit_price": 5.67,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "JOBY",
+      "entry_datetime": "2023-11-17T06:37:00",
+      "entry_price": 6.185,
+      "investment": 25000.0,
+      "shares": 4042.037186742118,
+      "exit_datetime": "2023-11-24T12:51:00",
+      "exit_price": 5.81,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "LRMR",
+      "entry_datetime": "2023-11-17T06:37:00",
+      "entry_price": 3.265,
+      "investment": 25000.0,
+      "shares": 7656.967840735068,
+      "exit_datetime": "2023-11-24T11:52:00",
+      "exit_price": 3.42,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "MCFT",
+      "entry_datetime": "2023-11-17T06:37:00",
+      "entry_price": 21.2601,
+      "investment": 25000.0,
+      "shares": 1175.91168432886,
+      "exit_datetime": "2023-11-24T10:01:00",
+      "exit_price": 20.77,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "CLSK",
+      "entry_datetime": "2023-11-24T06:35:00",
+      "entry_price": 4.95,
+      "investment": 25000.0,
+      "shares": 5050.50505050505,
+      "exit_datetime": "2023-11-28T08:17:00",
+      "exit_price": 6.1875,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "FDMT",
+      "entry_datetime": "2023-11-24T06:35:00",
+      "entry_price": 12.35,
+      "investment": 25000.0,
+      "shares": 2024.2914979757086,
+      "exit_datetime": "2023-12-01T12:55:00",
+      "exit_price": 13.25,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "IOVA",
+      "entry_datetime": "2023-11-24T06:35:00",
+      "entry_price": 5.585,
+      "investment": 25000.0,
+      "shares": 4476.275738585497,
+      "exit_datetime": "2023-12-01T12:55:00",
+      "exit_price": 6.235,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "SGHT",
+      "entry_datetime": "2023-11-24T06:35:00",
+      "entry_price": 2.82,
+      "investment": 25000.0,
+      "shares": 8865.248226950354,
+      "exit_datetime": "2023-11-28T07:43:00",
+      "exit_price": 3.525,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "ELF",
+      "entry_datetime": "2023-12-01T06:34:00",
+      "entry_price": 121.94,
+      "investment": 25000.0,
+      "shares": 205.01886173527964,
+      "exit_datetime": "2023-12-08T12:55:00",
+      "exit_price": 127.075,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "FRSH",
+      "entry_datetime": "2023-12-01T06:34:00",
+      "entry_price": 20.225,
+      "investment": 25000.0,
+      "shares": 1236.0939431396785,
+      "exit_datetime": "2023-12-08T12:55:00",
+      "exit_price": 20.26,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "GCT",
+      "entry_datetime": "2023-12-01T06:34:00",
+      "entry_price": 11.5,
+      "investment": 25000.0,
+      "shares": 2173.913043478261,
+      "exit_datetime": "2023-12-08T12:55:00",
+      "exit_price": 13.33,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "NEXT",
+      "entry_datetime": "2023-12-01T06:34:00",
+      "entry_price": 4.9688,
+      "investment": 25000.0,
+      "shares": 5031.395910481404,
+      "exit_datetime": "2023-12-08T12:55:00",
+      "exit_price": 5.045,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "BDTX",
+      "entry_datetime": "2023-12-08T06:35:00",
+      "entry_price": 2.71,
+      "investment": 25000.0,
+      "shares": 9225.09225092251,
+      "exit_datetime": "2023-12-15T12:55:00",
+      "exit_price": 2.665,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "CRSR",
+      "entry_datetime": "2023-12-08T06:35:00",
+      "entry_price": 13.65,
+      "investment": 25000.0,
+      "shares": 1831.5018315018315,
+      "exit_datetime": "2023-12-15T12:55:00",
+      "exit_price": 14.64,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "GDYN",
+      "entry_datetime": "2023-12-08T06:35:00",
+      "entry_price": 12.74,
+      "investment": 25000.0,
+      "shares": 1962.3233908948193,
+      "exit_datetime": "2023-12-15T12:55:00",
+      "exit_price": 13.66,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "KOD",
+      "entry_datetime": "2023-12-08T06:35:00",
+      "entry_price": 3.1464,
+      "investment": 25000.0,
+      "shares": 7945.58860920417,
+      "exit_datetime": "2023-12-15T12:55:00",
+      "exit_price": 3.035,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "GASS",
+      "entry_datetime": "2023-12-15T06:34:00",
+      "entry_price": 6.67,
+      "investment": 25000.0,
+      "shares": 3748.125937031484,
+      "exit_datetime": "2023-12-22T12:55:00",
+      "exit_price": 6.87,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "PLL",
+      "entry_datetime": "2023-12-15T06:34:00",
+      "entry_price": 31.44,
+      "investment": 25000.0,
+      "shares": 795.1653944020356,
+      "exit_datetime": "2023-12-22T12:55:00",
+      "exit_price": 29.19,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "RCM",
+      "entry_datetime": "2023-12-15T06:34:00",
+      "entry_price": 11.25,
+      "investment": 25000.0,
+      "shares": 2222.222222222222,
+      "exit_datetime": "2023-12-22T12:55:00",
+      "exit_price": 10.655,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "ZIM",
+      "entry_datetime": "2023-12-15T06:34:00",
+      "entry_price": 9.02,
+      "investment": 25000.0,
+      "shares": 2771.618625277162,
+      "exit_datetime": "2023-12-22T06:32:00",
+      "exit_price": 11.274999999999999,
+      "exit_reason": "Profit Target"
+    },
+    {
+      "ticker": "ALLO",
+      "entry_datetime": "2023-12-22T06:35:00",
+      "entry_price": 2.96,
+      "investment": 25000.0,
+      "shares": 8445.945945945947,
+      "exit_datetime": "2023-12-29T12:55:00",
+      "exit_price": 3.205,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "FSM",
+      "entry_datetime": "2023-12-22T06:35:00",
+      "entry_price": 4.09,
+      "investment": 25000.0,
+      "shares": 6112.469437652812,
+      "exit_datetime": "2023-12-29T12:55:00",
+      "exit_price": 3.86,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "GATO",
+      "entry_datetime": "2023-12-22T06:35:00",
+      "entry_price": 7.25,
+      "investment": 25000.0,
+      "shares": 3448.2758620689656,
+      "exit_datetime": "2023-12-29T12:55:00",
+      "exit_price": 6.54,
+      "exit_reason": "Second Friday"
+    },
+    {
+      "ticker": "UUUU",
+      "entry_datetime": "2023-12-22T06:35:00",
+      "entry_price": 7.86,
+      "investment": 25000.0,
+      "shares": 3180.6615776081426,
+      "exit_datetime": "2023-12-29T12:55:00",
+      "exit_price": 7.1839,
+      "exit_reason": "Second Friday"
+    }
+  ]
+}
